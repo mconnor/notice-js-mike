@@ -1,0 +1,3 @@
+vpaid tag
+
+<script type="text/javascript" src="//c.evidon.com/evidon-vpaid.js?;coid=XXX;nid=XXXXXX;position=top-right" id="evidon-vpaid"></script>

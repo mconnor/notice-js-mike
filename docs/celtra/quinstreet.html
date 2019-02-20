@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="celtra-ad-v3">
+        <!-- externalCreativeId = raw %ecid! -->
+        <!-- externalPlacementId = raw %epid! -->
+        <!-- externalSiteId = raw %esid! -->
+        <!-- externalSiteName = raw %%SITE%% -->
+        <!-- externalLineItemId = raw %eaid! -->
+        <!-- externalCampaignId = raw %ebuy! -->
+        <img src="data:image/png,celtra" style="display: none" onerror="
+                (function(img) {
+                var params = {'clickUrl':'%%CLICK_URL_UNESC%%','expandDirection':'','clickEvent':'advertiser','iosAdvId':'%%ADVERTISING_IDENTIFIER_PLAIN%%','androidAdvId':'%%ADVERTISING_IDENTIFIER_PLAIN%%','externalAdServer':'DFPPremium','tagVersion':'6'};
+                [].slice.apply(img.parentNode.childNodes).forEach(function(n) { var decfs = { urldecode: decodeURIComponent, htmldecode: function(v) { var d = document.createElement('div'); d.innerHTML = v; return d.textContent; }, eval: function(v) { return eval(v); }, raw: function(v) { return v; } }; var m; if (n.nodeType == 8 && (m = n.textContent.match(/^&#92;s+([&#92;w.]+)(&#92;[.+&#92;])?&#92;s+=&#92;s+(&#92;w+)&#92;s+(.*)$/i))) { try { params[m[1]+(m[2] || '')] = decfs[m[3]](m[4].replace(/^&#92;s+|&#92;s+$/g, '')); } catch (e) {} } }); var req = document.createElement('script'); req.id = params.scriptId = 'celtra-script-' + (window.celtraScriptIndex = (window.celtraScriptIndex||0)+1); params.clientTimestamp = new Date/1000; params.clientTimeZoneOffsetInMinutes = new Date().getTimezoneOffset(); params.hostPageLoadId=window.celtraHostPageLoadId=window.celtraHostPageLoadId||(Math.random()+'').slice(2);
+                var src = 'https://ads.celtra.com/b2889c8c/web.js?';
+                for (var k in params) {
+                src += '&' + encodeURIComponent(k) + '=' + encodeURIComponent(params[k]); } req.src = src; img.parentNode.insertBefore(req, img.nextSibling); })(this); "
+        />
+    </div>
+
+    <script type="text/javascript" src="//dev.betrad.com/durly.js?;coid=242;nid=64545;ad_w=300;ad_h=600;"></script>
+
+
+</body>
+
+</html>

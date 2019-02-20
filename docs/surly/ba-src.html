@@ -1,0 +1,39 @@
+<!DOCTYPE HTML><html><title></title><script type="text/javascript">
+  // get uglify-js to remove our console messages
+  // uglifyjs -c --define DEVMODE=false <file>
+  if (typeof DEVMODE === 'undefined') { DEVMODE = true; }
+
+  var rev = window.location.search || "";
+  var url = (("https:" == window.location.protocol) ? "https" : "http") +
+              "://c.betrad.com/geo/ba.js" + rev;
+
+  var script = window.localStorage.getItem(url);
+  if (window.localStorage.getItem("rev") === rev && script) {
+    DEVMODE && console.log("cache hit!");
+    window.parent.postMessage(script, "*");
+
+  } else {
+    DEVMODE && console.log("cache miss!");
+    DEVMODE && console.log("going to fetch url: ", url);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open( 'GET', url );
+
+    xhr.onreadystatechange = function() {
+      if ( xhr.readyState === 4 ) {
+        DEVMODE && console.log("fetch complete");
+        if ( xhr.status === 200 ) {
+          try {
+            window.localStorage.setItem("rev", rev);
+            window.localStorage.setItem(url, xhr.responseText);
+          } catch (e) {
+            // may fail when blocking 3rd party (or all) cookies
+          }
+          window.parent.postMessage(xhr.responseText, "*");
+        }
+      }
+    };
+
+    xhr.send();
+  }
+</script></html>

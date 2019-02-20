@@ -1,0 +1,11 @@
+{
+  "name": "notice-js-mike",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/evidon/notice-js.git",
+  "author": "mike connor <mike@rocketnumber9.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.12.0"
+  }
+}
