@@ -20,7 +20,7 @@
     <h1>Bottom Left Icon</h1>
     <!-- <div>
         <a href="http://www.ibm.com">
-            <img id="myImg" class="right" border="0" width="300" height="250" src="//i.imgur.com/IUNOJvh.jpg" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
+            <img id="myImg" class="right" border="0" width="300" height="250" src="//via.placeholder.com/300x250.png" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
                 onmouseout="javascript:document.getElementById('myImg').style.width = '300px';" />
         </a>
         <script type="text/javascript" src="//dev.betrad.com/durly.js?;coid=242;nid=64578;ad_wxh=300x250;position=top-left;"></script>
@@ -28,42 +28,49 @@
     <h2>icons on 1st and 4th ad. No icon on other ads.   Durly pulled from dev. L2.</h2>
     <div>
         <a href="http://www.ibm.com">
-            <img border="0" width="300" height="250" src="//i.imgur.com/IUNOJvh.jpg" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
-                onmouseout="javascript:document.getElementById('myImg').style.width = '300px';" />
+            <img border="0" width="300" height="250" src="//via.placeholder.com/300x250.png" />
         </a>
         <script type="text/javascript" src="//dev.betrad.com/durly.js?;check_container=true;coid=242;nid=64578;ad_wxh=300x250;position=bottom-right"></script>
     </div>
     <div>
         <a href="http://www.ibm.com">
-            <img border="0" width="300" height="250" src="//i.imgur.com/IUNOJvh.jpg" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
-                onmouseout="javascript:document.getElementById('myImg').style.width = '300px';" />
+            <img border="0" width="300" height="250" src="//via.placeholder.com/300x250.png" />
         </a>
         
     </div>
     
     <div>
         <a href="http://www.ibm.com">
-            <img border="0" width="300" height="250" src="//i.imgur.com/IUNOJvh.jpg" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
-                onmouseout="javascript:document.getElementById('myImg').style.width = '300px';" />
+            <img border="0" width="300" height="250" src="//via.placeholder.com/300x250.png" />
         </a>
         
     </div>
     <div>
         <a href="http://www.ibm.com">
-            <img border="0" width="300" height="250" src="//i.imgur.com/IUNOJvh.jpg" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
-                onmouseout="javascript:document.getElementById('myImg').style.width = '300px';" />
+            <img border="0" width="300" height="250" src="//via.placeholder.com/300x250.png" />
         </a>
         <script type="text/javascript" src="//dev.betrad.com/durly.js?;coid=242;nid=64578;ad_wxh=300x250;position=bottom-right"></script>
     </div>
     <div>
         <a href="http://www.ibm.com">
-            <img border="0" width="300" height="250" src="//i.imgur.com/IUNOJvh.jpg" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
-                onmouseout="javascript:document.getElementById('myImg').style.width = '300px';" />
+            <img border="0" width="300" height="250" src="//via.placeholder.com/300x250.png" />
         </a>
         
     </div>
 
-   
+    <script>
+        (function() {
+            var placeholders = document.querySelectorAll("img");
+            Array.from(placeholders).map(placeholder => {
+                placeholder.addEventListener('mouseover', function(e) {
+                    e.target.style.width = '600px';
+                });
+                placeholder.addEventListener('mouseout', function(e) {
+                    e.target.style.width = '300px';
+                });
+            })   
+        })();
+        </script>
 </body>
 
 </html>

@@ -7,11 +7,22 @@
   </head>
   <body>  	
       
-<img  name="myImg" border="0" width="300" height="250" src="//i.imgur.com/IUNOJvh.jpg"
+<img  class="myImg" border="0" width="300" height="250" src="//via.placeholder.com/300x250.png"
 />
 
 
 <script type="text/javascript" src="//dev.betrad.com/durly.js?;coid=242;nid=64545;ad_w=300;ad_h=250;"></script>
+<script>
+(function() {
+    var placeholder = document.querySelector(".myImg");
+    placeholder.addEventListener('mouseover', function(e) {
+        e.target.style.width = '600px';
+    });
+    placeholder.addEventListener('mouseout', function(e) {
+        e.target.style.width = '300px';
+    })
+})();
+</script>
 <p>code pulled from dev</p>
 
 </body>
