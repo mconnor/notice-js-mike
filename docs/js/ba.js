@@ -3106,6 +3106,9 @@ var BAP =
         left: left
       };
     } 
+    function attach(){
+      console.log('attach')
+    }
     try {
       addEvent(window, "message", handleMessage);
     } catch (e) {}
@@ -3161,6 +3164,7 @@ var BAP =
     if (window._bao) {
       start(window._bao);
     }
+    API.attach = BAP.attach;
     API.options = BAP.options;
     API.flashPostMessage = flashPostMessage;
     API.createL2 = createL2;
