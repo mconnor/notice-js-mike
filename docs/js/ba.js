@@ -3106,9 +3106,11 @@ var BAP =
         left: left
       };
     } 
-    function attach(){
-      console.log('attach')
+
+    BAP.attach = function(){
+console.log('attach');
     }
+    
     try {
       addEvent(window, "message", handleMessage);
     } catch (e) {}
