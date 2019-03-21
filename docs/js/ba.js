@@ -3130,7 +3130,9 @@ var BAP =
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         console.log('change icon positoin to ' + position);
+        
         opt.position = position;
+        console.log(opt)
       } else {
         console.warn('invalid icon position  request');
       }
