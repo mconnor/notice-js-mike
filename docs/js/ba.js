@@ -3120,8 +3120,8 @@ var BAP =
       console.log(el);
 
       Object.keys(BAP.options).forEach(key => {
-        if (obj[key].ad === el) {
-          console.log(obj[key]);
+        if (BAP.options[key].ad === el) {
+          console.log(BAP.options[key]);
         }
         //use key and value here
       });
