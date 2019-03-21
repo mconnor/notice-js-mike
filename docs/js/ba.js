@@ -3107,12 +3107,25 @@ var BAP =
       };
     } 
 
-    BAP.changePosition = function(...args){
+    BAP.changePosition = function(domElement, position){
       
-      if (isElement(arg[0])){
+      if (isElement(domElement)){
         console.log('you sent in a dom element');
-      } else if (typeof arg[0] === 'string') {
+      } else if (typeof domElement === 'string') {
         console.log('you sent in a string');
+      }
+
+      switch (position) {
+        case 'top-left':
+          console.log('change icon positoin to ' + position);
+        case 'top-right':
+          console.log('change icon positoin to ' + position);
+        case 'bottom-left':
+          console.log('change icon positoin to ' + position);
+        case 'bottom-right':
+          console.log('change icon positoin to ' + position);
+        default: 
+         console.warning('invalid icon position  request');
       }
 
     
