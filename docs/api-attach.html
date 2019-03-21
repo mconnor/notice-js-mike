@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        .mg20 {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mg20">
+        <button id="btn" onclick="reposition()">CLICK - BAP.changePosition('canvas#mycanvas1', 'bottom-right')</button>
+    </div>
+    <div class='container mg20' id="ad1" style="width: 300px;height: 200ps;">
+        <canvas id="mycanvas1" width="300" height="200"></canvas>
+    </div>
+    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=top-left"></script>
+
+    <div class='container mg20' id="ad2 " style="width: 300px;height: 200ps;">
+        <canvas id="mycanvas2" width="300" height="200"></canvas>
+    </div>
+
+    <script type="text/javascript">
+        function reposition() {
+            window.BAP.changePosition('canvas#mycanvas1', 'bottom-right')
+        }
+    </script>
+    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=top-right"></script>
+
+</body>
+
+</html>
