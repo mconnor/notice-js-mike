@@ -3126,7 +3126,7 @@ var BAP =
         //use key and value here
       });
 
-      if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'top-right') {
+      if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         console.log('change icon positoin to ' + position);
         BAP.options[key].position = position;
       } else {
