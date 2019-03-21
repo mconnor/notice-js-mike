@@ -3109,6 +3109,7 @@ var BAP =
 
     BAP.changePosition = function(arg1, position){
       var ad;
+      var opt;
       if (isElement(arg1)){
         console.log('you sent in a dom element');
         el = arg1;
@@ -3122,13 +3123,14 @@ var BAP =
       Object.keys(BAP.options).forEach(key => {
         if (BAP.options[key].ad === el) {
           console.log(BAP.options[key]);
+          opt = BAP.options[key].ad;
         }
         //use key and value here
       });
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         console.log('change icon positoin to ' + position);
-        BAP.options[key].position = position;
+        opt.position = position;
       } else {
         console.warn('invalid icon position  request');
       }
