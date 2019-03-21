@@ -3114,7 +3114,7 @@ var BAP =
         el = arg1;
       } else if (typeof arg1 === 'string') {
         console.log('you sent in a string');
-        el = document.querySelector(arg1)
+        el = document.querySelector(arg1);
       }
       console.log('ad dom element:');
       console.log(el);
@@ -3126,19 +3126,31 @@ var BAP =
         //use key and value here
       });
 
-      switch (position) {
-        case 'top-left':
-          console.log('change icon positoin to ' + position);
-        case 'top-right':
-          console.log('change icon positoin to ' + position);
-        case 'bottom-left':
-          console.log('change icon positoin to ' + position);
-        case 'bottom-right':
-          console.log('change icon positoin to ' + position);
-        default: 
-         console.warn('invalid icon position  request');
-    
+      if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'top-right') {
+        console.log('change icon positoin to ' + position);
+        BAP.options[key].position = position;
+      } else {
+        console.warn('invalid icon position  request');
       }
+
+      //BAP.changePosition('canvas#mycanvas1', 'top-right')
+      // switch (position) {
+      //   case 'top-left':
+      //     console.log('change icon positoin to ' + position);
+         
+      //     break;
+      //   case 'top-right':
+      //     console.log('change icon positoin to ' + position);
+      //     break;
+      //   case 'bottom-left':
+      //     console.log('change icon positoin to ' + position);
+      //     break;
+      //   case 'bottom-right':
+      //     console.log('change icon positoin to ' + position);
+      //     break;
+      //   default: 
+      //    console.warn('invalid icon position  request');
+      // }
 
     
     };
