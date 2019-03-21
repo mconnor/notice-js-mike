@@ -3109,7 +3109,7 @@ var BAP =
 
     BAP.changePosition = function(arg1, position){
       var ad;
-      var opt;
+      var pageId;
       if (isElement(arg1)){
         console.log('you sent in a dom element');
         el = arg1;
@@ -3122,8 +3122,9 @@ var BAP =
 
       Object.keys(BAP.options).forEach(key => {
         if (BAP.options[key].ad === el) {
-          console.log(BAP.options[key]);
-          opt = BAP.options[key];
+          pageId = key;
+          console.log(BAP.options[pageId]);
+          
         }
         //use key and value here
       });
@@ -3131,11 +3132,17 @@ var BAP =
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         console.log('change icon position to ' + position);
         
-        opt.position = position;
-        console.log(opt)
+        BAP.options[pageId].position = position;
+        console.log(opt);
+
+        noticeCreate(pageId);
+        //noticePosition(pageId);
+
       } else {
         console.warn('invalid icon position  request');
       }
+
+     
 
       //BAP.changePosition('canvas#mycanvas1', 'top-right')
       // switch (position) {
