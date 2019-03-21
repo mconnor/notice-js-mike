@@ -3123,13 +3123,13 @@ var BAP =
       Object.keys(BAP.options).forEach(key => {
         if (BAP.options[key].ad === el) {
           console.log(BAP.options[key]);
-          opt = BAP.options[key].ad;
+          opt = BAP.options[key];
         }
         //use key and value here
       });
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
-        console.log('change icon positoin to ' + position);
+        console.log('change icon position to ' + position);
         
         opt.position = position;
         console.log(opt)
