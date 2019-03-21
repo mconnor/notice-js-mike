@@ -3108,14 +3108,23 @@ var BAP =
     } 
 
     BAP.changePosition = function(arg1, position){
-      
+      var ad;
       if (isElement(arg1)){
         console.log('you sent in a dom element');
+        el = arg1;
       } else if (typeof arg1 === 'string') {
         console.log('you sent in a string');
-        var el = document.querySelector(arg1)
-        return el;
+        el = document.querySelector(arg1)
       }
+      console.log('ad dom element:');
+      console.log(el);
+
+      Object.keys(BAP.options).forEach(key => {
+        if (obj[key].ad === el) {
+          console.log(obj[key]);
+        }
+        //use key and value here
+      });
 
       switch (position) {
         case 'top-left':
