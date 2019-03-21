@@ -3136,7 +3136,7 @@ var BAP =
         
 
         noticeCreate(pageId);
-        noticePosition(pageId);
+        //noticePosition(pageId);
 
       } else {
         console.warn('invalid icon position  request');
