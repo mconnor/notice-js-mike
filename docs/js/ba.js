@@ -3134,8 +3134,10 @@ var BAP =
         
         BAP.options[pageId].position = position;
         
+        document.querySelector()
 
-        noticeCreate(pageId);
+        document.querySelector('#trigger-box-'+pageId).innerHTML = '<img id="trigger-box-image-' + pageId + '"' + 'src="http://dev.betrad.com/icon/box_77_'+ position + '.png">';
+        //noticeCreate(pageId);
         //noticePosition(pageId);
 
       } else {
