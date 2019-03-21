@@ -3107,12 +3107,14 @@ var BAP =
       };
     } 
 
-    BAP.changePosition = function(domElement, position){
+    BAP.changePosition = function(arg1, position){
       
-      if (isElement(domElement)){
+      if (isElement(arg1)){
         console.log('you sent in a dom element');
-      } else if (typeof domElement === 'string') {
+      } else if (typeof arg1 === 'string') {
         console.log('you sent in a string');
+        var el = document.querySelector(arg1)
+        return el;
       }
 
       switch (position) {
@@ -3125,7 +3127,8 @@ var BAP =
         case 'bottom-right':
           console.log('change icon positoin to ' + position);
         default: 
-         console.warning('invalid icon position  request');
+         console.warn('invalid icon position  request');
+    
       }
 
     
