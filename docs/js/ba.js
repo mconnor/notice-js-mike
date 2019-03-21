@@ -3133,10 +3133,10 @@ var BAP =
         console.log('change icon position to ' + position);
         
         BAP.options[pageId].position = position;
-        console.log(opt);
+        
 
         noticeCreate(pageId);
-        //noticePosition(pageId);
+        noticePosition(pageId);
 
       } else {
         console.warn('invalid icon position  request');
