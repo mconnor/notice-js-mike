@@ -3131,14 +3131,13 @@ var BAP =
       } else {
         console.warn('invalid icon position request');
       }
-      BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
-      BAP.options[pageId].offsetTop  = parseInt(offsetObj.y, 10) ;
-      // if (offsetObj.x && !isNaN(offsetObj.x)){
-      //   BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
-      // } 
-      // if (offsetObj.y && !isNaN(offsetObj.y)) {
-      //   BAP.options[pageId].offsetTop  = offsetObj.y;
-      // } 
+
+      if (offsetObj.x && !isNaN(parseInt(offsetObj.x, 10))) {
+        BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
+      } 
+      if (offsetObj.y && !isNaN(parseInt(offsetObj.y, 10))) {
+        BAP.options[pageId].offsetTop = parseInt(offsetObj.y, 10) ;
+      } 
     };
 
     function isElement(obj) {
