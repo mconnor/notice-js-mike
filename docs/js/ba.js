@@ -3107,9 +3107,18 @@ var BAP =
       };
     } 
 
-    BAP.changePosition = function(arg1, position){
-      var ad;
-      var pageId;
+    BAP.changePosition = function(arg1, position, offsetObj){
+      var ad, pageId;
+      
+      if (offsetObj.x && !isNaN(offsetObj.x)){
+        BAP.options[pageId].offsetLeft = offsetObj.x ;
+      } 
+      if (offsetObj.y && !isNaN(offsetObj.y)) {
+        BAP.options[pageId].offsetTop  = offsetObj.y;
+      } 
+        
+        
+
       if (isElement(arg1)){
         el = arg1;
       } else if (typeof arg1 === 'string') {
@@ -3132,8 +3141,7 @@ var BAP =
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         BAP.options[pageId].position = position;
 
-        BAP.options[pageId].offsetLeft  = -20;
-        BAP.options[pageId].offsetTop  = -20;
+        
         
     
         document.querySelector('#trigger-box-'+pageId).innerHTML = '<img id="trigger-box-image-' + pageId + '"' + 'src="http://dev.betrad.com/icon/box_77_'+ position + '.png">';
