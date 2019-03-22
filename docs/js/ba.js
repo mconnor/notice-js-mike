@@ -3111,11 +3111,12 @@ var BAP =
       var ad;
       var pageId;
       if (isElement(arg1)){
-        console.log('you sent in a dom element');
         el = arg1;
       } else if (typeof arg1 === 'string') {
-        console.log('you sent in a string');
         el = document.querySelector(arg1);
+      } else {
+        console.warn('invalid dom argument. Send dom element or string')
+        return;
       }
       console.log('ad dom element:');
       console.log(el);
@@ -3124,15 +3125,15 @@ var BAP =
         if (BAP.options[key].ad === el) {
           pageId = key;
           console.log(BAP.options[pageId]);
-          
         }
         //use key and value here
       });
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
-        console.log('change icon position to ' + position);
-        
         BAP.options[pageId].position = position;
+
+        BAP.options[pageId].offsetLeft  = 20;
+        BAP.options[pageId].offsetTop  = 20;
         
     
         document.querySelector('#trigger-box-'+pageId).innerHTML = '<img id="trigger-box-image-' + pageId + '"' + 'src="http://dev.betrad.com/icon/box_77_'+ position + '.png">';
@@ -3140,7 +3141,7 @@ var BAP =
         //noticePosition(pageId);
 
       } else {
-        console.warn('invalid icon position  request');
+        console.warn('invalid icon position request');
       }
 
      
