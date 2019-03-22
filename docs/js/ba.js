@@ -3109,16 +3109,6 @@ var BAP =
 
     BAP.changePosition = function(arg1, position, offsetObj){
       var ad, pageId;
-      
-      if (offsetObj.x && !isNaN(offsetObj.x)){
-        BAP.options[pageId].offsetLeft = offsetObj.x ;
-      } 
-      if (offsetObj.y && !isNaN(offsetObj.y)) {
-        BAP.options[pageId].offsetTop  = offsetObj.y;
-      } 
-        
-        
-
       if (isElement(arg1)){
         el = arg1;
       } else if (typeof arg1 === 'string') {
@@ -3127,9 +3117,6 @@ var BAP =
         console.warn('invalid dom argument. Send dom element or string')
         return;
       }
-      console.log('ad dom element:');
-      console.log(el);
-
       Object.keys(BAP.options).forEach(key => {
         if (BAP.options[key].ad === el) {
           pageId = key;
@@ -3140,40 +3127,17 @@ var BAP =
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         BAP.options[pageId].position = position;
-
-        
-        
-    
         document.querySelector('#trigger-box-'+pageId).innerHTML = '<img id="trigger-box-image-' + pageId + '"' + 'src="http://dev.betrad.com/icon/box_77_'+ position + '.png">';
-        //noticeCreate(pageId);
-        //noticePosition(pageId);
-
       } else {
         console.warn('invalid icon position request');
       }
 
-     
-
-      //BAP.changePosition('canvas#mycanvas1', 'top-right')
-      // switch (position) {
-      //   case 'top-left':
-      //     console.log('change icon positoin to ' + position);
-         
-      //     break;
-      //   case 'top-right':
-      //     console.log('change icon positoin to ' + position);
-      //     break;
-      //   case 'bottom-left':
-      //     console.log('change icon positoin to ' + position);
-      //     break;
-      //   case 'bottom-right':
-      //     console.log('change icon positoin to ' + position);
-      //     break;
-      //   default: 
-      //    console.warn('invalid icon position  request');
-      // }
-
-    
+      if (offsetObj.x && !isNaN(offsetObj.x)){
+        BAP.options[pageId].offsetLeft = offsetObj.x ;
+      } 
+      if (offsetObj.y && !isNaN(offsetObj.y)) {
+        BAP.options[pageId].offsetTop  = offsetObj.y;
+      } 
     };
 
     function isElement(obj) {
