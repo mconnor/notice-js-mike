@@ -3132,8 +3132,8 @@ var BAP =
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         BAP.options[pageId].position = position;
 
-        BAP.options[pageId].offsetLeft  = 20;
-        BAP.options[pageId].offsetTop  = 20;
+        BAP.options[pageId].offsetLeft  = -20;
+        BAP.options[pageId].offsetTop  = -20;
         
     
         document.querySelector('#trigger-box-'+pageId).innerHTML = '<img id="trigger-box-image-' + pageId + '"' + 'src="http://dev.betrad.com/icon/box_77_'+ position + '.png">';
