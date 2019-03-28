@@ -2257,8 +2257,20 @@ var BAP =
         ">" +
         icon +
         "</span>";
-      icon = '<div id="trigger-container-' + pageId + '" style="position: static !important;"><span id="trigger-box-' + pageId + '" class="bap-trigger" style="' + z + "position:absolute;" + opacity + "width:" + iconWidth + 'px;height:15px;"><img id="trigger-box-image-' + pageId + '" src="' + DOMAIN_ROOT + iconDir + "/box_" + iconWidth + "_" + BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
-      div.innerHTML = div.innerHTML + icon;
+      icon = '<div id="trigger-container-' + pageId + 
+      '" style="position: static !important;"><span id="trigger-box-' + 
+      pageId + 
+      '" class="bap-trigger" style="' + z + "position:absolute;" + opacity + 
+      "width:" + iconWidth + 'px;height:15px;"><img id="trigger-box-image-' + 
+      pageId + '" src="' + DOMAIN_ROOT + iconDir + "/box_" + iconWidth + "_" + 
+      BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
+
+      //div.innerHTML = div.innerHTML + icon;
+      BAP.options[pageId].ad.innerHTML =  div.innerHTML + icon;
+      if (BAP.options[pageId].amzn) {
+
+
+
     }
 
     function showNoticeHelper(pageId) {
