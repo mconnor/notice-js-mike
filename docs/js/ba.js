@@ -587,16 +587,16 @@ var BAP =
       // attaching resize event
       BAP.vs = frameSize()[0] < body.scrollHeight;
       iX = frameSize()[1];
-      // addEvent(window, "resize", resize);
-      // // movement detection
-      // setIntervalWithFalloff(function() {
-      //   testTruste();
-      //   testMs();
-      //   testResize();
-      //   testMovement();
-      // });
-      // // scroll detection
-      // addEvent(window, "scroll", scroll);
+      addEvent(window, "resize", resize);
+      // movement detection
+      setIntervalWithFalloff(function() {
+        testTruste();
+        testMs();
+        testResize();
+        testMovement();
+      });
+      // scroll detection
+      addEvent(window, "scroll", scroll);
       rendered = true;
     }
     /**
