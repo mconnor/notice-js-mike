@@ -2267,10 +2267,6 @@ var BAP =
 
       //div.innerHTML = div.innerHTML + icon;
       BAP.options[pageId].ad.innerHTML =  div.innerHTML + icon;
-      if (BAP.options[pageId].amzn) {
-
-
-
     }
 
     function showNoticeHelper(pageId) {
