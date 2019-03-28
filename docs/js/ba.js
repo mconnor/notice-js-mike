@@ -2266,7 +2266,7 @@ var BAP =
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
 
       //div.innerHTML = div.innerHTML + icon;
-      BAP.options[pageId].ad.innerHTML =  div.innerHTML + icon;
+      BAP.options[pageId].ad.innerHTML += icon;
     }
 
     function showNoticeHelper(pageId) {
