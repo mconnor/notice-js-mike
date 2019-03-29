@@ -922,14 +922,17 @@ var BAP =
     function testResize() {
       var pageId;
       for (pageId in BAP.options) {
-        noticePositionCalculate(pageId);
-        noticePosition(pageId);
-        repositionL2(pageId);
+        if (BAP.options[pageId].dm !== 3) {
+          noticePositionCalculate(pageId);
+          noticePosition(pageId);
+          repositionL2(pageId);
+        }
       }
     }
     function testMovement() {
       var b, pEl, el, pageId;
       for (pageId in BAP.options) {
+       if (BAP.options[pageId].dm !== 3) {
         b = BAP.options[pageId];
         if (b.dm === 5) {
           // skip iframes
@@ -2265,8 +2268,33 @@ var BAP =
       pageId + '" src="' + DOMAIN_ROOT + iconDir + "/box_" + iconWidth + "_" + 
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
 
-      //div.innerHTML = div.innerHTML + icon;
-      BAP.options[pageId].ad.innerHTML += icon;
+      if (BAP.options[pageId].dm === 3) {
+        BAP.options[pageId].ad.innerHTML += icon;
+        if (BAP.options[pageId].position === 'top-left') {
+          $("trigger-box-" + pageId).style.top = 0;
+          $("trigger-box-" + pageId).style.left = 0;
+          $("trigger-" + pageId).style.top = 0;
+          $("trigger-" + pageId).style.left = 0;
+        } else if (BAP.options[pageId].position === 'top-right') {
+          $("trigger-box-" + pageId).style.top = 0;
+          $("trigger-box-" + pageId).style.right = 0;
+          $("trigger-" + pageId).style.top = 0;
+          $("trigger-" + pageId).style.right = 0;
+        } else if (BAP.options[pageId].position === 'bottom-left') {
+          $("trigger-box-" + pageId).style.bottom = 0;
+          $("trigger-box-" + pageId).style.left = 0;
+          $("trigger-" + pageId).style.bottom = 0;
+          $("trigger-" + pageId).style.left = 0;
+        } else if (BAP.options[pageId].position === 'bottom-right') {
+          $("trigger-box-" + pageId).style.bottom = 0;
+          $("trigger-box-" + pageId).style.right = 0;
+          $("trigger-" + pageId).style.bottom = 0;
+          $("trigger-" + pageId).style.right = 0;
+        }
+      } else {
+        div.innerHTML = div.innerHTML + icon;
+      }
+     
     }
 
     function showNoticeHelper(pageId) {
