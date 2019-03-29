@@ -2268,7 +2268,7 @@ var BAP =
         icon +
         "</span>";
       icon = '<div id="trigger-container-' + pageId + 
-      '" style="position: static"><span id="trigger-box-' + 
+      '" style="position: static !important;"><span id="trigger-box-' + 
       pageId + 
       '" class="bap-trigger" style="' + z + "position:absolute;" + opacity + 
       "width:" + iconWidth + 'px;height:15px;"><img id="trigger-box-image-' + 
@@ -2276,41 +2276,47 @@ var BAP =
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
 
       if (BAP.options[pageId].dm === 3) {
-        BAP.options[pageId].ad.innerHTML += icon;
-        if (BAP.options[pageId].position === 'top-left') {
-          $("trigger-container-" + pageId).style.positon = 'relative';
-          $("trigger-container-" + pageId).style.height = '100%';
-          $("trigger-box-" + pageId).style.top = 0;
-          $("trigger-box-" + pageId).style.left = 0;
-          $("trigger-" + pageId).style.top = 0;
-          $("trigger-" + pageId).style.left = 0;
-        } else if (BAP.options[pageId].position === 'top-right') {
-          $("trigger-container-" + pageId).style.positon = 'relative';
-          $("trigger-container-" + pageId).style.height = '100%';
-          $("trigger-box-" + pageId).style.top = 0;
-          $("trigger-box-" + pageId).style.right = 0;
-          $("trigger-" + pageId).style.top = 0;
-          $("trigger-" + pageId).style.right = 0;
-        } else if (BAP.options[pageId].position === 'bottom-left') {
-          $("trigger-container-" + pageId).style.positon = 'relative';
-          $("trigger-container-" + pageId).style.height = '100%';
-          $("trigger-box-" + pageId).style.bottom = 0;
-          $("trigger-box-" + pageId).style.left = 0;
-          $("trigger-" + pageId).style.bottom = 0;
-          $("trigger-" + pageId).style.left = 0;
-        } else if (BAP.options[pageId].position === 'bottom-right') {
-          $("trigger-container-" + pageId).style.positon = 'relative';
-          $("trigger-container-" + pageId).style.height = '100%';
-          $("trigger-box-" + pageId).style.bottom = 0;
-          $("trigger-box-" + pageId).style.right = 0;
-          $("trigger-" + pageId).style.bottom = 0;
-          $("trigger-" + pageId).style.right = 0;
-        }
+        setTimeout(positionDM3(pageId),1000);
       } else {
         div.innerHTML = div.innerHTML + icon;
       }
      
     }
+
+    function positionDM3(pageId){
+      BAP.options[pageId].ad.innerHTML += icon;
+      if (BAP.options[pageId].position === 'top-left') {
+        $("trigger-container-" + pageId).style.positon = 'relative';
+        $("trigger-container-" + pageId).style.height = '100%';
+        $("trigger-box-" + pageId).style.top = 0;
+        $("trigger-box-" + pageId).style.left = 0;
+        $("trigger-" + pageId).style.top = 0;
+        $("trigger-" + pageId).style.left = 0;
+      } else if (BAP.options[pageId].position === 'top-right') {
+        $("trigger-container-" + pageId).style.positon = 'relative';
+        $("trigger-container-" + pageId).style.height = '100%';
+        $("trigger-box-" + pageId).style.top = 0;
+        $("trigger-box-" + pageId).style.right = 0;
+        $("trigger-" + pageId).style.top = 0;
+        $("trigger-" + pageId).style.right = 0;
+      } else if (BAP.options[pageId].position === 'bottom-left') {
+        $("trigger-container-" + pageId).style.positon = 'relative';
+        $("trigger-container-" + pageId).style.height = '100%';
+        $("trigger-box-" + pageId).style.bottom = 0;
+        $("trigger-box-" + pageId).style.left = 0;
+        $("trigger-" + pageId).style.bottom = 0;
+        $("trigger-" + pageId).style.left = 0;
+      } else if (BAP.options[pageId].position === 'bottom-right') {
+        $("trigger-container-" + pageId).style.positon = 'relative';
+        $("trigger-container-" + pageId).style.height = '100%';
+        $("trigger-box-" + pageId).style.bottom = 0;
+        $("trigger-box-" + pageId).style.right = 0;
+        $("trigger-" + pageId).style.bottom = 0;
+        $("trigger-" + pageId).style.right = 0;
+      }
+    }
+
+
 
     function showNoticeHelper(pageId) {
       // noticeMode is moved into process.
