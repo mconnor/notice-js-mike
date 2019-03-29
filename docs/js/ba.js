@@ -932,83 +932,85 @@ var BAP =
     function testMovement() {
       var b, pEl, el, pageId;
       for (pageId in BAP.options) {
-       if (BAP.options[pageId].dm !== 3) {
-        b = BAP.options[pageId];
-        if (b.dm === 5) {
-          // skip iframes
-          return;
-        } else if (b.dm === 6) {
-          // use pixel element
-          el = b.px;
-        } else {
-          // use ad element
-          el = b.ad;
-        }
-        // Occurs when the notice becomes detached, example: DV or TRUSTe or iVillage via MediaMind
-        pEl = el;
-        if (
-          !BAP.options[pageId].hidden &&
-          !BAP.options[pageId].detached &&
-          pEl
-        ) {
-          while (true) {
-            pEl = pEl.parentNode;
-            if (pEl === body) {
-              break;
+        if (BAP.options[pageId].dm !== 3) {
+          b = BAP.options[pageId];
+          if (b.dm === 5) {
+            // skip iframes
+            return;
+          } else if (b.dm === 6) {
+            // use pixel element
+            el = b.px;
+          } else {
+            // use ad element
+            el = b.ad;
+          }
+          // Occurs when the notice becomes detached, example: DV or TRUSTe or iVillage via MediaMind
+          pEl = el;
+          if (
+            !BAP.options[pageId].hidden &&
+            !BAP.options[pageId].detached &&
+            pEl
+          ) {
+            while (true) {
+              pEl = pEl.parentNode;
+              if (pEl === body) {
+                break;
+              }
+              if (pEl) {
+                continue;
+              } else {
+                BAPUtil.trace("[testMovement()] Found a detached element");
+                BAP.options[pageId].detached = true;
+                break;
+              }
             }
+          } else {
+            // TODO: this is a part of noticeMode.  Maybe move it out?
+            pEl = proximityDetection(
+              BAP.options[pageId].proximityId,
+              BAP.options[pageId].ad_w,
+              BAP.options[pageId].ad_h
+            );
+            pEl = pickChildLevel(
+              pEl,
+              BAP.options[pageId].ad_h,
+              BAP.options[pageId].ad_w
+            );
             if (pEl) {
-              continue;
-            } else {
-              BAPUtil.trace("[testMovement()] Found a detached element");
-              BAP.options[pageId].detached = true;
-              break;
+              BAP.options[pageId].ad = pEl;
             }
+            BAP.options[pageId].detached = false;
+            BAPUtil.trace("[testMovement()] Detached element re-anchored");
           }
-        } else {
-          // TODO: this is a part of noticeMode.  Maybe move it out?
-          pEl = proximityDetection(
-            BAP.options[pageId].proximityId,
-            BAP.options[pageId].ad_w,
-            BAP.options[pageId].ad_h
-          );
-          pEl = pickChildLevel(
-            pEl,
-            BAP.options[pageId].ad_h,
-            BAP.options[pageId].ad_w
-          );
-          if (pEl) {
-            BAP.options[pageId].ad = pEl;
+          // determine current visibility
+          if (
+            b.dm !== 6 &&
+            ((el.offsetWidth === 0 && el.offsetHeight === 0) ||
+              getStyle(el, "display") === "none")
+          ) {
+            BAP.options[pageId].hidden = true;
+          } else {
+            BAP.options[pageId].hidden = false;
           }
-          BAP.options[pageId].detached = false;
-          BAPUtil.trace("[testMovement()] Detached element re-anchored");
-        }
-        // determine current visibility
-        if (
-          b.dm !== 6 &&
-          ((el.offsetWidth === 0 && el.offsetHeight === 0) ||
-            getStyle(el, "display") === "none")
-        ) {
-          BAP.options[pageId].hidden = true;
-        } else {
-          BAP.options[pageId].hidden = false;
-        }
-        if (BAP.options[pageId].detached || BAP.options[pageId].hidden) {
-          BAPUtil.trace( "[testMovement()] Hiding notice due to the loss of anchor element");
-          hidePopup(pageId);
-          $("trigger-container-" + pageId).style.display = "none";
-          continue;
-        } else {
-          $("trigger-container-" + pageId).style.display = "";
-        }
-        try {
-          var p = _offset(el);
-          if (p.top !== b.pxt || p.left !== b.pxl) {
-            // check current offset against stored values. if either differ, redraw!
+          if (BAP.options[pageId].detached || BAP.options[pageId].hidden) {
+            BAPUtil.trace( "[testMovement()] Hiding notice due to the loss of anchor element");
             hidePopup(pageId);
-            noticePositionCalculate(pageId);
-            noticePosition(pageId);
+            $("trigger-container-" + pageId).style.display = "none";
+            continue;
+          } else {
+            $("trigger-container-" + pageId).style.display = "";
           }
-        } catch (e) {}
+          try {
+            var p = _offset(el);
+            if (p.top !== b.pxt || p.left !== b.pxl) {
+              // check current offset against stored values. if either differ, redraw!
+              hidePopup(pageId);
+              noticePositionCalculate(pageId);
+              noticePosition(pageId);
+            }
+          } catch (e) {
+          }
+        }
       }
     }
     function resize() {
@@ -1800,8 +1802,8 @@ var BAP =
       pixelTop  =  y postion of the pixel dropped by durly (4.gif)
       */
       var posTop,
-        posLeft,
-        pixLeft,
+        posLeft, posRight,
+        pixLeft, posBottom,
         pixTop,
         spotLeft,
         spotTop,
@@ -1815,10 +1817,15 @@ var BAP =
       } else if (BAP.options[pageId].dm === 3) {
         spotWidth = BAP.options[pageId].ad.clientWidth;
         spotHeight = BAP.options[pageId].ad.clientHeight;
+
+        
         pixLeft = _offset(ad).left;
         pixTop = _offset(ad).top;
         spotLeft = pixLeft;
         spotTop = pixTop;
+
+
+
       } else if (/^(1|2|4|4.1|4.2|7|8|9)$/.test(BAP.options[pageId].dm)) {
         spotWidth = BAP.options[pageId].ad.clientWidth;
         spotHeight = BAP.options[pageId].ad.clientHeight;
