@@ -2268,7 +2268,7 @@ var BAP =
         icon +
         "</span>";
       icon = '<div id="trigger-container-' + pageId + 
-      '" style="position: static !important;"><span id="trigger-box-' + 
+      '" style="position: static"><span id="trigger-box-' + 
       pageId + 
       '" class="bap-trigger" style="' + z + "position:absolute;" + opacity + 
       "width:" + iconWidth + 'px;height:15px;"><img id="trigger-box-image-' + 
