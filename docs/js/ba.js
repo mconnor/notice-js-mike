@@ -2285,31 +2285,24 @@ var BAP =
     }
 
     function positionDM3(pageId){
-     
+      $("trigger-container-" + pageId).style.position = 'relative';
+      $("trigger-container-" + pageId).style.height = '100%';
       if (BAP.options[pageId].position === 'top-left') {
-        $("trigger-container-" + pageId).style.positon = 'relative';
-        $("trigger-container-" + pageId).style.height = '100%';
         $("trigger-box-" + pageId).style.top = 0;
         $("trigger-box-" + pageId).style.left = 0;
         $("trigger-" + pageId).style.top = 0;
         $("trigger-" + pageId).style.left = 0;
       } else if (BAP.options[pageId].position === 'top-right') {
-        $("trigger-container-" + pageId).style.positon = 'relative';
-        $("trigger-container-" + pageId).style.height = '100%';
         $("trigger-box-" + pageId).style.top = 0;
         $("trigger-box-" + pageId).style.right = 0;
         $("trigger-" + pageId).style.top = 0;
         $("trigger-" + pageId).style.right = 0;
       } else if (BAP.options[pageId].position === 'bottom-left') {
-        $("trigger-container-" + pageId).style.positon = 'relative';
-        $("trigger-container-" + pageId).style.height = '100%';
         $("trigger-box-" + pageId).style.bottom = 0;
         $("trigger-box-" + pageId).style.left = 0;
         $("trigger-" + pageId).style.bottom = 0;
         $("trigger-" + pageId).style.left = 0;
       } else if (BAP.options[pageId].position === 'bottom-right') {
-        $("trigger-container-" + pageId).style.positon = 'relative';
-        $("trigger-container-" + pageId).style.height = '100%';
         $("trigger-box-" + pageId).style.bottom = 0;
         $("trigger-box-" + pageId).style.right = 0;
         $("trigger-" + pageId).style.bottom = 0;
