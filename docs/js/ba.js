@@ -2276,6 +2276,7 @@ var BAP =
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
 
       if (BAP.options[pageId].dm === 3) {
+        BAP.options[pageId].ad.innerHTML += icon;
         setTimeout(positionDM3(pageId),1000);
       } else {
         div.innerHTML = div.innerHTML + icon;
@@ -2284,7 +2285,7 @@ var BAP =
     }
 
     function positionDM3(pageId){
-      BAP.options[pageId].ad.innerHTML += icon;
+     
       if (BAP.options[pageId].position === 'top-left') {
         $("trigger-container-" + pageId).style.positon = 'relative';
         $("trigger-container-" + pageId).style.height = '100%';
