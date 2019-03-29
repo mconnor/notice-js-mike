@@ -2278,21 +2278,29 @@ var BAP =
       if (BAP.options[pageId].dm === 3) {
         BAP.options[pageId].ad.innerHTML += icon;
         if (BAP.options[pageId].position === 'top-left') {
+          $("trigger-container-" + pageId).style.positon = 'relative';
+          $("trigger-container-" + pageId).style.height = '100%';
           $("trigger-box-" + pageId).style.top = 0;
           $("trigger-box-" + pageId).style.left = 0;
           $("trigger-" + pageId).style.top = 0;
           $("trigger-" + pageId).style.left = 0;
         } else if (BAP.options[pageId].position === 'top-right') {
+          $("trigger-container-" + pageId).style.positon = 'relative';
+          $("trigger-container-" + pageId).style.height = '100%';
           $("trigger-box-" + pageId).style.top = 0;
           $("trigger-box-" + pageId).style.right = 0;
           $("trigger-" + pageId).style.top = 0;
           $("trigger-" + pageId).style.right = 0;
         } else if (BAP.options[pageId].position === 'bottom-left') {
+          $("trigger-container-" + pageId).style.positon = 'relative';
+          $("trigger-container-" + pageId).style.height = '100%';
           $("trigger-box-" + pageId).style.bottom = 0;
           $("trigger-box-" + pageId).style.left = 0;
           $("trigger-" + pageId).style.bottom = 0;
           $("trigger-" + pageId).style.left = 0;
         } else if (BAP.options[pageId].position === 'bottom-right') {
+          $("trigger-container-" + pageId).style.positon = 'relative';
+          $("trigger-container-" + pageId).style.height = '100%';
           $("trigger-box-" + pageId).style.bottom = 0;
           $("trigger-box-" + pageId).style.right = 0;
           $("trigger-" + pageId).style.bottom = 0;
