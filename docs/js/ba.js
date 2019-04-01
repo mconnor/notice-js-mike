@@ -2286,9 +2286,11 @@ var BAP =
     }
 
     function positionDM3(pageId){
+      $("trigger-container-" + pageId).style.all = 'unset';
+      $("trigger-box-" + pageId).style.all = 'unset';
+      $("trigger-" + pageId).style.all = 'unset';
       $("trigger-box-" + pageId).style.position = 'absolute';
       $("trigger-" + pageId).style.position = 'absolute';
-
       $("trigger-container-" + pageId).style.position = 'absolute';
       $("trigger-container-" + pageId).style.top =  '0';
       $("trigger-container-" + pageId).style.left =  '0';
@@ -2308,7 +2310,7 @@ var BAP =
         $("trigger-box-" + pageId).style.bottom = '0';
         $("trigger-box-" + pageId).style.left = '0';
         $("trigger-" + pageId).style.bottom = '0';
-        $("trigger-" + pageId).style.left = '0';;
+        $("trigger-" + pageId).style.left = '0';
       } else if (BAP.options[pageId].position === 'bottom-right') {
         $("trigger-box-" + pageId).style.bottom = '0';
         $("trigger-box-" + pageId).style.right = '0';
