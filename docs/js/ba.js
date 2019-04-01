@@ -2276,7 +2276,7 @@ var BAP =
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
       
       const ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-      if (BAP.options[pageId].dm === 3 && (ad_css_position === 'relatvie' || ad_css_position === 'absolute')) {
+      if (BAP.options[pageId].dm === 3 && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
         BAP.options[pageId].ad.innerHTML += icon;
         setTimeout(positionDM3(pageId),1000);
       } else {
