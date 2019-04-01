@@ -2274,8 +2274,9 @@ var BAP =
       "width:" + iconWidth + 'px;height:15px;"><img id="trigger-box-image-' + 
       pageId + '" src="' + DOMAIN_ROOT + iconDir + "/box_" + iconWidth + "_" + 
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
-
-      if (BAP.options[pageId].dm === 3) {
+      
+      const ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
+      if (BAP.options[pageId].dm === 3 && (ad_css_position === 'relatvie' || ad_css_position === 'absolute')) {
         BAP.options[pageId].ad.innerHTML += icon;
         setTimeout(positionDM3(pageId),1000);
       } else {
