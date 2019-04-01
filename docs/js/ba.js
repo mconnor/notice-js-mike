@@ -2286,9 +2286,11 @@ var BAP =
     }
 
     function positionDM3(pageId){
-      $("trigger-container-" + pageId).style.all = 'unset';
-      $("trigger-box-" + pageId).style.all = 'unset';
-      $("trigger-" + pageId).style.all = 'unset';
+      $("trigger-box-" + pageId).style.top = 'unset';
+      $("trigger-" + pageId).style.top = 'unset';
+      $("trigger-box-" + pageId).style.left = 'unset';
+      $("trigger-" + pageId).style.left = 'unset';
+      
       $("trigger-box-" + pageId).style.position = 'absolute';
       $("trigger-" + pageId).style.position = 'absolute';
       $("trigger-container-" + pageId).style.position = 'absolute';
