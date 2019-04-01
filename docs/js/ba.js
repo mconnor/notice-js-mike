@@ -1776,13 +1776,26 @@ var BAP =
      * This method positions the notice.
      */
     function noticePosition(pageId) {
+
+     if ( BAP.options[pageId].dm !==3) {
       var t = $("trigger-" + pageId),
-        tc = $("trigger-box-" + pageId);
+      tc = $("trigger-box-" + pageId);
       t.style.top = BAP.options[pageId].posTop + "px";
       t.style.left = BAP.options[pageId].posLeft + "px";
       tc.style.top = BAP.options[pageId].posTop + "px";
       tc.style.left = BAP.options[pageId].posLeft + "px";
+     }
+     
     }
+
+
+    function noticePositionCalculateRedux(pageId) {
+/// here we will position the icon once inside the ad,
+// pinning it to the corner
+
+
+    }
+
     /**
      * This method calculates new notice location points based on the mode
      * that the notice is in.
