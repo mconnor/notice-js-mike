@@ -922,7 +922,7 @@ var BAP =
     function testResize() {
       var pageId;
       for (pageId in BAP.options) {
-        if (BAP.options[pageId].dm !== 3 && BAP.options[pageId].dm !== 7) {
+        if (BAP.options[pageId].dm !== 3) {
           noticePositionCalculate(pageId);
           noticePosition(pageId);
           repositionL2(pageId);
@@ -932,7 +932,7 @@ var BAP =
     function testMovement() {
       var b, pEl, el, pageId;
       for (pageId in BAP.options) {
-        if (BAP.options[pageId].dm !== 3 && BAP.options[pageId].dm !== 7) {
+        if (BAP.options[pageId].dm !== 3) {
           b = BAP.options[pageId];
           if (b.dm === 5) {
             // skip iframes
@@ -1005,6 +1005,7 @@ var BAP =
             if (p.top !== b.pxt || p.left !== b.pxl) {
               // check current offset against stored values. if either differ, redraw!
               hidePopup(pageId);
+              
               noticePositionCalculate(pageId);
               noticePosition(pageId);
             }
@@ -1777,7 +1778,7 @@ var BAP =
      */
     function noticePosition(pageId) {
 
-     if ( BAP.options[pageId].dm !== 3 && BAP.options[pageId].dm !== 7) {
+     if ( BAP.options[pageId].dm !== 3) {
       var t = $("trigger-" + pageId),
       tc = $("trigger-box-" + pageId);
       t.style.top = BAP.options[pageId].posTop + "px";
@@ -2058,7 +2059,7 @@ var BAP =
           }
         } catch (e) {}
       }
-      if (dm === 3 || dm === 7) {
+      if (dm === 3) {
         // validate if the level of notice is correct by looking into children
         ad = pickChildLevel(ad, spotHeight, spotWidth);
       }
@@ -2289,7 +2290,7 @@ var BAP =
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
       
       var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-      if ((BAP.options[pageId].dm === 3 || BAP.options[pageId].dm === 7) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+      if ((BAP.options[pageId].dm === 3) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
         BAP.options[pageId].ad.innerHTML += icon;
         setTimeout(positionDM3(pageId),1000);
       } else {
