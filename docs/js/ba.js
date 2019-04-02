@@ -2112,7 +2112,7 @@ var BAP =
          * Added for the case when detection is not executed within an iframe,
          * but the frame contents are also set pretty high up in the depth index
          */
-      if (dm === 5) {
+      if (dm === 5 || dm === 3) {
         BAP.options[pageId].ad_z = 9990;
       }
       /**
