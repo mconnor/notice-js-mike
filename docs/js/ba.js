@@ -922,7 +922,7 @@ var BAP =
     function testResize() {
       var pageId;
       for (pageId in BAP.options) {
-        if (BAP.options[pageId].dm !== 3 || BAP.options[pageId].dm !== 7) {
+        if (BAP.options[pageId].dm !== 3 && BAP.options[pageId].dm !== 7) {
           noticePositionCalculate(pageId);
           noticePosition(pageId);
           repositionL2(pageId);
@@ -932,7 +932,7 @@ var BAP =
     function testMovement() {
       var b, pEl, el, pageId;
       for (pageId in BAP.options) {
-        if (BAP.options[pageId].dm !== 3 || BAP.options[pageId].dm !== 7) {
+        if (BAP.options[pageId].dm !== 3 && BAP.options[pageId].dm !== 7) {
           b = BAP.options[pageId];
           if (b.dm === 5) {
             // skip iframes
