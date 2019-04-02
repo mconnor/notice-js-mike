@@ -1777,7 +1777,7 @@ var BAP =
      */
     function noticePosition(pageId) {
 
-     if ( BAP.options[pageId].dm !==3) {
+     if ( BAP.options[pageId].dm !== 3 && BAP.options[pageId].dm !== 7) {
       var t = $("trigger-" + pageId),
       tc = $("trigger-box-" + pageId);
       t.style.top = BAP.options[pageId].posTop + "px";
