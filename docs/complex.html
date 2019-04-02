@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header, footer, div {
+            width: 600px;
+            border: 1px solid black;
+        }
+        .ad {
+            width: 150px;
+            height: 100px;
+            background-color: gray;
+            position: relative;
+            margin-bottom: 4px;
+        }
+
+        .ad p {
+            width: 140px;
+            font-family: sans-serif;
+            font-size: 8px;
+        }
+
+        #wrapper {
+            background-color: aquamarine;
+        }
+
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        Ad dm == 7 here in this dom layout which is only slightly more complex.  Icons is placed absolutely in div.#BAP-holder.
+    </header>
+    <div>
+        <div>
+            <div class='ad'>
+                <a href="http://www.ibm.com">
+                    <img border="0" src="//via.placeholder.com/100x75png" />
+                </a>
+            </div>
+            <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=150x100;position=top-right"></script>
+        </div>
+
+    </div>
+    <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium tempore ratione, esse accusamus in tempora autem! Veniam, corrupti rerum sit illum eveniet voluptatem ducimus. Esse ipsa sequi odit? Accusamus, fugit?</footer>
+
+    <script>
+        (function() {
+            var placeholders = document.querySelectorAll(".ad");
+            Array.from(placeholders).map(placeholder => {
+                placeholder.addEventListener('mouseover', function(e) {
+                    placeholder.style.width = '200px';
+                });
+                placeholder.addEventListener('mouseout', function(e) {
+                    placeholder.style.width = '150px';
+                });
+            })
+        })();
+    </script>
+</body>
+
+</html>
