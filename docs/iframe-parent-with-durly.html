@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #myframe2,
+        #myframe3,
+        #myframe4 {
+            position: relative;
+
+            top: 20px;
+        }
+
+        aside {
+            position: relative;
+            left: 200px;
+            top: 0;
+        }
+        p {
+            font-size: .5em;
+    font-family: sans-serif;
+    border: 1px solid black;
+    width: 290px;
+        }
+
+        /* body {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        } */
+    </style>
+</head>
+
+<body>
+<p>Icon script applied here - exterior to ifames. 
+    Not an ideal approach. Fails when dom lay out gets more complex.
+</p>
+
+    <div>
+        <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
+       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, rerum quaerat, ipsa inventore magnam dolor facere deserunt ea dignissimos hic culpa libero doloremque eum maxime atque porro ipsum. Hic, exercitationem.</p>
+        <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=top-left"></script>
+    </div>
+
+
+    <div>
+        <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
+        <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=top-right"></script>
+    </div>
+
+    <div>
+        <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
+        <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=bottom-left"></script>
+    </div>
+    <div>
+        <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
+        <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=bottom-right"></script>
+    </div>
+
+
+
+</body>
+
+</html>

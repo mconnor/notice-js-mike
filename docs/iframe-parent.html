@@ -28,14 +28,19 @@
             position: relative;
         }
 
-        .sidebar {
+        aside {
             position: relative;
+
 
         }
 
-        .main {
+        main {
             display: flex;
             flex-direction: row;
+        }
+
+        .main-copy {
+            width: 400px;
         }
     </style>
 </head>
@@ -45,11 +50,11 @@
     <nav>LOREM | IPSUM | DOLOR | SIT</nav>
     <div>
 
-        <div class="main">
-            <div>
+        <main>
+            <div class="main-copy">
                 <section>
-                    <h1>Section 1</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum tempore quas molestiae dicta natus cupiditate rem ratione quis enim, corporis quos, neque qui quam laudantium tenetur laborum ad adipisci sit.</p>
+                    <h1>Iframes containing durly</h1>
+                    <p>Durly applied <b>inside</b> of the iframe. DM = 5</p>
                 </section>
                 <section>
                     <h1>Section 2</h1>
@@ -57,16 +62,16 @@
                 </section>
             </div>
 
-            <aside class=sidebar>
-                    
-                    <iframe src="./iframe-ad-tl.html" frameborder="0" width="500" height="300" scrolling="no"></iframe>
-                    <iframe src="./iframe-ad-tr.html" frameborder="0" width="500" height="300" scrolling="no"></iframe>
-                    <iframe src="./iframe-ad-bl.html" frameborder="0" width="500" height="300" scrolling="no"></iframe>
-                    <iframe src="./iframe-ad-br.html" frameborder="0" width="500" height="300" scrolling="no"></iframe>
-                
+            <aside>
+
+                <iframe src="./iframe-ad-tl.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
+                <iframe src="./iframe-ad-tr.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
+                <iframe src="./iframe-ad-bl.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
+                <iframe src="./iframe-ad-br.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
+
             </aside>
 
-        </div>
+        </main>
 
     </div>
 
