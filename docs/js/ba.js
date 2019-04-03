@@ -1777,9 +1777,7 @@ var BAP =
      * This method positions the notice.
      */
     function noticePosition(pageId) {
-
-      var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-      if ((BAP.options[pageId].dm === 3) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+      if ( BAP.options[pageId].dm !== 3) {
         var t = $("trigger-" + pageId),
         tc = $("trigger-box-" + pageId);
         t.style.top = BAP.options[pageId].posTop + "px";
