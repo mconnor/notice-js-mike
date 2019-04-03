@@ -1780,12 +1780,12 @@ var BAP =
 
       var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
       if ((BAP.options[pageId].dm === 3) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
-      var t = $("trigger-" + pageId),
-      tc = $("trigger-box-" + pageId);
-      t.style.top = BAP.options[pageId].posTop + "px";
-      t.style.left = BAP.options[pageId].posLeft + "px";
-      tc.style.top = BAP.options[pageId].posTop + "px";
-      tc.style.left = BAP.options[pageId].posLeft + "px";
+        var t = $("trigger-" + pageId),
+        tc = $("trigger-box-" + pageId);
+        t.style.top = BAP.options[pageId].posTop + "px";
+        t.style.left = BAP.options[pageId].posLeft + "px";
+        tc.style.top = BAP.options[pageId].posTop + "px";
+        tc.style.left = BAP.options[pageId].posLeft + "px";
      }
      
     }
