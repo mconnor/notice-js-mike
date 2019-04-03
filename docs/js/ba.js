@@ -2288,13 +2288,19 @@ var BAP =
       pageId + '" src="' + DOMAIN_ROOT + iconDir + "/box_" + iconWidth + "_" + 
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
       
-      var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-      if ((BAP.options[pageId].dm === 3) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
-        BAP.options[pageId].ad.innerHTML += icon;
-        setTimeout(positionDM3(pageId),1000);
-      } else {
+      try {
+        var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
+        if (BAP.options[pageId].dm === 3 && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+          BAP.options[pageId].ad.innerHTML += icon;
+          setTimeout(positionDM3(pageId),1000);
+        } else {
+          div.innerHTML = div.innerHTML + icon;
+        }
+      } catch (e) {
         div.innerHTML = div.innerHTML + icon;
       }
+     
+      
      
     }
 
