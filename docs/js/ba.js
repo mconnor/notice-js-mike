@@ -2298,7 +2298,9 @@ var BAP =
         if (BAP.options[pageId].dm === 3 && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
           var _iconDomElement = document.createElement('div');
           _iconDomElement.innerHTML += icon;
+          _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
           BAP.options[pageId].ad.appendChild(_iconDomElement);
+          
           setTimeout(positionDM3(pageId),1000);
         } else {
           div.innerHTML = div.innerHTML + icon;
