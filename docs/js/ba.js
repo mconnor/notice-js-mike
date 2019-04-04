@@ -2296,7 +2296,9 @@ var BAP =
       try {
         var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
         if (BAP.options[pageId].dm === 3 && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
-          BAP.options[pageId].ad.innerHTML += icon;
+          var _iconDomElement = document.createElement(icon);
+          BAP.options[pageId].appendChild(_iconDomElement);
+         // BAP.options[pageId].ad.innerHTML += icon;
           setTimeout(positionDM3(pageId),1000);
         } else {
           div.innerHTML = div.innerHTML + icon;
