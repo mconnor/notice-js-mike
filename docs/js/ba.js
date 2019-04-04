@@ -2322,8 +2322,11 @@ var BAP =
       var _iconDomElement = document.createElement('div');
       _iconDomElement.innerHTML += icon;
       _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
-      BAP.options[pageId].ad.appendChild(_iconDomElement);
-      
+      if (BAP.options[pageId].dm === 5) {
+        document.appendChild(_iconDomElement);
+      } else {
+        BAP.options[pageId].ad.appendChild(_iconDomElement);
+      }
       setTimeout(positionDM3(pageId),1000);
     }
 
