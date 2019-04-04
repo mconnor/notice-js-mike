@@ -1828,8 +1828,8 @@ var BAP =
       pixelTop  =  y postion of the pixel dropped by durly (4.gif)
       */
       var posTop,
-        posLeft, posRight,
-        pixLeft, posBottom,
+        posLeft,
+        pixLeft,
         pixTop,
         spotLeft,
         spotTop,
@@ -2303,7 +2303,7 @@ var BAP =
 
       if (BAP.options[pageId].dm === 5) { 
         // iframe containing druly
-        appenIconToAd(pageId, icon);
+        div.innerHTML = div.innerHTML + icon;
       } else  {
         try {
           var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
