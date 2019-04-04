@@ -1782,7 +1782,7 @@ var BAP =
      * This method positions the notice.
      */
     function noticePosition(pageId) {
-      if ( BAP.options[pageId].dm !== 3) {
+      if (!isNonTimerDm(BAP.options[pageId].dm)) {
         var t = $("trigger-" + pageId),
         tc = $("trigger-box-" + pageId);
         t.style.top = BAP.options[pageId].posTop + "px";
