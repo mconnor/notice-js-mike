@@ -2303,12 +2303,12 @@ var BAP =
 
       if (BAP.options[pageId].dm === 5) { 
         // iframe containing druly
-        appenIconToAd(pageId);
+        appenIconToAd(pageId, icon);
       } else  {
         try {
           var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
           if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
-            appenIconToAd(pageId);
+            appenIconToAd(pageId, icon);
           } else {
             div.innerHTML = div.innerHTML + icon;
           }
@@ -2318,10 +2318,14 @@ var BAP =
       }
     }
 
-    function appenIconToAd(pageId){
+    function appenIconToAd(pageId, icon){
       var _iconDomElement = document.createElement('div');
       _iconDomElement.innerHTML += icon;
-      _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
+      try {
+        _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
+      } catch(e) {
+        console.warn(e.message)
+      }
       if (BAP.options[pageId].dm === 5) {
         document.appendChild(_iconDomElement);
       } else {
