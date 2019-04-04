@@ -2348,7 +2348,7 @@ var BAP =
       $("trigger-container-" + pageId).style.left =  '0';
       $("trigger-container-" + pageId).style.width =  '100%';
       $("trigger-container-" + pageId).style.height = '100%';
-      $("trigger-container-" + pageId).style.zIndex = '10000';
+      $("trigger-container-" + pageId).style.zIndex = '9990';
       if (BAP.options[pageId].position === 'top-left') {
         $("trigger-box-" + pageId).style.top = '0';
         $("trigger-box-" + pageId).style.left = '0';
