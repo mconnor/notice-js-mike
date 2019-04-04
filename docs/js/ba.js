@@ -1353,7 +1353,12 @@ var BAP =
     }
 
     function nodeAcceptCheck(el) {
-      return /DIV|IMG|EMBED|OBJECT|IFRAME|CANVAS|VIDEO|svg|ARTICLE|MAIN|ASIDE|FIGURE|NAV|SECTION/.test(
+      return /DIV|IMG|EMBED|OBJECT|IFRAME|VIDEO|svg|ARTICLE|MAIN|ASIDE|FIGURE|NAV|SECTION/.test(
+        el.nodeName
+      );
+    }
+    function nodeIsContainer(el) {
+      return /DIV|ARTICLE|MAIN|ASIDE|FIGURE|NAV|SECTION/.test(
         el.nodeName
       );
     }
