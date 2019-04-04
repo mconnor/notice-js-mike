@@ -922,8 +922,7 @@ var BAP =
     function testResize() {
       var pageId;
       for (pageId in BAP.options) {
-        var nonTimerDm = (BAP.options[pageId].dm === 3 || BAP.options[pageId].dm === 9);
-        if (!nonTimerDm) {
+        if (!isNonTimerDm(BAP.options[pageId].dm)) {
           noticePositionCalculate(pageId);
           noticePosition(pageId);
           repositionL2(pageId);
@@ -1794,6 +1793,14 @@ var BAP =
      
     }
 
+    function isNonTimerDm(_dm){
+      if (_dm === 3 || _dm === 9){
+        return true;
+      } else {
+        return false;
+      }
+    }
+
 
     function noticePositionCalculateRedux(pageId) {
 /// here we will position the icon once inside the ad,
@@ -2296,8 +2303,7 @@ var BAP =
       
       try {
         var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-        var nonTimerDm = (BAP.options[pageId].dm === 3 || BAP.options[pageId].dm === 9);
-        if (nonTimerDm && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+        if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
           var _iconDomElement = document.createElement('div');
           _iconDomElement.innerHTML += icon;
           _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
