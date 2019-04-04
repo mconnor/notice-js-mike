@@ -922,7 +922,8 @@ var BAP =
     function testResize() {
       var pageId;
       for (pageId in BAP.options) {
-        if (BAP.options[pageId].dm !== 3) {
+        var nonTimerDm = (BAP.options[pageId].dm === 3 || BAP.options[pageId].dm === 9);
+        if (!nonTimerDm) {
           noticePositionCalculate(pageId);
           noticePosition(pageId);
           repositionL2(pageId);
