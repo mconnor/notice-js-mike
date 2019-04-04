@@ -2300,23 +2300,22 @@ var BAP =
       "width:" + iconWidth + 'px;height:15px;"><img id="trigger-box-image-' + 
       pageId + '" src="' + DOMAIN_ROOT + iconDir + "/box_" + iconWidth + "_" + 
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
-      
-      try {
-        var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position
-        if (BAP.options[pageId].dm === 5) {
-          // durly inside an iframe
-          appenIconToAd(pageId);
-        } else if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
-          appenIconToAd(pageId);
-        } else {
+
+      if (BAP.options[pageId].dm === 5) { 
+        // iframe containing druly
+        appenIconToAd(pageId);
+      } else  {
+        try {
+          var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
+          if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+            appenIconToAd(pageId);
+          } else {
+            div.innerHTML = div.innerHTML + icon;
+          }
+        } catch (e) {
           div.innerHTML = div.innerHTML + icon;
         }
-      } catch (e) {
-        div.innerHTML = div.innerHTML + icon;
       }
-     
-      
-     
     }
 
     function appenIconToAd(pageId){
