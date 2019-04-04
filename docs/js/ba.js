@@ -2304,6 +2304,7 @@ var BAP =
       if (BAP.options[pageId].dm === 5) { 
         // iframe containing druly
         div.innerHTML = div.innerHTML + icon;
+        setTimeout(positionDM3(pageId),1000);
       } else  {
         try {
           var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
