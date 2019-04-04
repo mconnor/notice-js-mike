@@ -2295,7 +2295,8 @@ var BAP =
       
       try {
         var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-        if (BAP.options[pageId].dm === 3 && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+        var nonTimerDm = (BAP.options[pageId].dm === 3 || BAP.options[pageId].dm === 9);
+        if (nonTimerDm && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
           var _iconDomElement = document.createElement('div');
           _iconDomElement.innerHTML += icon;
           _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
