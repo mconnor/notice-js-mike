@@ -2302,14 +2302,12 @@ var BAP =
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
       
       try {
-        var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-        if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
-          var _iconDomElement = document.createElement('div');
-          _iconDomElement.innerHTML += icon;
-          _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
-          BAP.options[pageId].ad.appendChild(_iconDomElement);
-          
-          setTimeout(positionDM3(pageId),1000);
+        var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position
+        if (BAP.options[pageId].dm === 5) {
+          // durly inside an iframe
+          appenIconToAd(pageId);
+        } else if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+          appenIconToAd(pageId);
         } else {
           div.innerHTML = div.innerHTML + icon;
         }
@@ -2319,6 +2317,15 @@ var BAP =
      
       
      
+    }
+
+    function appenIconToAd(pageId){
+      var _iconDomElement = document.createElement('div');
+      _iconDomElement.innerHTML += icon;
+      _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
+      BAP.options[pageId].ad.appendChild(_iconDomElement);
+      
+      setTimeout(positionDM3(pageId),1000);
     }
 
     function positionDM3(pageId){
@@ -2334,6 +2341,7 @@ var BAP =
       $("trigger-container-" + pageId).style.left =  '0';
       $("trigger-container-" + pageId).style.width =  '100%';
       $("trigger-container-" + pageId).style.height = '100%';
+      $("trigger-container-" + pageId).style.zIndex = '10000';
       if (BAP.options[pageId].position === 'top-left') {
         $("trigger-box-" + pageId).style.top = '0';
         $("trigger-box-" + pageId).style.left = '0';
