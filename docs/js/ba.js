@@ -1353,7 +1353,7 @@ var BAP =
     }
 
     function nodeAcceptCheck(el) {
-      return /DIV|IMG|EMBED|OBJECT|IFRAME|VIDEO|svg|ARTICLE|MAIN|ASIDE|FIGURE|NAV|SECTION/.test(
+      return /DIV|IMG|EMBED|OBJECT|IFRAME|CANVAS|VIDEO|svg|ARTICLE|MAIN|ASIDE|FIGURE|NAV|SECTION/.test(
         el.nodeName
       );
     }
@@ -1379,10 +1379,10 @@ var BAP =
             if (!isValidElement(_[o])) {
               continue;
             }
-            if (checkElement(_[o], spotHeight, spotWidth)) {
+            if (checkElement(_[o], spotHeight, spotWidth) && nodeIsContainer(_[o])) {
               return _[o];
               /*jsl:ignore*/
-            } else if ((q = checkChildren(_[o], spotHeight, spotWidth))) {
+            } else if ((q = checkChildren(_[o], spotHeight, spotWidth)) && nodeIsContainer(_[o]) ) {
               /*jsl:end*/
               return q;
             }
