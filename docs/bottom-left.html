@@ -6,22 +6,30 @@
 
     <link rel="stylesheet" href="./style.css">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </head>
 
 <body>
 
-
     <h1>Bottom Left Icon</h1>
-
     <div id="slider"></div>
-    <a href="http://www.ibm.com">
-        <img id="myImg" border="0" width="300" height="250" src="//via.placeholder.com/300x250.png" onmouseover="javascript:document.getElementById('myImg').style.width = '600px';"
-            onmouseout="javascript:document.getElementById('myImg').style.width = '300px';" />
-    </a>
-    <script type="text/javascript" src="//staging.betrad.com/durly.js?;coid=242;nid=110505;ad_w=300;ad_h=250;position=bottom-left"></script>
-    <pre>pulled from:
-//staging.betrad.com/durly.js?;coid=242;nid=110505;ad_w=300;ad_h=250;position=bottom-left</pre>
+
+    <div id='container'>
+
+        <a href="http://www.ibm.com">
+            <canvas id="mycanvas" width="400" height="250"></canvas>
+
+        </a>
+    </div>
+
+    <script id='resizeDemo' type="text/javascript" src="./resize-ad-demo.js?ad_w=400&ad_h=250"></script>
+
+    <script data-name="durly" type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_w=400;ad_h=250;position=bottom-left"></script>
+
+
 </body>
 
 </html>

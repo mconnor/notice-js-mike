@@ -20,48 +20,74 @@
             left: 200px;
             top: 0;
         }
+
         p {
             font-size: .5em;
-    font-family: sans-serif;
-    border: 1px solid black;
-    width: 290px;
+            font-family: sans-serif;
+            border: 1px solid black;
+            width: 290px;
+            
         }
 
-        /* body {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        } */
+        
     </style>
 </head>
 
 <body>
-<p>Icon script applied here - exterior to ifames. 
-    Not an ideal approach. Fails when dom lay out gets more complex.
-</p>
+    <p>Icon script applied here - exterior to ifames.
+        Not an ideal approach. Fails when dom lay out gets more complex.
+    </p>
 
     <div>
         <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
-       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo, rerum quaerat, ipsa inventore magnam dolor facere deserunt ea dignissimos hic culpa libero doloremque eum maxime atque porro ipsum. Hic, exercitationem.</p>
+        <p>Icon script applied here - exterior to ifames.
+            Not an ideal approach. Fails when dom lay out gets more complex.
+        </p>
         <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=top-left"></script>
     </div>
 
 
     <div>
         <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
+        <p>Icon script applied here - exterior to ifames.
+            Not an ideal approach. Fails when dom lay out gets more complex.
+        </p>
         <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=top-right"></script>
     </div>
 
     <div>
         <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
+        <p>Icon script applied here - exterior to ifames.
+            Not an ideal approach. Fails when dom lay out gets more complex.
+        </p>
         <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=bottom-left"></script>
     </div>
     <div>
         <iframe id="myframe1" src="./iframe-ad.html" frameborder="0" width="300" height="200" scrolling="no"></iframe>
+        <p>Icon script applied here - exterior to ifames.
+            Not an ideal approach. Fails when dom lay out gets more complex.
+        </p>
         <script type="text/javascript" src="./surly/durly.js?;coid=242;nid=64564;ad_wxh=300x200;position=bottom-right"></script>
     </div>
+    <script>
+        (function() {
+            (function() {
+                var ads = document.querySelectorAll("iframe");
+
+                ads.forEach(ad => {
+                    ad.addEventListener('mouseover', function(e) {
+                        ad.style.width = '400px';
+                    });
+                    ad.addEventListener('mouseout', function(e) {
+                        ad.style.width = '300px';
+                    });
+                })
 
 
+
+            })();
+        })();
+    </script>
 
 </body>
 
