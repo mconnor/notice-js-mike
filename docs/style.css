@@ -1,17 +1,15 @@
 .container {
   background-color: lightcoral;
   border: 1px solid green;
-
-  width:990px;
+  position: relative;
 }
 
 #container {
   background-color: lightcoral;
   border: 1px solid green;
-
-  width:990px;
+  position: relative;
+  
 }
-
 #slider {
   width: 300px;
   margin: 20px;
@@ -21,6 +19,7 @@
   .container {
     left: 40px;
     border: 2px solid green;
+    position: relative;
   }
 }
 
