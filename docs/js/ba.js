@@ -371,7 +371,7 @@ var BAP =
         background: none !important; \
       } \
       #BAP-holder { \
-        position: relative !important; \
+        position: static !important; \
       } \
       #BAP-holder .bap-trigger { \
         z-index: 9990; \
