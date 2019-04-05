@@ -2320,12 +2320,15 @@ var BAP =
     }
 
     function appenIconToAd(pageId, icon){
-      var _iconDomElement = document.createElement('div');
-      _iconDomElement.innerHTML += icon;
-      try {
-        _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
-      } catch(e) {
-        console.warn(e.message)
+      var _iconDomElement =  $("BAP-icon-"+ BAP.options[pageId].ad.notice);
+      if (!_iconDomElement) {
+        _iconDomElement = document.createElement('div');
+        _iconDomElement.innerHTML += icon;
+        try {
+          _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
+        } catch(e) {
+          console.warn(e.message)
+        }
       }
       BAP.options[pageId].ad.appendChild(_iconDomElement);
       setTimeout(positionDM3(pageId),1000);
