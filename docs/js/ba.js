@@ -3233,18 +3233,18 @@ var BAP =
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         BAP.options[pageId].position = position;
+        if (offsetObj.x && !isNaN(parseInt(offsetObj.x, 10))) {
+          BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
+        } 
+        if (offsetObj.y && !isNaN(parseInt(offsetObj.y, 10))) {
+          BAP.options[pageId].offsetTop = parseInt(offsetObj.y, 10) ;
+        } 
+        noticeCreate(pageId);
         positionDM3(pageId);
+       
       } else {
         console.warn('invalid icon position request');
       }
-
-      if (offsetObj.x && !isNaN(parseInt(offsetObj.x, 10))) {
-        BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
-      } 
-      if (offsetObj.y && !isNaN(parseInt(offsetObj.y, 10))) {
-        BAP.options[pageId].offsetTop = parseInt(offsetObj.y, 10) ;
-      } 
-      noticeCreate(pageId);
     };
 
     function isElement(obj) {
