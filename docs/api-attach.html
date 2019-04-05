@@ -10,7 +10,7 @@
     <style>
         .mg20 {
             margin: 20px;
-           
+
         }
 
         .w20 {
@@ -21,7 +21,7 @@
 
 <body>
     <div class="mg20">
-<p>adujut top ad icon</p>
+        <p>adjust top ad icon</p>
 
         <select id="top-select" size="1">
             <option>top-left</option>
@@ -37,7 +37,7 @@
         </button>
     </div>
     <div class="mg20">
-            <p>adjust bottom ad icon</p>
+        <p>adjust bottom ad icon</p>
         <select id="bottom-select" size="1">
             <option>top-left</option>
             <option>top-right</option>
@@ -51,48 +51,52 @@
             adust
         </button>
     </div>
-    <div class='container mg20' id="ad1" style="width: 300px;height: 200ps;">
-        <canvas id="mycanvas1" width="300" height="200"></canvas>
+
+
+
+    <div class='container' id="ad1" style="width: 300px;height: 200px;">
+        <p class='mg20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis a harum cupiditate ipsam obcaecati! Nam, consectetur quis repudiandae nostrum officia deleniti, cumque, impedit quam quibusdam magni quo ipsa aut?</p>
     </div>
     <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=top-left"></script>
 
-    <div class='container mg20' id="ad2 " style="width: 300px;height: 200ps;">
-        <canvas id="mycanvas2" width="300" height="200"></canvas>
+    <div class='container' id="ad2" style="width: 300px;height: 200px;">
+        <p class='mg20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis a harum cupiditate ipsam obcaecati! Nam, consectetur quis repudiandae nostrum officia deleniti, cumque, impedit quam quibusdam magni quo ipsa aut?</p>
     </div>
+    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=bottom-right"></script>
 
     <script type="text/javascript">
-        //function reposition(el, pos, offSetObj) {
-        var topPostionSelect = document.querySelector('#top-select');
-        var topOffsetX = document.querySelector('#xposTop');
-        var topOffsetY = document.querySelector('#yposTop');
+       // (function() {
+            var topPostionSelect = document.querySelector('#top-select');
+            var topOffsetX = document.querySelector('#xposTop');
+            var topOffsetY = document.querySelector('#yposTop');
 
 
-        var bottomPostionSelect = document.querySelector('#bottom-select');
-        var bottomOffsetX = document.querySelector('#xposBottom');
-        var bottomOffsetY = document.querySelector('#yposBottom');
+            var bottomPostionSelect = document.querySelector('#bottom-select');
+            var bottomOffsetX = document.querySelector('#xposBottom');
+            var bottomOffsetY = document.querySelector('#yposBottom');
 
 
-        function repositionTop() {
-            var corner = topPostionSelect.value;
-            var offSetObj = {
-                x: topOffsetX.value,
-                y: topOffsetY.value
+            var repositionTop =function() {
+                var corner = topPostionSelect.value;
+                var offSetObj = {
+                    x: topOffsetX.value,
+                    y: topOffsetY.value
+                };
+                window.BAP.changePosition('div#ad1', corner, offSetObj)
             };
 
-            window.BAP.changePosition('canvas#mycanvas1', corner, offSetObj)
-        }
+            var repositionBottom = function() {
+                var corner = bottomPostionSelect.value;
+                var offSetObj = {
+                    x: bottomOffsetX.value,
+                    y: bottomOffsetY.value
+                };
 
-        function repositionBottom() {
-            var corner = bottomPostionSelect.value;
-            var offSetObj = {
-                x: bottomOffsetX.value,
-                y: bottomOffsetY.value
+                window.BAP.changePosition('div#ad2', corner, offSetObj)
             };
-
-            window.BAP.changePosition('canvas#mycanvas2', corner, offSetObj)
-        }
+        //     return  repositionTop;
+        // })();
     </script>
-    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=bottom-right"></script>
 
 </body>
 
