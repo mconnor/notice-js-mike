@@ -3231,8 +3231,6 @@ var BAP =
         //use key and value here
       });
 
-     
-      
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
         BAP.options[pageId].position = position;
         positionDM3(pageId);
@@ -3246,6 +3244,7 @@ var BAP =
       if (offsetObj.y && !isNaN(parseInt(offsetObj.y, 10))) {
         BAP.options[pageId].offsetTop = parseInt(offsetObj.y, 10) ;
       } 
+      noticeCreate(pageId);
     };
 
     function isElement(obj) {
