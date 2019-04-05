@@ -2302,7 +2302,7 @@ var BAP =
       BAP.options[pageId].position + '.png"></span>' + icon + "</div>";
 
       if (BAP.options[pageId].dm === 5) { 
-        // iframe containing druly
+        // iframe containing durly
         div.innerHTML = div.innerHTML + icon;
         setTimeout(positionDM3(pageId),1000);
       } else  {
