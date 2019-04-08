@@ -2360,12 +2360,12 @@ var BAP =
       } else if (BAP.options[pageId].position === 'bottom-left') {
         $("trigger-box-" + pageId).style.bottom = _nudgeY;
         $("trigger-box-" + pageId).style.left = _nudgeX;
-        $("trigger-" + pageId).style.bottom = _nudgeY;
+        $("trigger-" + pageId).style.bottom = (BAP.options[pageId].offsetTop - 4) + 'px';
         $("trigger-" + pageId).style.left = _nudgeX;
       } else if (BAP.options[pageId].position === 'bottom-right') {
         $("trigger-box-" + pageId).style.bottom = _nudgeY;
         $("trigger-box-" + pageId).style.right = _nudgeX;
-        $("trigger-" + pageId).style.bottom = _nudgeY;
+        $("trigger-" + pageId).style.bottom = (BAP.options[pageId].offsetTop - 4) + 'px';
         $("trigger-" + pageId).style.right = _nudgeX;
       }
       
