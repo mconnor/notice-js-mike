@@ -2344,15 +2344,8 @@ var BAP =
       $("trigger-" + pageId).style.position = 'absolute';
 
 
-      var _nudgeY,
-        _nudgeX = BAP.options[pageId].offsetLeft + 'px';
-  
-      // adjust for top icon art being off 
-      if (BAP.options[pageId].position === 'bottom-left'  || BAP.options[pageId].position === 'bottom-right') {
-        _nudgeY = (BAP.options[pageId].offsetTop - 2) + 'px';
-      } else {
-        _nudgeY = BAP.options[pageId].offsetTop + 'px';
-      }
+      var _nudgeY = (BAP.options[pageId].offsetTop - 2) + 'px';
+      var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
 
       if (BAP.options[pageId].position === 'top-left') {
         $("trigger-box-" + pageId).style.top = _nudgeY;
