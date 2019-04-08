@@ -2344,7 +2344,7 @@ var BAP =
       $("trigger-" + pageId).style.position = 'absolute';
 
 
-      var _nudgeY = (BAP.options[pageId].offsetTop - 2) + 'px';
+      var _nudgeY = (BAP.options[pageId].offsetTop) + 'px';
       var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
 
       if (BAP.options[pageId].position === 'top-left') {
@@ -3237,6 +3237,7 @@ var BAP =
       });
       var _x, _y,
         _changeFlag = false;
+
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right' || _x) {
         if (BAP.options[pageId].position !== position) {
