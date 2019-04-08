@@ -3236,9 +3236,8 @@ var BAP =
         }
         //use key and value here
       });
-      var _x = parseInt(offsetObj.x, 10);
-      var _y = parseInt(offsetObj.y, 10);
-      var _changeFlag = false;
+      var _x, _y,
+        _changeFlag = false;
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right' || _x) {
         if (BAP.options[pageId].position !== position) {
@@ -3251,13 +3250,20 @@ var BAP =
       } else {
         console.warn('invalid icon position request');
       }
-      if (BAP.options[pageId].offsetLeft !== _x  )  {
-        BAP.options[pageId].offsetLeft = _x;
-        _changeFlag = true;
+
+      if (offsetObj.x) { 
+        _x = parseInt(offsetObj.x, 10);
+        if (BAP.options[pageId].offsetLeft !== _x  )  {
+          BAP.options[pageId].offsetLeft = _x;
+          _changeFlag = true;
+        }
       }
-      if (BAP.options[pageId].offsetTop !== _y){
-        BAP.options[pageId].offsetTop = _y;
-        _changeFlag = true;
+      if (offsetObj.y) { 
+        _y = parseInt(offsetObj.y, 10);
+        if (BAP.options[pageId].offsetTop !== _y  )  {
+          BAP.options[pageId].offsetTop = _y;
+          _changeFlag = true;
+        }
       }
       if (_changeFlag) positionDM3(pageId);
     };
