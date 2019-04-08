@@ -2344,8 +2344,8 @@ var BAP =
       $("trigger-" + pageId).style.position = 'absolute';
 
 
-      var _nudgeX = Bap.options[pageId].offsetLeft;
-      var _nudgeY = Bap.options[pageId].offsetRight;
+      var _nudgeX = BAP.options[pageId].offsetLeft;
+      var _nudgeY = BAP.options[pageId].offsetRight;
 
 
       if (BAP.options[pageId].position === 'top-left') {
