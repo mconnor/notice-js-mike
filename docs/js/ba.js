@@ -2363,6 +2363,7 @@ var BAP =
         $("trigger-" + pageId).style.bottom = '0';
         $("trigger-" + pageId).style.right = '0';
       }
+      
     }
 
 
@@ -3232,8 +3233,14 @@ var BAP =
       });
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
-        BAP.options[pageId].position = position;
-        positionDM3(pageId);
+        if (BAP.options[pageId].position !== position) {
+          // new position
+          BAP.options[pageId].position = position;
+          positionDM3(pageId);
+          //swap out background art of icon
+          $("trigger-box-" + pageId).querySelector('img').src="http://dev.betrad.com/icon/box_77_" + position + ".png"
+        }
+        
       } else {
         console.warn('invalid icon position request');
       }
