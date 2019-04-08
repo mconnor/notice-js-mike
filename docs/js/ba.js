@@ -2342,16 +2342,22 @@ var BAP =
       
       $("trigger-box-" + pageId).style.position = 'absolute';
       $("trigger-" + pageId).style.position = 'absolute';
+
+
+      var _nudgeX = Bap.options[pageId].offsetLeft;
+      var _nudgeY = Bap.options[pageId].offsetRight;
+
+
       if (BAP.options[pageId].position === 'top-left') {
         $("trigger-box-" + pageId).style.top = '0';
         $("trigger-box-" + pageId).style.left = '0';
         $("trigger-" + pageId).style.top = '0';
         $("trigger-" + pageId).style.left = '0';
       } else if (BAP.options[pageId].position === 'top-right') {
-        $("trigger-box-" + pageId).style.top = '0';
-        $("trigger-box-" + pageId).style.right = '0';
-        $("trigger-" + pageId).style.top = '0';
-        $("trigger-" + pageId).style.right = '0';
+        $("trigger-box-" + pageId).style.top = _nudgeY + 'px';
+        $("trigger-box-" + pageId).style.right = _nudgeX + 'px';
+        $("trigger-" + pageId).style.top = _nudgeX + 'px';
+        $("trigger-" + pageId).style.right = _nudgeY + 'px';
       } else if (BAP.options[pageId].position === 'bottom-left') {
         $("trigger-box-" + pageId).style.bottom = '0';
         $("trigger-box-" + pageId).style.left = '0';
@@ -3236,22 +3242,25 @@ var BAP =
         if (BAP.options[pageId].position !== position) {
           // new position
           BAP.options[pageId].position = position;
-          positionDM3(pageId);
+          
           //swap out background art of icon
-          $("trigger-box-" + pageId).querySelector('img').src="http://dev.betrad.com/icon/box_77_" + position + ".png"
+          $("trigger-box-" + pageId).querySelector('img').src="http://dev.betrad.com/icon/box_77_" + position + ".png";
+
+          if (offsetObj.x && !isNaN(parseInt(offsetObj.x, 10))) {
+            BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
+          } 
+          if (offsetObj.y && !isNaN(parseInt(offsetObj.y, 10))) {
+            BAP.options[pageId].offsetTop = parseInt(offsetObj.y, 10) ;
+          } 
+
+          positionDM3(pageId);
+
         }
         
       } else {
         console.warn('invalid icon position request');
       }
 
-      if (offsetObj.x && !isNaN(parseInt(offsetObj.x, 10))) {
-        BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
-      } 
-      if (offsetObj.y && !isNaN(parseInt(offsetObj.y, 10))) {
-        BAP.options[pageId].offsetTop = parseInt(offsetObj.y, 10) ;
-      } 
-      noticeCreate(pageId);
     };
 
     function isElement(obj) {
