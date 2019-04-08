@@ -2345,7 +2345,7 @@ var BAP =
 
 
       var _nudgeX = BAP.options[pageId].offsetLeft;
-      var _nudgeY = BAP.options[pageId].offsetRight;
+      var _nudgeY = BAP.options[pageId].offsetTop;
 
 
       if (BAP.options[pageId].position === 'top-left') {
