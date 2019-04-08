@@ -2344,30 +2344,30 @@ var BAP =
       $("trigger-" + pageId).style.position = 'absolute';
 
 
-      var _nudgeX = BAP.options[pageId].offsetLeft;
-      var _nudgeY = BAP.options[pageId].offsetTop;
+      var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
+      var _nudgeY = BAP.options[pageId].offsetTop + 'px';
 
 
       if (BAP.options[pageId].position === 'top-left') {
-        $("trigger-box-" + pageId).style.top = '0';
-        $("trigger-box-" + pageId).style.left = '0';
-        $("trigger-" + pageId).style.top = '0';
-        $("trigger-" + pageId).style.left = '0';
+        $("trigger-box-" + pageId).style.top = _nudgeY;
+        $("trigger-box-" + pageId).style.left = _nudgeX;
+        $("trigger-" + pageId).style.top = _nudgeY;
+        $("trigger-" + pageId).style.left = _nudgeX;
       } else if (BAP.options[pageId].position === 'top-right') {
-        $("trigger-box-" + pageId).style.top = _nudgeY + 'px';
-        $("trigger-box-" + pageId).style.right = _nudgeX + 'px';
-        $("trigger-" + pageId).style.top = _nudgeX + 'px';
-        $("trigger-" + pageId).style.right = _nudgeY + 'px';
+        $("trigger-box-" + pageId).style.top = _nudgeY;
+        $("trigger-box-" + pageId).style.right = _nudgeX;
+        $("trigger-" + pageId).style.top = _nudgeY;
+        $("trigger-" + pageId).style.right = _nudgeX;
       } else if (BAP.options[pageId].position === 'bottom-left') {
-        $("trigger-box-" + pageId).style.bottom = '0';
-        $("trigger-box-" + pageId).style.left = '0';
-        $("trigger-" + pageId).style.bottom = '0';
-        $("trigger-" + pageId).style.left = '0';
+        $("trigger-box-" + pageId).style.bottom = _nudgeY;
+        $("trigger-box-" + pageId).style.left = _nudgeX;
+        $("trigger-" + pageId).style.bottom = _nudgeY;
+        $("trigger-" + pageId).style.left = _nudgeX;
       } else if (BAP.options[pageId].position === 'bottom-right') {
-        $("trigger-box-" + pageId).style.bottom = '0';
-        $("trigger-box-" + pageId).style.right = '0';
-        $("trigger-" + pageId).style.bottom = '0';
-        $("trigger-" + pageId).style.right = '0';
+        $("trigger-box-" + pageId).style.bottom = _nudgeY;
+        $("trigger-box-" + pageId).style.right = _nudgeX;
+        $("trigger-" + pageId).style.bottom = _nudgeY;
+        $("trigger-" + pageId).style.right = _nudgeX;
       }
       
     }
