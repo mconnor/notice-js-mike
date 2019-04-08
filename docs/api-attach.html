@@ -3,34 +3,34 @@
 
 <head>
     <meta charset="utf-8">
-   
+    
      <style>
         .mg20 {
             margin: 20px;
 
         }
-
         .w20 {
             width: 60px;
         }
         .container {
-  background-color: lightcoral;
-  border: 1px solid green;
-  position: relative;
-  margin-bottom: 4px;
-  padding: 8px;
-
-}
-body {
-    background-color:black;
-    color: white;
-}
+            background-color: lightcoral;
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+        .container > p {
+            padding: 18px;
+        }
+        body {
+            background-color:black;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
     <div class="mg20">
-        <p>adjust top ad icon</p>
+        <span>adjust top ad icon: </span>
 
         <select id="top-select" size="1">
             <option>top-left</option>
@@ -46,7 +46,7 @@ body {
         </button>
     </div>
     <div class="mg20">
-        <p>adjust bottom ad icon</p>
+        <span>adjust bottom ad icon:</span>
         <select id="bottom-select" size="1">
             <option>top-left</option>
             <option>top-right</option>
@@ -63,12 +63,12 @@ body {
 
 
 
-    <div class='container' id="ad1" style="width: 300px;height: 200px;">
+    <div class='container' id="ad1">
         <p class='mg20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis a harum cupiditate ipsam obcaecati! Nam, consectetur quis repudiandae nostrum officia deleniti, cumque, impedit quam quibusdam magni quo ipsa aut?</p>
     </div>
     <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=top-left"></script>
 
-    <div class='container' id="ad2" style="width: 300px;height: 200px;">
+    <div class='container' id="ad2">
         <p class='mg20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis a harum cupiditate ipsam obcaecati! Nam, consectetur quis repudiandae nostrum officia deleniti, cumque, impedit quam quibusdam magni quo ipsa aut?</p>
     </div>
     <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=bottom-right"></script>
