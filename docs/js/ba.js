@@ -3233,34 +3233,33 @@ var BAP =
       Object.keys(BAP.options).forEach(key => {
         if (BAP.options[key].ad === el) {
           pageId = key;
-          console.log(BAP.options[pageId]);
         }
         //use key and value here
       });
+      var _x = parseInt(offsetObj.x, 10);
+      var _y = parseInt(offsetObj.y, 10);
+      var _changeFlag = false;
 
-      if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right') {
+      if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right' || _x) {
         if (BAP.options[pageId].position !== position) {
           // new position
           BAP.options[pageId].position = position;
-          
           //swap out background art of icon
           $("trigger-box-" + pageId).querySelector('img').src="http://dev.betrad.com/icon/box_77_" + position + ".png";
-
-          if (offsetObj.x && !isNaN(parseInt(offsetObj.x, 10))) {
-            BAP.options[pageId].offsetLeft = parseInt(offsetObj.x, 10) ;
-          } 
-          if (offsetObj.y && !isNaN(parseInt(offsetObj.y, 10))) {
-            BAP.options[pageId].offsetTop = parseInt(offsetObj.y, 10) ;
-          } 
-
-          positionDM3(pageId);
-
+          _changeFlag = true;
         }
-        
       } else {
         console.warn('invalid icon position request');
       }
-
+      if (BAP.options[pageId].offsetLeft !== _x  )  {
+        BAP.options[pageId].offsetLeft = _x;
+        _changeFlag = true;
+      }
+      if (BAP.options[pageId].offsetTop !== _y){
+        BAP.options[pageId].offsetTop = _y;
+        _changeFlag = true;
+      }
+      if (_changeFlag) positionDM3(pageId);
     };
 
     function isElement(obj) {
