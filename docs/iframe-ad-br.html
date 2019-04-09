@@ -11,24 +11,44 @@
         <style>
             
             .ad {
-                width: 300px;
-                height: 200px;
+                width: 150px;
+                height: 100px;
                 background-color:cadetblue;
-                margin: 0;
-                padding: 20px;
+                
                 position: relative;
     
+            }
+            #ad {
+                font-family: sans-serif;
+                font-size: .5em;
+            }
+            body {
+                background-color: aquamarine;
+              
             }
         </style>
     </head>
     
     <body>
-        <div class='ad'>
-                <p>Lorem ipsum dolor sit <a href="https://google.com" target="_blank">amet consectetur adipisicing elit</a>. Illo ducimus eum sed explicabo! Officiis cupiditate aperiam iusto dicta, odit quas blanditiis hic quae quis laborum nesciunt doloribus maiores. Dolorum, recusandae?</p>
+        <div class='ad' id='ad'>
+            <p>DM = 3</p>
+                <p>This iframe has an initial div matching w/h set on durly. The icon attaches inside the div.
+                </p>
        
         </div>  
-        <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=bottom-right;"></script>
+        <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=150;ad_h=100;position=bottom-right;"></script>
 
 
-    <!-- <script type="text/javascript" src="./resize-ad.js"></script> -->
+    <script type="text/javascript">
+    (function() {
+    var ad = document.querySelector("#ad");
+
+    ad.addEventListener('mouseover', function(e) {
+        ad.style.width = '100%';
+    });
+    ad.addEventListener('mouseout', function(e) {
+        ad.style.width =  '150px';
+    });
+
+})();</script>
 </html>

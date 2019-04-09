@@ -34,6 +34,7 @@
 </head>
 
 <body>
+    <h1>DM = 7</h1>
     <p>Icon script applied here - exterior to ifames.
         Not an ideal approach. Fails when dom lay out gets more complex.
     </p>
@@ -72,16 +73,21 @@
     <script>
         (function() {
             (function() {
-                var ads = document.querySelectorAll("iframe");
+                if (self == top) {
+                    var ads = document.querySelectorAll("iframe");
 
-                ads.forEach(ad => {
-                    ad.addEventListener('mouseover', function(e) {
-                        ad.style.width = '400px';
-                    });
-                    ad.addEventListener('mouseout', function(e) {
-                        ad.style.width = '300px';
-                    });
-                })
+                    ads.forEach(ad => {
+                        ad.addEventListener('mouseover', function(e) {
+                            ad.style.width = '400px';
+                        });
+                        ad.addEventListener('mouseout', function(e) {
+                            ad.style.width = '300px';
+                        });
+                    })
+                } else {
+                    console.log('this page not top')
+                }
+                
 
 
 

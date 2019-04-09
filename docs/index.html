@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Test Icon Placement</title>
+   
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: .8em;
+            margin: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>Icon Response to Resizing Ad</h1>
     <p>In non-iframe set up, the icon will now be positined inside of the ad.
         The ad stays glued to the the designated corner - should the ad expand - independent of any timer.
+        Note: <i>REG</i> refers different L2 layouts corresponding to ad sizes.
     </p>
     <div>
         <ul>
@@ -51,15 +60,17 @@
         <p>In iframes, icons will attach to BAP-holder div at bottom of page and be positioned absolutely</p>
         <ul>
             <li>
-                <a href="./iframe-parent.html">marked up page with iframes that contain icon script</a>
+                <a href="./iframe-parent.html">Marked up page with iframes that contain icon script</a>
             </li>
+            
             <li>
-                <a href="./iframe-parent-parent.html">marked up page w/ iframe contaning iframes</a>
-            </li>
-            <li>
-                <a href="./iframe-parent-with-durly.html">simple page with icon script + iframe</a>
+                <a href="./iframe-parent-with-durly.html">Simple page with icon script + iframe. Durly applied extneral to the iframes.</a>
+                <div>DM = 7.  These iframes coded to resize.  Icons will repositon by way of timer - which will slow down</div>
             </li>
 
+            <li>
+                    <a href="./iframe-parent-parent.html">Marked up page w/ iframe contaning iframes</a>
+                </li>
 
         </ul>
         <h2>Icon on Video</h2>
@@ -67,9 +78,6 @@
                 <li>
                     <a href="./video.html">icon on Video</a>
                 </li>
-                
-    
-    
             </ul>
 
     </div>

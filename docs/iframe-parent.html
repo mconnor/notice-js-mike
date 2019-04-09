@@ -42,6 +42,17 @@
         .main-copy {
             width: 400px;
         }
+        .frame-wrapper{
+            border: 1px solid black;
+            width: 324px;
+            margin-bottom: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        
+
     </style>
 </head>
 
@@ -54,7 +65,18 @@
             <div class="main-copy">
                 <section>
                     <h1>Iframes containing durly</h1>
-                    <p>Durly applied <b>inside</b> of the iframe. DM = 5</p>
+                    <p>Durly applied <i>inside</i> of the iframe.</p>
+
+                    <p>Note:
+                        If the iframe size is +-5px width/height of what params attached to durly, 
+                        then the icon will attach to the div.BAP-holder in the frame.  Regardless if there's an matching <i>ad</i>
+                        inside the iframe.
+
+                        If the iframe has w/h that does not match the params sent to durly AND there is a matching <i>ad</i>, the icon will attach to that - <i>unless</i>...if the <i>vast=true</i> is sent thru durly, that ad will attach to the iframe - specifically to div.BAP-holder - regardless of the iframe size.
+
+
+                    
+                    </p>  
                 </section>
                 <section>
                     <h1>Section 2</h1>
@@ -64,10 +86,38 @@
 
             <aside>
 
-                <iframe src="./iframe-ad-tl.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
-                <iframe src="./iframe-ad-tr.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
-                <iframe src="./iframe-ad-bl.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
-                <iframe src="./iframe-ad-br.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
+                    <div class='frame-wrapper'>  
+                        <div> 
+                            <iframe src="./iframe-ad-tl.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
+                        </div>
+                        <div><B>DM = 5</B></div>
+                        <div>Icon attaches to Iframe.</div>
+                     </div>
+
+                    <div class='frame-wrapper'>  
+                        <div> 
+                            <iframe src="./iframe-ad-tr.html" frameborder="1" width="300" height="200" scrolling="no"></iframe>
+                        </div>
+                        <div><B>DM = 5.</B> </div>
+                          <div>Icon attaches to Iframe.</div>
+                    </div>
+    
+
+                <div class='frame-wrapper'>  
+                   <div> <iframe src="./iframe-ad-bl.html" frameborder="1" width="320" height="200" scrolling="no"></iframe></div>
+                   <div><B>DM = 3</B></div> 
+                   <div> Iframe containing a matching <i>ad</i>. Here the frame w/h does <b>not</b> match params on durly. Thus the icon will attach to the ad.</div>
+                </div>
+
+                <div class='frame-wrapper'>  
+                        <div> <iframe src="./iframe-ad-br.html" frameborder="1" width="320" height="200" scrolling="no"></iframe></div>
+                        <div><B>DM = 3</B></div>
+                       
+                     </div>
+               
+
+               
+                <!-- <iframe src="./iframe-ad-br.html" frameborder="1" width="300" height="200" scrolling="no"></iframe> -->
 
             </aside>
 
@@ -82,45 +132,6 @@
     </footer>
 
 
-
-
-
-
-
-
-
-    <script type="text/javascript">
-        //function reposition(el, pos, offSetObj) {
-        var topPostionSelect = document.querySelector('#top-select');
-        var topOffsetX = document.querySelector('#xposTop');
-        var topOffsetY = document.querySelector('#yposTop');
-
-
-        var bottomPostionSelect = document.querySelector('#bottom-select');
-        var bottomOffsetX = document.querySelector('#xposBottom');
-        var bottomOffsetY = document.querySelector('#yposBottom');
-
-
-        function repositionTop() {
-            var corner = topPostionSelect.value;
-            var offSetObj = {
-                x: topOffsetX.value,
-                y: topOffsetY.value
-            };
-
-            window.BAP.changePosition('canvas#mycanvas1', corner, offSetObj)
-        }
-
-        function repositionBottom() {
-            var corner = bottomPostionSelect.value;
-            var offSetObj = {
-                x: bottomOffsetX.value,
-                y: bottomOffsetY.value
-            };
-
-            window.BAP.changePosition('canvas#mycanvas2', corner, offSetObj)
-        }
-    </script>
 
 </body>
 
