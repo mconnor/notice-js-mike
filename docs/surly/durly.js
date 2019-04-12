@@ -14,7 +14,8 @@ if (localTestingEnv) {
   _durly_root = "mconnor.github.io/notice-js-mike";
   _durly_rev = "rDEV";
 } else {
-  _durly_root = "c.evidon.com";
+  _durly_root = "dev.betrad.com";
+  //_durly_root = "c.evidon.com";
   _durly_rev = "r170209";
 }
 
@@ -229,9 +230,9 @@ if (localTestingEnv) {
 
       // an akamai url was previously used to serve https resources
       var _durly_src = durly_script.src,
-        _durly_own =
-          isBetrad(_durly_src) ||
-          /^https?:\/\/a248.e.akamai.net/.test(_durly_src); //TODO: check this url...
+        _durly_own = true;
+          // isBetrad(_durly_src) ||
+          // /^https?:\/\/a248.e.akamai.net/.test(_durly_src); //TODO: check this url...
 
       // check if the src is indeed ours
       if (_durly_src.match("durly.js") && _durly_own) {
@@ -327,7 +328,12 @@ if (localTestingEnv) {
           dropPixel(null, _durly_rnd);
           var baScript = document.createElement("SCRIPT");
           baScript.setAttribute("id", "ba.js");
-          baScript.setAttribute("src", _durly_url + "/js/ba.js?" + _durly_rev);
+          if (_durly_url.includes('dev')) {
+            baScript.setAttribute("src", _durly_url + "/ba.js?" + _durly_rev);
+          } else {
+            baScript.setAttribute("src", _durly_url + "/js/ba.js?" + _durly_rev);
+          }
+         
           document.body.appendChild(baScript);
           window.BAPStart(_bao);
         }
@@ -340,4 +346,4 @@ if (localTestingEnv) {
   } else {
     window.onload = execute;
   }
-})(true);
+})(false);
