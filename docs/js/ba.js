@@ -1801,14 +1801,6 @@ var BAP =
       }
     }
 
-
-    function noticePositionCalculateRedux(pageId) {
-/// here we will position the icon once inside the ad,
-// pinning it to the corner
-
-
-    }
-
     /**
      * This method calculates new notice location points based on the mode
      * that the notice is in.
@@ -2343,7 +2335,6 @@ var BAP =
       $("trigger-box-" + pageId).style.position = 'absolute';
       $("trigger-" + pageId).style.position = 'absolute';
 
-
       var _nudgeY = (BAP.options[pageId].offsetTop) + 'px';
       var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
 
@@ -2360,12 +2351,12 @@ var BAP =
       } else if (BAP.options[pageId].position === 'bottom-left') {
         $("trigger-box-" + pageId).style.bottom = _nudgeY;
         $("trigger-box-" + pageId).style.left = _nudgeX;
-        $("trigger-" + pageId).style.bottom = (BAP.options[pageId].offsetTop - 4) + 'px';
+        $("trigger-" + pageId).style.bottom = _nudgeY;
         $("trigger-" + pageId).style.left = _nudgeX;
       } else if (BAP.options[pageId].position === 'bottom-right') {
         $("trigger-box-" + pageId).style.bottom = _nudgeY;
         $("trigger-box-" + pageId).style.right = _nudgeX;
-        $("trigger-" + pageId).style.bottom = (BAP.options[pageId].offsetTop - 4) + 'px';
+        $("trigger-" + pageId).style.bottom = _nudgeY;
         $("trigger-" + pageId).style.right = _nudgeX;
       }
       
