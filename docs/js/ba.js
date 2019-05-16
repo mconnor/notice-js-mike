@@ -679,7 +679,7 @@ var BAP =
           (BAP.options[pageId].defTrans.link1 = cud.default_link1);
         cud.default_link2 &&
           (BAP.options[pageId].defTrans.link2 = cud.default_link2);
-        cud.default_link2 &&
+        cud.default_link3 &&
           (BAP.options[pageId].defTrans.link3 = cud.default_link3);
         cud.default_footer &&
           (BAP.options[pageId].defTrans.footer = cud.default_footer);
