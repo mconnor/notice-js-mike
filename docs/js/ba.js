@@ -2862,10 +2862,11 @@ var BAP =
         BAP_LINKS, BAP_EVIDON_LOGO, CLOSE_BTN, BAP_ADVERTISER_LOGO, MAIN_COPY;
       /* translation scaffold */
       var sc = "&times",
-        sm = "Opt Out & More Info",
+        rigthArrow = "&#187",
+        sm,
         sw = "Privacy Policy",
         sl = "Learn about your choices",
-        se = "Privacy Policy",
+        se,
         sg1 =
           "This ad has been matched to your interests. It was selected for you based on your browsing activity.",
         sg2 =
@@ -2874,6 +2875,13 @@ var BAP =
         sg4 = "determine that you might be interested in an ad like this.",
         sg5 = "select this ad for you.",
         sg6 = "selected this ad for you.";
+
+        if (BAP.options[pageId].new_l2) {
+          sm = "Opt Out & More Info";
+          se = "Privacy Policy";
+        } else {
+          sm = "More information & opt-out options " + rigthArrow;
+        }
 
       function trans(z) {
         try {
@@ -2886,17 +2894,18 @@ var BAP =
           sg4 = z.generic4;
           sg5 = z.generic5;
           sg6 = z.generic6;
-          sm = z.link1;
-          sw = z.link2;
-          sl = z.link3;
+          sm = z.link1; //"Opt Out & More Info"
+          sw = z.link2; // what is IAB
+          sl = z.link3; //"Learn about your choices"
           BAP.options[pageId].advName = BAP.options[pageId].advName.replace("Ghostery", "Evidon");
         } catch (err) {}
       }
       // translation layer
       if (!BAP.options[pageId].noDefault) {
         trans(BAP.options[pageId].defTrans);
+      } else if (BAP.options[pageId].translation) {
+        trans(BAP.options[pageId].translation);
       }
-      trans(BAP.options[pageId].translation);
       if (BAP.options[pageId].behavioral === "definitive") {
         generic_msg = sg1;
         if (BAP.options[pageId].advName) {
