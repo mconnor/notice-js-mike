@@ -760,6 +760,7 @@ var BAP =
         BAP.options[pageId].ad_w = parseInt(BAP.options[pageId].ad_w);
         BAP.options[pageId].vast = (BAP.options[pageId].vast == 'true');
         BAP.options[pageId].vpaid = (BAP.options[pageId].vpaid == 'true');
+        BAP.options[pageId].new_l2 = (BAP.options[pageId].new_l2 == 'true');
 
         // reset detection mode
         BAP.options[pageId].dm = -1;
