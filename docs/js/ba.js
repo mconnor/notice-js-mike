@@ -333,6 +333,8 @@ var BAP =
         cursor: pointer; \
         user-select: none; \
       } \
+      .gray-border: 1px gray solid; \
+      .double-gray-border: 4px gray double; \
       .bap-notice { \
         background-color: #FFFFFF; \
         position: absolute; \
@@ -2967,23 +2969,23 @@ var BAP =
         reg = 6;
       }
 
+      if (BAP.options[pageId].new_l2) {
+        BAP_ADVERTISER_LOGO = '<div class="bap-img-container">' +
+            (BAP.options[pageId].advLogo
+              ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
+                ? '<a target="_blank" href="' +
+                  BAP.options[pageId].advLink +
+                  '" onclick="BAP.action(\'' +
+                  pageId +
+                  "', 'A');\"><img id=\"bap-logo-" +
+                  pageId +
+                  '" border="0"></a>'
+                : '<img id="bap-logo-' + pageId + '" border="0">'
+              : "") +
+            '</div>';
 
-      BAP_ADVERTISER_LOGO = '<div class="bap-img-container">' +
-          (BAP.options[pageId].advLogo
-            ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
-              ? '<a target="_blank" href="' +
-                BAP.options[pageId].advLink +
-                '" onclick="BAP.action(\'' +
-                pageId +
-                "', 'A');\"><img id=\"bap-logo-" +
-                pageId +
-                '" border="0"></a>'
-              : '<img id="bap-logo-' + pageId + '" border="0">'
-            : "") +
-          '</div>';
-
-
-      BAP_LINKS = '<div class="bap-links"> \
+        //if (BAP.options[pageId].new_l2) {
+        BAP_LINKS = '<div class="bap-links"> \
                     <div' +
                       lds +
                       '><a href="about:blank" id="bap-link-1-' +
@@ -3017,52 +3019,82 @@ var BAP =
                       </div>") + 
                   // ** end WHAT IS IAB
                 '</div>';
+        
+        
 
-      BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
-                           <a href="https://www.evidon.com/solutions/ad-notice/"> \
-                              <img style=" \
-                                        width:50px; height:15px;" \
-                                        src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
-                                        alt="evidon logo"> \
-                          </a> \
-                        </div>';
+        BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
+                            <a href="https://www.evidon.com/solutions/ad-notice/"> \
+                                <img style=" \
+                                          width:50px; height:15px;" \
+                                          src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
+                                          alt="evidon logo"> \
+                            </a> \
+                          </div>';
 
-      CLOSE_BTN = '<div class="bap-close" onclick="BAP.toggle(' + pageId + ');return false;">' + sc + '</div>';
+        CLOSE_BTN = '<div class="bap-close" onclick="BAP.toggle(' + pageId + ');return false;">' + sc + '</div>';
 
-      MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
+        MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
+      } else {
+
+      }
 
       if (reg === 1) {
-        lds = browser.QuirksMode ? ' style="width:294px !important"' : "";
-        // qw = browser.QuirksMode
-        //   ? "width:296px !important;"
-        //   : "width:auto !important;max-width:299px;min-width:276px;";
-        noticeHTML =
-          '<div id="bap-notice-' + pageId +
-            '" class="bap-notice" style=" \
-                                    width: 299px;height: 232px;">' +
-            CLOSE_BTN +
-          '<div class="center-vert" \
-                style="padding: 0 25px 0 25px;">' + 
-            BAP_ADVERTISER_LOGO + 
-            MAIN_COPY + 
-            BAP_LINKS + 
-          '</div>' + //close center-vert
-          BAP_EVIDON_LOGO +
-        '</div>';
-      } else if (reg === 2) {
-        noticeHTML =
-        '<div id="bap-notice-' + pageId +
-          '" class="bap-notice" style=" \
-                                  width: 159px;height: 342px;"> ' +
-          CLOSE_BTN +
-        '<div class="center-vert" \
-              style="padding: 0 8px 0 8px;">' +
-          BAP_ADVERTISER_LOGO +  
-          MAIN_COPY +
-          BAP_LINKS + 
-        '</div>' + //close center-vert
-        BAP_EVIDON_LOGO +
-      '</div>';
+
+
+        if (BAP.options[pageId].new_l2) {
+              lds = browser.QuirksMode ? ' style="width:294px !important"' : "";
+            // qw = browser.QuirksMode
+            //   ? "width:296px !important;"
+            //   : "width:auto !important;max-width:299px;min-width:276px;";
+            noticeHTML =
+              '<div id="bap-notice-' + pageId +
+                '" class="bap-notice" style=" \
+                                        width: 299px;height: 232px;">' +
+                CLOSE_BTN +
+              '<div class="center-vert" \
+                    style="padding: 0 25px 0 25px;">' + 
+                BAP_ADVERTISER_LOGO + 
+                MAIN_COPY + 
+                BAP_LINKS + 
+              '</div>' + //close center-vert
+              BAP_EVIDON_LOGO +
+            '</div>';
+          } else if (reg === 2) {
+            noticeHTML =
+            '<div id="bap-notice-' + pageId +
+              '" class="bap-notice" style=" \
+                                      width: 159px;height: 342px;"> ' +
+              CLOSE_BTN +
+            '<div class="center-vert" \
+                  style="padding: 0 8px 0 8px;">' +
+              BAP_ADVERTISER_LOGO +  
+              MAIN_COPY +
+              BAP_LINKS + 
+            '</div>' + //close center-vert
+            BAP_EVIDON_LOGO +
+          '</div>';
+        } else {
+          noticeHTML =
+            '<div id="bap-notice-' + pageId +
+              '" class="bap-notice" style=" \
+                                      width: 299px;height: 232px;">' +
+              CLOSE_BTN +
+              '<div>This ad has been matched to your interests. It was selected for you based on your browsing activity \
+              12Mnkys helped Evidon determine that you might be interested in an ad like this.</div>' +
+              '<div>more info</div>' +
+              '<div>what is</div>' +
+              '<div>custome</div>' +
+              '<div>privacy controls</div>' +
+            '</div>';
+        }
+
+        
+
+
+
+
+
+
       } else if (reg === 5) {
         noticeHTML =
         '<div id="bap-notice-' + pageId +
