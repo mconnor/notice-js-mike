@@ -2977,7 +2977,7 @@ var BAP =
         reg = 6;
       }
 
-      var logoCssClasses = BAP.BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
+      var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
       BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
             ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
