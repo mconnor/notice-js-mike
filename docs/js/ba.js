@@ -297,6 +297,9 @@ var BAP =
         width: 124px; \
         height: 45px; \
       } \
+      .padding-left-4 { \
+        padding-left: 4px; \
+      } \
       .center-horiz { \
         margin: 0 auto 0 auto; \
       } \
@@ -2988,7 +2991,8 @@ var BAP =
         reg = 6;
       }
 
-      var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
+      var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container padding-left-4";
+
       BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
             ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
@@ -3080,7 +3084,11 @@ var BAP =
         
         
 
-        BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
+        
+
+        
+        if (BAP.options[pageId].new_l2) {
+          BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
                             <a href="https://www.evidon.com/solutions/ad-notice/"> \
                                 <img style=" \
                                           width:50px; height:15px;" \
@@ -3088,9 +3096,6 @@ var BAP =
                                           alt="evidon logo"> \
                             </a> \
                           </div>';
-
-        
-        if (BAP.options[pageId].new_l2) {
           MAIN_COPY = "<p class='main-copy-new-l2'>" + generic_msg + '</p>';
           CLOSE_BTN = '<div class="bap-close" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
