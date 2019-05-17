@@ -292,7 +292,7 @@ var BAP =
     function process() {
 
 
-      BAP.CSS_COMMON = 
+      BAP.CSS_COMMON =
       ".main-copy { \
         font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
       } \
@@ -342,11 +342,17 @@ var BAP =
         -webkit-box-sizing: border-box; \
         box-sizing: border-box; \
         color: rgb(138, 135, 135); \
-        -webkit-box-shadow: 2px 2px 4px rgb(187, 185, 185); \
-        box-shadow: 2px 2px 4px rgb(187, 185, 185); \
-        line-height: 1.6; \
         z-index: 9991; \
         display:none; \
+      } \
+      .bap-notice-old-l2 { \
+        line-height: 1.6; \
+        border: 4px gray double; \
+      } \
+      .bap-notice-new-l2 { \
+        line-height: 1.6; \
+        -webkit-box-shadow: 2px 2px 4px rgb(187, 185, 185); \
+        box-shadow: 2px 2px 4px rgb(187, 185, 185); \
       } \
       .bap-blue,.bap-blue:link,.bap-blue:visited { \
         color: #2b2f98; \
@@ -3046,7 +3052,7 @@ var BAP =
         if (BAP.options[pageId].new_l2) {
           noticeHTML =
             '<div id="bap-notice-' + pageId +
-              '" class="bap-notice" style=" \
+              '" class="bap-notice bap-notice-new-l2" style=" \
                                       width: 299px;height: 232px;">' +
               CLOSE_BTN +
             '<div class="center-vert" \
@@ -3057,21 +3063,21 @@ var BAP =
             '</div>' + //close center-vert
             BAP_EVIDON_LOGO +
           '</div>';
-      } else {
-        noticeHTML =
-            '<div id="bap-notice-' + pageId +
-              '" class="bap-notice double-gray-border" style=" \
-                                      width: 299px;height: 232px;">' +
-              CLOSE_BTN +
-            '<div class="center-vert" \
-                  style="padding: 0 25px 0 25px;">' + 
-              BAP_ADVERTISER_LOGO + 
-              MAIN_COPY + 
-              BAP_LINKS + 
-            '</div>' + //close center-vert
-            BAP_EVIDON_LOGO +
-          '</div>';
-      }
+        } else {
+          noticeHTML =
+              '<div id="bap-notice-' + pageId +
+                '" class="bap-notice bap-notice-old-l2 style=" \
+                                        width: 299px;height: 232px;">' +
+                CLOSE_BTN +
+              '<div class="center-vert" \
+                    style="padding: 0 25px 0 25px;">' + 
+                BAP_ADVERTISER_LOGO + 
+                MAIN_COPY + 
+                BAP_LINKS + 
+              '</div>' + //close center-vert
+              BAP_EVIDON_LOGO +
+            '</div>';
+        }
 
 
 
