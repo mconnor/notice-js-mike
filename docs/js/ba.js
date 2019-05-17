@@ -3045,7 +3045,7 @@ var BAP =
                       "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
                       pageId +
                       "')\">" +
-                      sm + rigthArrow //opt out and more info
+                      sm + rigthArrow + //opt out and more info
                       "</a> \
                     </div>" +
                     // *** end link - opt out
