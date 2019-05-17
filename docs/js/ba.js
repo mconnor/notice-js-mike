@@ -312,7 +312,7 @@ var BAP =
         position: absolute; \
       } \
       .bap-links { \
-        font-size: .7em; \
+        font-size: .9em; \
         font-weight: bold; \
       } \
       .bap-links-new-l2 { \
@@ -393,6 +393,7 @@ var BAP =
         z-index: 9990; \
       } \
       .main-copy { \
+        line-height: 13px; \
         color: rgb(0, 0, 0); \
         margin: 0 0 0 0; \
         font-size: .9em; \
