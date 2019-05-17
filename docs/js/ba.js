@@ -333,8 +333,8 @@ var BAP =
         cursor: pointer; \
         user-select: none; \
       } \
-      .gray-border {1px gray solid;} \
-      .double-gray-border {4px gray double;} \
+      .gray-border {border: 1px gray solid;} \
+      .double-gray-border {border: 4px gray double;} \
       .bap-notice { \
         background-color: #FFFFFF; \
         position: absolute; \
