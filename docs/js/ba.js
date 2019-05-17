@@ -297,8 +297,8 @@ var BAP =
         width: 124px; \
         height: 45px; \
       } \
-      .padding-left-4 { \
-        padding-left: 4px; \
+      .padding-left-10 { \
+        padding-left: 10px; \
       } \
       .center-horiz { \
         margin: 0 auto 0 auto; \
@@ -2991,7 +2991,7 @@ var BAP =
         reg = 6;
       }
 
-      var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container padding-left-4";
+      var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container padding-left-10";
 
       BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
