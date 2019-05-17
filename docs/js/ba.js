@@ -297,9 +297,11 @@ var BAP =
         font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
       } \
       .bap-img-container { \
-        margin: 0 auto 0 auto; \
         width: 124px; \
         height: 45px; \
+      } \
+      .center-horiz { \
+        margin: 0 auto 0 auto; \
       } \
       .center-vert { \
         top: 50%; \
@@ -2977,8 +2979,8 @@ var BAP =
         reg = 6;
       }
 
-  
-      BAP_ADVERTISER_LOGO = '<div class="bap-img-container">' +
+      var logoCssClasses = BAP.new_l2 ? "bap-img-container" : "bap-img-container center-horiz";
+      BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
             ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
               ? '<a target="_blank" href="' +
