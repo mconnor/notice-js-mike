@@ -377,6 +377,18 @@ var BAP =
       #BAP-holder .bap-trigger { \
         z-index: 9990; \
       } \
+      .main-copy { \
+        color: rgb(0, 0, 0); \
+        margin: 0 0 0 0; \
+        font-size: .7em; \
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+      } \
+      .main-copy-new-l2 { \
+        color: rgb(138, 135, 135); \
+        margin: 0 0 0 0; \
+        font-size: 1em; \
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+      } \
       .bap-trigger { \
         cursor: pointer; \
         display:block; \
@@ -398,23 +410,6 @@ var BAP =
         width: 299px; \
         height: 232px; \
       }";
-
-      if (BAP.new_l2) {
-        BAP.CSS += '.main-copy { \
-          color: rgb(138, 135, 135); \
-          margin: 0 0 0 0; \
-          font-size: 1em; \
-          font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
-        } ';
-      } else {
-        BAP.CSS += '.main-copy { \
-          color: rgb(0, 0, 0); \
-          margin: 0 0 0 0; \
-          font-size: .7em; \
-          font-family: Arial; \
-        } ';
-      }
-
 
       /**
        * The order of processing might get called before json gets pulled in IE.
@@ -3048,8 +3043,12 @@ var BAP =
                           </div>';
 
         CLOSE_BTN = '<div class="bap-close" onclick="BAP.toggle(' + pageId + ');return false;">' + sc + '</div>';
-
-        MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
+        if (BAP.options[pageId].new_l2) {
+          MAIN_COPY = "<p class='main-copy-new-l2'>" + generic_msg + '</p>';
+        } else {
+          MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
+        }
+       
 
 
       if (reg === 1) {
