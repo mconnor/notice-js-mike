@@ -3068,6 +3068,9 @@ var BAP =
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
+                  '<div class="gray-border"> \
+                    Privacy Controls by Evidon, Inc. \
+                  </div>' +
                 '</div>';
         }
         
