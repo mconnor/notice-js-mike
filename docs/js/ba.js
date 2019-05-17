@@ -293,10 +293,7 @@ var BAP =
 
 
       BAP.CSS_COMMON =
-      ".main-copy { \
-        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
-      } \
-      .bap-img-container { \
+      ".bap-img-container { \
         width: 124px; \
         height: 45px; \
       } \
@@ -343,7 +340,6 @@ var BAP =
         font-size: 12px; \
         -webkit-box-sizing: border-box; \
         box-sizing: border-box; \
-        color: rgb(138, 135, 135); \
         z-index: 9991; \
         display:none; \
       } \
@@ -361,11 +357,6 @@ var BAP =
       } \
       .bap-gray, .bap-gray:visited { \
         color: #444; \
-      } \
-      .main-copy { \
-        margin: 0 0 0 0; \
-        font-size: 1em; \
-        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
       } \
       #BAP-holder img { \
         margin: 0; \
@@ -408,6 +399,21 @@ var BAP =
         height: 232px; \
       }";
 
+      if (BAP.new_l2) {
+        BAP.CSS += '.main-copy { \
+          color: rgb(138, 135, 135); \
+          margin: 0 0 0 0; \
+          font-size: 1em; \
+          font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+        } ';
+      } else {
+        BAP.CSS += '.main-copy { \
+          color: rgb(0, 0, 0); \
+          margin: 0 0 0 0; \
+          font-size: .7em; \
+          font-family: Arial; \
+        } ';
+      }
 
 
       /**
