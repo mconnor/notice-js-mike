@@ -292,6 +292,115 @@ var BAP =
     function process() {
 
 
+      BAP.CSS_COMMON = 
+      ".main-copy { \
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+      } \
+      .bap-img-container { \
+        margin: 0 auto 0 auto; \
+        width: 124px; \
+        height: 45px; \
+      } \
+      .center-vert { \
+        top: 50%; \
+        box-sizing: border-box; \
+        -webkit-transform: translateY(-50%); \
+        -ms-transform: translateY(-50%); \
+        transform: translateY(-50%); \
+        position: absolute; \
+      } \
+      .bap-links { \
+        text-align: center; \
+        font-size: 1em; \
+      } \
+      .bap-links a { \
+        color: #58a0cb; \
+        text-decoration: none; \
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+      } \
+      .bap-close { \
+        position: absolute; \
+        top: -1px; \
+        right: 5px; \
+        z-index: 2; \
+        font-weight: 100; \
+        font-size: 1em; \
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+        -webkit-user-select: none; \
+        -moz-user-select: none; \
+        -ms-user-select: none; \
+        user-select: none; \
+        cursor: pointer; \
+        user-select: none; \
+      } \
+      .gray-border {border: 1px gray solid;} \
+      .double-gray-border {border: 4px gray double;} \
+      .bap-notice { \
+        background-color: #FFFFFF; \
+        position: absolute; \
+        font-size: 12px; \
+        -webkit-box-sizing: border-box; \
+        box-sizing: border-box; \
+        color: rgb(138, 135, 135); \
+        -webkit-box-shadow: 2px 2px 4px rgb(187, 185, 185); \
+        box-shadow: 2px 2px 4px rgb(187, 185, 185); \
+        line-height: 1.6; \
+        z-index: 9991; \
+        display:none; \
+      } \
+      .bap-blue,.bap-blue:link,.bap-blue:visited { \
+        color: #2b2f98; \
+      } \
+      .bap-gray, .bap-gray:visited { \
+        color: #444; \
+      } \
+      .main-copy { \
+        margin: 0 0 0 0; \
+        font-size: 1em; \
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+      } \
+      #BAP-holder img { \
+        margin: 0; \
+        padding: 0; \
+        border: 0; \
+        font-size: 100%; \
+        font: inherit; \
+        vertical-align: baseline; \
+        max-width: 100%; \
+        box-shadow: 0 0 !important; \
+        -moz-box-shadow:0 0 !important; \
+        -webkit-box-shadow: 0 0 !important; \
+        background: none !important; \
+      } \
+      #BAP-holder { \
+        position: static !important; \
+      } \
+      #BAP-holder .bap-trigger { \
+        z-index: 9990; \
+      } \
+      .bap-trigger { \
+        cursor: pointer; \
+        display:block; \
+        font-family:Arial; \font-size:8pt; \
+        white-space:nowrap; \
+      } \
+      .bap-trigger img { \
+        width: auto; \
+        height: auto; \
+      } \
+      .evidon-logo { \
+        position: absolute; \
+        bottom: 5px; \
+        left: 10px; \
+        width: 50px; \
+        height: 15px; \
+      }";
+      BAP.CSS_1 = ".bap1 { \
+        width: 299px; \
+        height: 232px; \
+      }";
+
+
 
       /**
        * The order of processing might get called before json gets pulled in IE.
