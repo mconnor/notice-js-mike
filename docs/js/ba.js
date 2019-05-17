@@ -3050,7 +3050,7 @@ var BAP =
                     </div>" +
                     // *** end link - opt out
                     '<div> \
-                      <a href="#" target="_blank">' + se + '</a></div>' + //privacy policy
+                      <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
@@ -3064,7 +3064,7 @@ var BAP =
                               "', 'B');\" onmouseover=\"BAP.iabLink('" +
                               pageId +
                               "')\">" +
-                              sw + + rigthArrow +
+                              sw  + rigthArrow +
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
