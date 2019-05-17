@@ -3066,7 +3066,7 @@ var BAP =
         } else {
           noticeHTML =
               '<div id="bap-notice-' + pageId +
-                '" class="bap-notice bap-notice-old-l2 style=" \
+                '" class="bap-notice bap-notice-old-l2" style=" \
                                         width: 299px;height: 232px;">' +
                 CLOSE_BTN +
               '<div class="center-vert" \
