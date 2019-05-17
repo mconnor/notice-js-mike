@@ -332,6 +332,7 @@ var BAP =
         cursor: pointer; \
         user-select: none; \
       } \
+      .gray-light {color: #707070;} \
       .gray-border {border: 1px gray solid;} \
       .double-gray-border {border: 4px gray double;} \
       .bap-notice { \
@@ -342,6 +343,7 @@ var BAP =
         box-sizing: border-box; \
         z-index: 9991; \
         display:none; \
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
       } \
       .bap-notice-old-l2 { \
         line-height: 1.6; \
@@ -380,14 +382,12 @@ var BAP =
       .main-copy { \
         color: rgb(0, 0, 0); \
         margin: 0 0 0 0; \
-        font-size: .7em; \
-        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
+        font-size: .9em; \
       } \
       .main-copy-new-l2 { \
         color: rgb(138, 135, 135); \
         margin: 0 0 0 0; \
         font-size: 1em; \
-        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
       } \
       .bap-trigger { \
         cursor: pointer; \
@@ -2872,8 +2872,7 @@ var BAP =
         qw = "",
         BAP_LINKS, BAP_EVIDON_LOGO, CLOSE_BTN, BAP_ADVERTISER_LOGO, MAIN_COPY;
       /* translation scaffold */
-      var sc,
-        rigthArrow = "&#187",
+      var rigthArrow = "&#187",
         sm,
         sw = "Privacy Policy",
         sl = "Learn about your choices",
@@ -2888,11 +2887,9 @@ var BAP =
         sg6 = "selected this ad for you.";
 
         if (BAP.options[pageId].new_l2) {
-          sc = "&times",
           sm = "Opt Out & More Info";
           se = "Privacy Policy";
         } else {
-          sc = "[ &times ]",
           sm = "More information & opt-out options " + rigthArrow;
         }
 
@@ -3042,11 +3039,13 @@ var BAP =
                             </a> \
                           </div>';
 
-        CLOSE_BTN = '<div class="bap-close" onclick="BAP.toggle(' + pageId + ');return false;">' + sc + '</div>';
+        
         if (BAP.options[pageId].new_l2) {
           MAIN_COPY = "<p class='main-copy-new-l2'>" + generic_msg + '</p>';
+          CLOSE_BTN = '<div class="bap-close" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
           MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
+          CLOSE_BTN = '<div class="bap-close gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[&times]</div>';
         }
        
 
