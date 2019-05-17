@@ -2977,7 +2977,7 @@ var BAP =
         reg = 6;
       }
 
-      var logoCssClasses = BAP.new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
+      var logoCssClasses = BAP.BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
       BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
             ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
@@ -3076,7 +3076,7 @@ var BAP =
                                         width: 299px;height: 232px;">' +
                 CLOSE_BTN +
               '<div class="center-vert" \
-                    style="padding: 0 25px 0 25px;">' + 
+                    style="padding: 0 10px 0 5px;">' + 
                 BAP_ADVERTISER_LOGO + 
                 MAIN_COPY + 
                 BAP_LINKS + 
