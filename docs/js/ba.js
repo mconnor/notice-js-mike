@@ -309,13 +309,20 @@ var BAP =
         position: absolute; \
       } \
       .bap-links { \
+        font-size: .7em; \
+        font-weight-bold; \
+      } \
+      .bap-links-new-l2 { \
         text-align: center; \
         font-size: 1em; \
       } \
       .bap-links a { \
+        color: #2b2f98; \
+        text-decoration: none; \
+      } \
+      .bap-links-new-l2 a { \
         color: #58a0cb; \
         text-decoration: none; \
-        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
       } \
       .bap-close { \
         position: absolute; \
@@ -2992,41 +2999,77 @@ var BAP =
             : "") +
           '</div>';
 
-      //if (BAP.options[pageId].new_l2) {
-      BAP_LINKS = '<div class="bap-links"> \
-                  <div' +
-                    lds +
-                    '><a href="about:blank" id="bap-link-1-' +
-                    pageId +
-                    '" target="_blank" onclick="BAP.action(\'' +
-                    pageId +
-                    "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
-                    pageId +
-                    "')\">" +
-                    sm + //opt out and more info
-                    "</a> \
-                  </div>" +
-                  // *** end link - opt out
-                  '<div> \
-                    <a href="#" target="_blank">' + se + '</a></div>' + //privacy policy
-                  // ** start WHAT IS IAB
-                    (BAP.options[pageId].hideWhatIs
-                      ? ""
-                      : '<div' +
-                          lds +
-                          '> \
-                          <a href="about:blank" id="bap-link-2-' +
-                            pageId +
-                            '" target="_blank" onclick="BAP.action(\'' +
-                            pageId +
-                            "', 'B');\" onmouseover=\"BAP.iabLink('" +
-                            pageId +
-                            "')\">" +
-                            sw +
+      if (BAP.options[pageId].new_l2) {
+        BAP_LINKS = '<div class="bap-links-new-l2"> \
+                    <div' +
+                      lds +
+                      '><a href="about:blank" id="bap-link-1-' +
+                      pageId +
+                      '" target="_blank" onclick="BAP.action(\'' +
+                      pageId +
+                      "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+                      pageId +
+                      "')\">" +
+                      sm + //opt out and more info
                       "</a> \
-                    </div>") + 
-                // ** end WHAT IS IAB
-              '</div>';
+                    </div>" +
+                    // *** end link - opt out
+                    '<div> \
+                      <a href="#" target="_blank">' + se + '</a></div>' + //privacy policy
+                    // ** start WHAT IS IAB
+                      (BAP.options[pageId].hideWhatIs
+                        ? ""
+                        : '<div' +
+                            lds +
+                            '> \
+                            <a href="about:blank" id="bap-link-2-' +
+                              pageId +
+                              '" target="_blank" onclick="BAP.action(\'' +
+                              pageId +
+                              "', 'B');\" onmouseover=\"BAP.iabLink('" +
+                              pageId +
+                              "')\">" +
+                              sw +
+                        "</a> \
+                      </div>") + 
+                  // ** end WHAT IS IAB
+                '</div>';
+        } else {
+          BAP_LINKS = '<div class="bap-links"> \
+                    <div' +
+                      lds +
+                      '><a href="about:blank" id="bap-link-1-' +
+                      pageId +
+                      '" target="_blank" onclick="BAP.action(\'' +
+                      pageId +
+                      "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+                      pageId +
+                      "')\">" +
+                      sm + //opt out and more info
+                      "</a> \
+                    </div>" +
+                    // *** end link - opt out
+                    '<div> \
+                      <a href="#" target="_blank">' + se + '</a></div>' + //privacy policy
+                    // ** start WHAT IS IAB
+                      (BAP.options[pageId].hideWhatIs
+                        ? ""
+                        : '<div' +
+                            lds +
+                            '> \
+                            <a href="about:blank" id="bap-link-2-' +
+                              pageId +
+                              '" target="_blank" onclick="BAP.action(\'' +
+                              pageId +
+                              "', 'B');\" onmouseover=\"BAP.iabLink('" +
+                              pageId +
+                              "')\">" +
+                              sw +
+                        "</a> \
+                      </div>") + 
+                  // ** end WHAT IS IAB
+                '</div>';
+        }
         
         
 
