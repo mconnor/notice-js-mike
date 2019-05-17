@@ -2863,7 +2863,7 @@ var BAP =
         qw = "",
         BAP_LINKS, BAP_EVIDON_LOGO, CLOSE_BTN, BAP_ADVERTISER_LOGO, MAIN_COPY;
       /* translation scaffold */
-      var sc = "&times",
+      var sc,
         rigthArrow = "&#187",
         sm,
         sw = "Privacy Policy",
@@ -2879,9 +2879,11 @@ var BAP =
         sg6 = "selected this ad for you.";
 
         if (BAP.options[pageId].new_l2) {
+          sc = "&times",
           sm = "Opt Out & More Info";
           se = "Privacy Policy";
         } else {
+          sc = "[ &times ]",
           sm = "More information & opt-out options " + rigthArrow;
         }
 
@@ -3038,22 +3040,48 @@ var BAP =
 
       if (reg === 1) {
         lds = browser.QuirksMode ? ' style="width:294px !important"' : "";
-        // qw = browser.QuirksMode
-        //   ? "width:296px !important;"
-        //   : "width:auto !important;max-width:299px;min-width:276px;";
+          // qw = browser.QuirksMode
+          //   ? "width:296px !important;"
+          //   : "width:auto !important;max-width:299px;min-width:276px;";
+        if (BAP.options[pageId].new_l2) {
+          noticeHTML =
+            '<div id="bap-notice-' + pageId +
+              '" class="bap-notice" style=" \
+                                      width: 299px;height: 232px;">' +
+              CLOSE_BTN +
+            '<div class="center-vert" \
+                  style="padding: 0 25px 0 25px;">' + 
+              BAP_ADVERTISER_LOGO + 
+              MAIN_COPY + 
+              BAP_LINKS + 
+            '</div>' + //close center-vert
+            BAP_EVIDON_LOGO +
+          '</div>';
+      } else {
         noticeHTML =
-          '<div id="bap-notice-' + pageId +
-            '" class="bap-notice" style=" \
-                                    width: 299px;height: 232px;">' +
-            CLOSE_BTN +
-          '<div class="center-vert" \
-                style="padding: 0 25px 0 25px;">' + 
-            BAP_ADVERTISER_LOGO + 
-            MAIN_COPY + 
-            BAP_LINKS + 
-          '</div>' + //close center-vert
-          BAP_EVIDON_LOGO +
-        '</div>';
+            '<div id="bap-notice-' + pageId +
+              '" class="bap-notice double-gray-border" style=" \
+                                      width: 299px;height: 232px;">' +
+              CLOSE_BTN +
+            '<div class="center-vert" \
+                  style="padding: 0 25px 0 25px;">' + 
+              BAP_ADVERTISER_LOGO + 
+              MAIN_COPY + 
+              BAP_LINKS + 
+            '</div>' + //close center-vert
+            BAP_EVIDON_LOGO +
+          '</div>';
+      }
+
+
+
+
+
+
+
+
+
+
       } else if (reg === 2) {
         noticeHTML =
         '<div id="bap-notice-' + pageId +
