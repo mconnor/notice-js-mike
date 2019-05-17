@@ -310,7 +310,7 @@ var BAP =
       } \
       .bap-links { \
         font-size: .7em; \
-        font-weight-bold; \
+        font-weight: bold; \
       } \
       .bap-links-new-l2 { \
         text-align: center; \
@@ -2879,7 +2879,7 @@ var BAP =
         qw = "",
         BAP_LINKS, BAP_EVIDON_LOGO, CLOSE_BTN, BAP_ADVERTISER_LOGO, MAIN_COPY;
       /* translation scaffold */
-      var rigthArrow = "&#187",
+      var rigthArrow = " &#187",
         sm,
         sw = "Privacy Policy",
         sl = "Learn about your choices",
@@ -2897,7 +2897,7 @@ var BAP =
           sm = "Opt Out & More Info";
           se = "Privacy Policy";
         } else {
-          sm = "More information & opt-out options " + rigthArrow;
+          sm = "More information & opt-out options";
         }
 
       function trans(z) {
@@ -3045,7 +3045,7 @@ var BAP =
                       "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
                       pageId +
                       "')\">" +
-                      sm + //opt out and more info
+                      sm + rigthArrow //opt out and more info
                       "</a> \
                     </div>" +
                     // *** end link - opt out
@@ -3064,7 +3064,7 @@ var BAP =
                               "', 'B');\" onmouseover=\"BAP.iabLink('" +
                               pageId +
                               "')\">" +
-                              sw +
+                              sw + + rigthArrow +
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
