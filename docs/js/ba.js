@@ -340,7 +340,10 @@ var BAP =
         user-select: none; \
       } \
       .gray-light {color: #707070;} \
-      .gray-border {border: 1px gray solid;} \
+      .gray-border { \
+        border: 1px gray solid; \
+        padding: 4px 5px 0 10px; \
+      } \
       .double-gray-border {border: 4px gray double;} \
       .bap-notice { \
         background-color: #FFFFFF; \
