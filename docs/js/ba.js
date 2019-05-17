@@ -3036,7 +3036,7 @@ var BAP =
                 '</div>';
         } else {
           BAP_LINKS = '<div class="bap-links"> \
-                    <div' +
+                    <div class="gray-border"' +
                       lds +
                       '><a href="about:blank" id="bap-link-1-' +
                       pageId +
@@ -3049,12 +3049,12 @@ var BAP =
                       "</a> \
                     </div>" +
                     // *** end link - opt out
-                    '<div> \
+                    '<div class="gray-border"> \
                       <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
-                        : '<div' +
+                        : '<div class="gray-border"' +
                             lds +
                             '> \
                             <a href="about:blank" id="bap-link-2-' +
@@ -3118,8 +3118,7 @@ var BAP =
                 '" class="bap-notice bap-notice-old-l2" style=" \
                                         width: 299px;height: 232px;">' +
                 CLOSE_BTN +
-              '<div class="center-vert" \
-                    style="padding: 0 10px 0 5px;">' + 
+              '<div class="center-vert">' + 
                 BAP_ADVERTISER_LOGO + 
                 MAIN_COPY + 
                 BAP_LINKS + 
