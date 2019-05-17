@@ -3081,7 +3081,6 @@ var BAP =
                 MAIN_COPY + 
                 BAP_LINKS + 
               '</div>' + //close center-vert
-              BAP_EVIDON_LOGO +
             '</div>';
         }
 
