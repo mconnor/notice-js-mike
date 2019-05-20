@@ -2935,6 +2935,7 @@ var BAP =
         generic_msg = sg1;
         if (BAP.options[pageId].advName) {
           generic_msg +=
+            "<br><br>" +
             " " +
             BAP.options[pageId].server.name +
             " " +
@@ -2947,13 +2948,13 @@ var BAP =
       } else if (BAP.options[pageId].behavioral === "single") {
         generic_msg = sg2;
         if (BAP.options[pageId].advName) {
-          generic_msg += " " + BAP.options[pageId].advName + " " + sg6;
+          generic_msg += "<br><br>" + BAP.options[pageId].advName + " " + sg6;
         }
       } else if (BAP.options[pageId].behavioral === "uncertain") {
         generic_msg = sg2;
         if (BAP.options[pageId].advName) {
           generic_msg +=
-           " " +
+          "<br><br>" +
             BAP.options[pageId].server.name +
             " " +
             sg3 +
