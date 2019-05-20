@@ -3123,7 +3123,7 @@ var BAP =
               '" class="bap-notice bap-notice-new-l2" style=" \
                                       width: 299px;height: 232px;">' +
               CLOSE_BTN +
-            '<div class="center-vert border-gray" \
+            '<div class="center-vert" \
                   style="padding: 0 25px 0 25px;">' + 
               BAP_ADVERTISER_LOGO + 
               MAIN_COPY + 
@@ -3137,7 +3137,7 @@ var BAP =
                 '" class="bap-notice bap-notice-old-l2" style=" \
                                         width: 299px;height: 232px;">' +
                 CLOSE_BTN +
-              '<div class="center-vert">' + 
+              '<div class="center-vert border-gray">' + 
                 BAP_ADVERTISER_LOGO + 
                 MAIN_COPY + 
                 BAP_LINKS + 
