@@ -310,6 +310,7 @@ var BAP =
       } \
       .center-vert { \
         top: 50%; \
+        height: 100%; \
         box-sizing: border-box; \
         -webkit-transform: translateY(-50%); \
         -ms-transform: translateY(-50%); \
