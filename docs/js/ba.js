@@ -303,7 +303,7 @@ var BAP =
       ".bap-img-container { \
         width: 124px; \
         height: 45px; \
-        margin-top: 4px 0 0 10px; \
+        margin: 4px 0 0 10px; \
       } \
       .center-horiz { \
         margin: 0 auto 0 auto; \
@@ -367,7 +367,7 @@ var BAP =
       } \
       .bap-notice-old-l2 { \
         line-height: 1.6; \
-        border: 4px white solid; \
+        border: 2px white solid; \
       } \
       .bap-notice-new-l2 { \
         line-height: 1.6; \
