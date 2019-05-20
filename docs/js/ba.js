@@ -408,7 +408,7 @@ var BAP =
         color: rgb(0, 0, 0); \
         margin: 0 0 0 0; \
         font-size: .9em; \
-        padding: 4px 5px 6px 10px; \
+        padding: 4px 5px 6px 8px; \
       } \
       .main-copy-new-l2 { \
         color: rgb(138, 135, 135); \
