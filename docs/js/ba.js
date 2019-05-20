@@ -3065,8 +3065,7 @@ var BAP =
                       "</a> \
                     </div>" +
                     // *** end link - opt out
-                    '<div class="gray-border"> \
-                      <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
+                    
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
@@ -3084,6 +3083,8 @@ var BAP =
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
+                  '<div class="gray-border"> \
+                      <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
                   '<div class="gray-border"> \
                     Privacy Controls by Evidon, Inc. \
                   </div>' +
