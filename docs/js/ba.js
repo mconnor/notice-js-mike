@@ -355,6 +355,9 @@ var BAP =
         border-top: 1px #ababab solid; \
         padding: 4px 10px 4px 10px; \
       } \
+      .font-8 { \
+        font-size: .8em; \
+      } \
       .bap-notice { \
         background-color: #FFFFFF; \
         position: absolute; \
@@ -3048,45 +3051,45 @@ var BAP =
                       </div>") + 
                   // ** end WHAT IS IAB
                 '</div>';
-        } else {
-          BAP_LINKS = '<div class="bap-links"> \
-                    <div class="bap-link-div"' +
-                      lds +
-                      '><a href="about:blank" id="bap-link-1-' +
-                      pageId +
-                      '" target="_blank" onclick="BAP.action(\'' +
-                      pageId +
-                      "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
-                      pageId +
-                      "')\">" +
-                      sm + rigthArrow + //opt out and more info
+      } else {
+        BAP_LINKS = '<div class="bap-links"> \
+                  <div class="bap-link-div"' +
+                    lds +
+                    '><a href="about:blank" id="bap-link-1-' +
+                    pageId +
+                    '" target="_blank" onclick="BAP.action(\'' +
+                    pageId +
+                    "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+                    pageId +
+                    "')\">" +
+                    sm + rigthArrow + //opt out and more info
+                    "</a> \
+                  </div>" +
+                  // *** end link - opt out
+                  
+                  // ** start WHAT IS IAB
+                    (BAP.options[pageId].hideWhatIs
+                      ? ""
+                      : '<div class="bap-link-div"' +
+                          lds +
+                          '> \
+                          <a href="about:blank" id="bap-link-2-' +
+                            pageId +
+                            '" target="_blank" onclick="BAP.action(\'' +
+                            pageId +
+                            "', 'B');\" onmouseover=\"BAP.iabLink('" +
+                            pageId +
+                            "')\">" +
+                            sw  + rigthArrow +
                       "</a> \
-                    </div>" +
-                    // *** end link - opt out
-                    
-                    // ** start WHAT IS IAB
-                      (BAP.options[pageId].hideWhatIs
-                        ? ""
-                        : '<div class="bap-link-div"' +
-                            lds +
-                            '> \
-                            <a href="about:blank" id="bap-link-2-' +
-                              pageId +
-                              '" target="_blank" onclick="BAP.action(\'' +
-                              pageId +
-                              "', 'B');\" onmouseover=\"BAP.iabLink('" +
-                              pageId +
-                              "')\">" +
-                              sw  + rigthArrow +
-                        "</a> \
-                      </div>") + 
-                  // ** end WHAT IS IAB
-                  '<div class="bap-link-div"> \
-                      <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
-                  '<div class="bap-link-div"> \
-                    Privacy Controls by Evidon, Inc. \
-                  </div>' +
-                '</div>';
+                    </div>") + 
+                // ** end WHAT IS IAB
+                '<div class="bap-link-div"> \
+                    <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
+                '<div class="bap-link-div font-8"> \
+                  PrivacyControlsbyEvidon,Inc. \
+                </div>' +
+              '</div>';
         }
         
         
@@ -3165,8 +3168,7 @@ var BAP =
             '" class="bap-notice bap-notice-old-l2" style=" \
                                     width: 159px;height: 342px;"> ' +
             CLOSE_BTN +
-            '<div class="center-vert border-gray" \
-                  style="padding: 0 8px 0 8px;">' +
+            '<div class="center-vert border-gray">' +
               BAP_ADVERTISER_LOGO +  
               MAIN_COPY +
               BAP_LINKS + 
