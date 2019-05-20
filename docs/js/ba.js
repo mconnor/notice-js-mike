@@ -207,7 +207,11 @@ var BAP =
             loadQueue++;
             i = document.createElement("script");
             //i.src = DOMAIN_JSON + bap_url + ".js";
-            i.src = '//mconnor.github.io/testVast/newL2testing/64564.js';
+            if (BAP.options[pageId].new_l2) {
+              i.src = '//mconnor.github.io/testVast/newL2testing/64564.js';
+            } else {
+              i.src = '//mconnor.github.io/testVast/oldL2testing/64564.js';
+            }
             body.appendChild(i);
           }
         } else {
