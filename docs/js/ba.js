@@ -3162,7 +3162,7 @@ var BAP =
         } else {
           noticeHTML =
           '<div id="bap-notice-' + pageId +
-            '" class="bap-notice" style=" \
+            '" class="bap-notice bap-notice-old-l2" style=" \
                                     width: 159px;height: 342px;"> ' +
             CLOSE_BTN +
             '<div class="center-vert border-gray" \
