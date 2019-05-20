@@ -3144,30 +3144,36 @@ var BAP =
               '</div>' + //close center-vert
             '</div>';
         }
-
-
-
-
-
-
-
-
-
-
       } else if (reg === 2) {
-        noticeHTML =
-        '<div id="bap-notice-' + pageId +
-          '" class="bap-notice" style=" \
-                                  width: 159px;height: 342px;"> ' +
-          CLOSE_BTN +
-        '<div class="center-vert" \
-              style="padding: 0 8px 0 8px;">' +
-          BAP_ADVERTISER_LOGO +  
-          MAIN_COPY +
-          BAP_LINKS + 
-        '</div>' + //close center-vert
-        BAP_EVIDON_LOGO +
-      '</div>';
+        if (BAP.options[pageId].new_l2) { 
+          noticeHTML =
+          '<div id="bap-notice-' + pageId +
+            '" class="bap-notice" style=" \
+                                    width: 159px;height: 342px;"> ' +
+            CLOSE_BTN +
+          '<div class="center-vert" \
+                style="padding: 0 8px 0 8px;">' +
+            BAP_ADVERTISER_LOGO +  
+            MAIN_COPY +
+            BAP_LINKS + 
+          '</div>' + //close center-vert
+          BAP_EVIDON_LOGO +
+          '</div>';
+        } else {
+          noticeHTML =
+          '<div id="bap-notice-' + pageId +
+            '" class="bap-notice" style=" \
+                                    width: 159px;height: 342px;"> ' +
+            CLOSE_BTN +
+            '<div class="center-vert border-gray" \
+                  style="padding: 0 8px 0 8px;">' +
+              BAP_ADVERTISER_LOGO +  
+              MAIN_COPY +
+              BAP_LINKS + 
+            '</div>' + //close center-vert
+          '</div>';
+        }
+        
       } else if (reg === 5) {
         noticeHTML =
         '<div id="bap-notice-' + pageId +
