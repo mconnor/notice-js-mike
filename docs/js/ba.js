@@ -207,11 +207,14 @@ var BAP =
             loadQueue++;
             i = document.createElement("script");
             //i.src = DOMAIN_JSON + bap_url + ".js";
+            // LOCAL TESTING
+            BAP.options[pageId].new_l2 = (BAP.options[pageId].new_l2 == 'true');
             if (BAP.options[pageId].new_l2) {
               i.src = '//mconnor.github.io/testVast/newL2testing/64564.js';
             } else {
               i.src = '//mconnor.github.io/testVast/oldL2testing/64564.js';
             }
+            // END LOCAL TESTING
             body.appendChild(i);
           }
         } else {
@@ -790,7 +793,6 @@ var BAP =
         BAP.options[pageId].ad_w = parseInt(BAP.options[pageId].ad_w);
         BAP.options[pageId].vast = (BAP.options[pageId].vast == 'true');
         BAP.options[pageId].vpaid = (BAP.options[pageId].vpaid == 'true');
-        BAP.options[pageId].new_l2 = (BAP.options[pageId].new_l2 == 'true');
 
         // reset detection mode
         BAP.options[pageId].dm = -1;
