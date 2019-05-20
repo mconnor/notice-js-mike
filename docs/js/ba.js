@@ -316,6 +316,9 @@ var BAP =
         transform: translateY(-50%); \
         position: absolute; \
       } \
+      .border-gray { \
+        border: 1px gray solid; \
+      } \
       .bap-links { \
         font-size: .9em; \
         font-weight: bold; \
@@ -352,7 +355,6 @@ var BAP =
         border-top: 1px #ababab solid; \
         padding: 4px 10px 4px 10px; \
       } \
-      .double-bap-link-div {border: 4px gray double;} \
       .bap-notice { \
         background-color: #FFFFFF; \
         position: absolute; \
@@ -365,7 +367,7 @@ var BAP =
       } \
       .bap-notice-old-l2 { \
         line-height: 1.6; \
-        border: 4px gray double; \
+        border: 4px white solid; \
       } \
       .bap-notice-new-l2 { \
         line-height: 1.6; \
@@ -3121,7 +3123,7 @@ var BAP =
               '" class="bap-notice bap-notice-new-l2" style=" \
                                       width: 299px;height: 232px;">' +
               CLOSE_BTN +
-            '<div class="center-vert" \
+            '<div class="center-vert border-gray" \
                   style="padding: 0 25px 0 25px;">' + 
               BAP_ADVERTISER_LOGO + 
               MAIN_COPY + 
