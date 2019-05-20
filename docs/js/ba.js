@@ -350,11 +350,11 @@ var BAP =
         user-select: none; \
       } \
       .gray-light {color: #707070;} \
-      .gray-border { \
+      .bap-link-div { \
         border-top: 1px #ababab solid; \
-        padding: 4px 5px 0 10px; \
+        padding: 4px 10px 4px 10px; \
       } \
-      .double-gray-border {border: 4px gray double;} \
+      .double-bap-link-div {border: 4px gray double;} \
       .bap-notice { \
         background-color: #FFFFFF; \
         position: absolute; \
@@ -3050,7 +3050,7 @@ var BAP =
                 '</div>';
         } else {
           BAP_LINKS = '<div class="bap-links"> \
-                    <div class="gray-border"' +
+                    <div class="bap-link-div"' +
                       lds +
                       '><a href="about:blank" id="bap-link-1-' +
                       pageId +
@@ -3067,7 +3067,7 @@ var BAP =
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
-                        : '<div class="gray-border"' +
+                        : '<div class="bap-link-div"' +
                             lds +
                             '> \
                             <a href="about:blank" id="bap-link-2-' +
@@ -3081,9 +3081,9 @@ var BAP =
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
-                  '<div class="gray-border"> \
+                  '<div class="bap-link-div"> \
                       <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
-                  '<div class="gray-border"> \
+                  '<div class="bap-link-div"> \
                     Privacy Controls by Evidon, Inc. \
                   </div>' +
                 '</div>';
