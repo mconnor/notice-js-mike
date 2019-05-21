@@ -3087,8 +3087,8 @@ var BAP =
                 // ** end WHAT IS IAB
                 '<div class="bap-link-div"> \
                     <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
-                '<div class="bap-link-div font-8"> \
-                  PrivacyControlsbyEvidon,Inc. \
+                '<div class="bap-link-div"> \
+                  Privacy Controls by Evidon, Inc. \
                 </div>' +
               '</div>';
         }
