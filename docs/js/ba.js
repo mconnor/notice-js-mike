@@ -3203,10 +3203,9 @@ var BAP =
         } else {
           noticeHTML =
             '<div id="bap-notice-' + pageId +
-              '" class="bap-notice bap-notice-new-l2 dimensions-reg5">' +
+              '" class="bap-notice bap-notice-old-l2 dimensions-reg5">' +
               CLOSE_BTN +
-              '<div class="center-vert border-gray" \
-                    style="padding: 0 25px 0 25px;">' + 
+              '<div class="center-vert border-gray">' + 
                 BAP_ADVERTISER_LOGO +  
                 BAP_LINKS + 
               '</div>' + //close center-vert
