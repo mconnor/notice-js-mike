@@ -3205,10 +3205,11 @@ var BAP =
             '<div id="bap-notice-' + pageId +
               '" class="bap-notice bap-notice-new-l2 dimensions-reg5">' +
               CLOSE_BTN +
-            '<div class="center-vert" \
-                  style="padding: 0 25px 0 25px;">' + 
-              BAP_LINKS + 
-            '</div>' + //close center-vert
+              '<div class="center-vert border-gray" \
+                    style="padding: 0 25px 0 25px;">' + 
+                BAP_ADVERTISER_LOGO +  
+                BAP_LINKS + 
+              '</div>' + //close center-vert
             BAP_EVIDON_LOGO +
           '</div>';
         }
