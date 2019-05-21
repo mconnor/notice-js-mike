@@ -3136,7 +3136,7 @@ var BAP =
         if (BAP.options[pageId].new_l2) {
           noticeHTML =
             '<div id="bap-notice-' + pageId +
-              '" class="bap-notice bap-notice-new-l2 dimensions-reg1"' +
+              '" class="bap-notice bap-notice-new-l2 dimensions-reg1">' +
               CLOSE_BTN +
             '<div class="center-vert" \
                   style="padding: 0 25px 0 25px;">' + 
@@ -3149,7 +3149,7 @@ var BAP =
         } else {
           noticeHTML =
               '<div id="bap-notice-' + pageId +
-                '" class="bap-notice bap-notice-old-l2 dimensions-reg1"' +
+                '" class="bap-notice bap-notice-old-l2 dimensions-reg1">' +
                 CLOSE_BTN +
               '<div class="center-vert border-gray">' + 
                 BAP_ADVERTISER_LOGO + 
@@ -3162,7 +3162,7 @@ var BAP =
         if (BAP.options[pageId].new_l2) { 
           noticeHTML =
           '<div id="bap-notice-' + pageId +
-            '" class="bap-notice bap-notice-new-l2 dimensions-reg2"' +
+            '" class="bap-notice bap-notice-new-l2 dimensions-reg2">' +
             CLOSE_BTN +
           '<div class="center-vert" \
                 style="padding: 0 8px 0 8px;">' +
@@ -3175,7 +3175,7 @@ var BAP =
         } else {
           noticeHTML =
           '<div id="bap-notice-' + pageId +
-            '" class="bap-notice bap-notice-old-l2 dimensions-reg2"' +
+            '" class="bap-notice bap-notice-old-l2 dimensions-reg2">' +
             CLOSE_BTN +
             '<div class="center-vert border-gray">' +
               BAP_ADVERTISER_LOGO +  
@@ -3207,7 +3207,6 @@ var BAP =
               CLOSE_BTN +
             '<div class="center-vert" \
                   style="padding: 0 25px 0 25px;">' + 
-              MAIN_COPY + 
               BAP_LINKS + 
             '</div>' + //close center-vert
             BAP_EVIDON_LOGO +
