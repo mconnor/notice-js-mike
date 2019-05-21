@@ -3181,22 +3181,41 @@ var BAP =
         }
         
       } else if (reg === 5) {
-        noticeHTML =
-        '<div id="bap-notice-' + pageId +
-          '" class="bap-notice" style=" \
-                                width: 299px; \
-                                height: 199px;">' +
-          CLOSE_BTN +
-        '<div class="center-vert" \
-              style="width:299px; \
-                    padding: 0 25px 0 25px;"> \
-          <div class="bap-img-container">' + 
-            BAP_ADVERTISER_LOGO + 
-          '</div>' + 
-            BAP_LINKS + 
-        '</div>' + //close center-vert
-        BAP_EVIDON_LOGO +
-      '</div>'; //close L2
+        if (BAP.options[pageId].new_l2) { 
+          noticeHTML =
+          '<div id="bap-notice-' + pageId +
+            '" class="bap-notice bap-notice-new-l2" style=" \
+                                  width: 299px; \
+                                  height: 199px;">' +
+            CLOSE_BTN +
+          '<div class="center-vert" \
+                style="width:299px; \
+                      padding: 0 25px 0 25px;"> \
+            <div class="bap-img-container">' + 
+              BAP_ADVERTISER_LOGO + 
+            '</div>' + 
+              BAP_LINKS + 
+          '</div>' + //close center-vert
+          BAP_EVIDON_LOGO +
+          '</div>'; //close L2
+        } else {
+          noticeHTML =
+          '<div id="bap-notice-' + pageId +
+            '" class="bap-notice" style=" \
+                                  width: 299px; \
+                                  height: 199px;">' +
+            CLOSE_BTN +
+          '<div class="center-vert" \
+                style="width:299px; \
+                      padding: 0 25px 0 25px;"> \
+            <div class="bap-img-container">' + 
+              BAP_ADVERTISER_LOGO + 
+            '</div>' + 
+              BAP_LINKS + 
+          '</div>' + //close center-vert
+          '</div>'; //close L2
+        }
+        
       } else if (reg === 6) {
         qw = browser.QuirksMode
           ? "width: 728px !important;"
