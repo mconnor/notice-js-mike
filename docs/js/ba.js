@@ -3155,7 +3155,7 @@ var BAP =
         if (BAP.options[pageId].new_l2) { 
           noticeHTML =
           '<div id="bap-notice-' + pageId +
-            '" class="bap-notice-new-l2" style=" \
+            '" class="bap-notice bap-notice-new-l2" style=" \
                                     width: 159px;height: 342px;"> ' +
             CLOSE_BTN +
           '<div class="center-vert" \
