@@ -3111,7 +3111,7 @@ var BAP =
           CLOSE_BTN = '<div class="bap-close" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
           MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
-          CLOSE_BTN = '<div class="bap-close gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[&times]</div>';
+          CLOSE_BTN = '<div class="bap-close gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[x]</div>';
         }
        
 
