@@ -3189,22 +3189,21 @@ var BAP =
         if (BAP.options[pageId].new_l2) { 
           noticeHTML =
           '<div id="bap-notice-' + pageId +
-            '" class="bap-notice bap-notice-new-l2 dimensions-reg5"' +
+            '" class="bap-notice bap-notice-new-l2 dimensions-reg5">' +
             CLOSE_BTN +
-          '<div class="center-vert" \
-                style="width:299px; \
-                      padding: 0 25px 0 25px;"> \
-            <div class="bap-img-container">' + 
-              BAP_ADVERTISER_LOGO + 
-            '</div>' + 
-              BAP_LINKS + 
-          '</div>' + //close center-vert
-          BAP_EVIDON_LOGO +
+              '<div class="center-vert" \
+                    style="width:299px; \
+                          padding: 0 25px 0 25px;"> \
+                  <div class="bap-img-container">' + 
+                    BAP_ADVERTISER_LOGO + 
+                  '</div>' + 
+                  BAP_LINKS + 
+              '</div>' + //close center-vert
           '</div>'; //close L2
         } else {
           noticeHTML =
             '<div id="bap-notice-' + pageId +
-              '" class="bap-notice bap-notice-new-l2 dimensions-reg5"' +
+              '" class="bap-notice bap-notice-new-l2 dimensions-reg5">' +
               CLOSE_BTN +
             '<div class="center-vert" \
                   style="padding: 0 25px 0 25px;">' + 
