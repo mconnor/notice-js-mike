@@ -3210,7 +3210,6 @@ var BAP =
                 BAP_ADVERTISER_LOGO +  
                 BAP_LINKS + 
               '</div>' + //close center-vert
-            BAP_EVIDON_LOGO +
           '</div>';
         }
         
