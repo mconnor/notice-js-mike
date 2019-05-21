@@ -322,6 +322,8 @@ var BAP =
       } \
       .border-gray { \
         border: 1px gray solid; \
+        width: 100%; \
+        height: 100%; \
       } \
       .bap-links { \
         font-size: .9em; \
@@ -3205,7 +3207,7 @@ var BAP =
             '<div id="bap-notice-' + pageId +
               '" class="bap-notice bap-notice-old-l2 dimensions-reg5">' +
               CLOSE_BTN +
-              '<div class="center-vert border-gray dimensions-reg5">' + 
+              '<div class="center-vert border-gray ">' + 
                 BAP_ADVERTISER_LOGO +  
                 BAP_LINKS + 
               '</div>' + //close center-vert
