@@ -3205,7 +3205,7 @@ var BAP =
             '<div id="bap-notice-' + pageId +
               '" class="bap-notice bap-notice-old-l2 dimensions-reg5">' +
               CLOSE_BTN +
-              '<div class="center-vert border-gray">' + 
+              '<div class="center-vert border-gray dimensions-reg5">' + 
                 BAP_ADVERTISER_LOGO +  
                 BAP_LINKS + 
               '</div>' + //close center-vert
