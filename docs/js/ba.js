@@ -309,13 +309,16 @@ var BAP =
         margin: 0 auto 0 auto; \
       } \
       .center-vert { \
+        margin: 0; \
         top: 50%; \
-        height: 100%; \
         box-sizing: border-box; \
         -webkit-transform: translateY(-50%); \
         -ms-transform: translateY(-50%); \
         transform: translateY(-50%); \
         position: absolute; \
+      } \
+      .height-33 { \
+        height: 33%; \
       } \
       .border-gray { \
         border: 1px gray solid; \
