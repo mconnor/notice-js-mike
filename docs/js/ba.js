@@ -372,8 +372,8 @@ var BAP =
       .padding4_10_4_10 { \
         padding: 4px 10px 4px 10px; \
       }\
-      .padding4_0_4_0 { \
-        padding: 4px 10px 4px 10px; \
+      .padding2_4_2_4 { \
+        padding: 2px 4px 2px 14px; \
       }\
       .font-8 { \
         font-size: .8em; \
@@ -3076,12 +3076,12 @@ var BAP =
                   // ** end WHAT IS IAB
                 '</div>';
       } else {
-        // if (reg === 6 && BAP.options[pageId].new_l2 ) {
-        //   bapLinkDivClassList =  "border-top padding4_10_4_10";
-        // } else {
-        //   bapLinkDivClassList =  "border-bottom padding4_10_4_10";
-        // }
+
         bapLinkDivClassList =  "border-top padding4_10_4_10";
+        if (reg === 6 && !BAP.options[pageId].new_l2 ) {
+          bapLinkDivClassList =  "border-top padding2_4_2_4";
+        }
+        
         BAP_LINKS = 
                 '<div class="bap-links">\
                   <div class="' + bapLinkDivClassList + '">\
