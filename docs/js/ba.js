@@ -362,8 +362,10 @@ var BAP =
       .gray-light {color: #707070;} \
       .bap-link-div { \
         border-top: 1px #ababab solid; \
-        padding: 4px 10px 4px 10px; \
       } \
+      .padding4_10_4_10 { \
+        padding: 4px 10px 4px 10px; \
+      }\
       .font-8 { \
         font-size: .8em; \
       } \
@@ -3065,6 +3067,9 @@ var BAP =
                   // ** end WHAT IS IAB
                 '</div>';
       } else {
+
+        var bapLinkDivClassList =  "bap-link-div";
+
         BAP_LINKS = '<div class="bap-links">\
                   <div class="bap-link-div">\
                     <a href="about:blank" id="bap-link-1-' +
@@ -3082,7 +3087,7 @@ var BAP =
                   // ** start WHAT IS IAB
                     (BAP.options[pageId].hideWhatIs
                       ? ""
-                      : '<div class="bap-link-div">\
+                      : '<div class=' + bapLinkDivClassList + '>\
                           <a href="about:blank" id="bap-link-2-' +
                             pageId +
                             '" target="_blank" onclick="BAP.action(\'' +
