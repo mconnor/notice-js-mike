@@ -3090,7 +3090,7 @@ var BAP =
                   // ** start WHAT IS IAB
                     (BAP.options[pageId].hideWhatIs
                       ? ""
-                      : '<div class=' + bapLinkDivClassList + '>\
+                      : '<div class="' + bapLinkDivClassList + '">\
                           <a href="about:blank" id="bap-link-2-' +
                             pageId +
                             '" target="_blank" onclick="BAP.action(\'' +
