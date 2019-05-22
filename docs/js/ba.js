@@ -3234,10 +3234,11 @@ var BAP =
         } else {
           noticeHTML = 
           '<div id="bap-notice-' + pageId + 
-                  '" class="bap-notice" style=" \
-                                        width: 726px; \
-                                        height: 118px; \
-                                        left: 274px;">' +
+                  '" class="bap-notice bap-notice-old-l2"\
+                             style=" \
+                                width: 726px; \
+                                height: 84px; \
+                                left: 274px;">' +
                       CLOSE_BTN +
               '<div> \
                   <div class="center-vert" style="\
@@ -3249,8 +3250,8 @@ var BAP =
                   '</div>\
                   <div class="center-vert" style="\
                                             display: inline-block; \
-                                            left: 25%; \
-                                            width:50%;">' + 
+                                            left: 33%; \
+                                            width:46%;">' + 
                      MAIN_COPY +
                   '</div> \
                   <div class="center-vert" style="\
