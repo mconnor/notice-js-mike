@@ -2910,8 +2910,6 @@ var BAP =
         generic_msg = "",
         z = "",
         div = $("BAP-holder"),
-        lds = "",
-        qw = "",
         BAP_LINKS, BAP_EVIDON_LOGO, CLOSE_BTN, BAP_ADVERTISER_LOGO, MAIN_COPY;
       /* translation scaffold */
       var rigthArrow = " &#187",
@@ -3036,16 +3034,15 @@ var BAP =
 
       if (BAP.options[pageId].new_l2) {
         BAP_LINKS = '<div class="bap-links-new-l2"> \
-                    <div' +
-                      lds +
-                      '><a href="about:blank" id="bap-link-1-' +
-                      pageId +
-                      '" target="_blank" onclick="BAP.action(\'' +
-                      pageId +
-                      "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
-                      pageId +
-                      "')\">" +
-                      sm + //opt out and more info
+                    <div>\
+                      <a href="about:blank" id="bap-link-1-' +
+                        pageId +
+                        '" target="_blank" onclick="BAP.action(\'' +
+                        pageId +
+                        "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+                        pageId +
+                        "')\">" +
+                        sm + //opt out and more info
                       "</a> \
                     </div>" +
                     // *** end link - opt out
@@ -3054,9 +3051,7 @@ var BAP =
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
-                        : '<div' +
-                            lds +
-                            '> \
+                        : '<div> \
                             <a href="about:blank" id="bap-link-2-' +
                               pageId +
                               '" target="_blank" onclick="BAP.action(\'' +
@@ -3070,27 +3065,24 @@ var BAP =
                   // ** end WHAT IS IAB
                 '</div>';
       } else {
-        BAP_LINKS = '<div class="bap-links"> \
-                  <div class="bap-link-div"' +
-                    lds +
-                    '><a href="about:blank" id="bap-link-1-' +
-                    pageId +
-                    '" target="_blank" onclick="BAP.action(\'' +
-                    pageId +
-                    "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
-                    pageId +
-                    "')\">" +
-                    sm + rigthArrow + //opt out and more info
-                    "</a> \
+        BAP_LINKS = '<div class="bap-links">\
+                  <div class="bap-link-div">\
+                    <a href="about:blank" id="bap-link-1-' +
+                      pageId +
+                      '" target="_blank" onclick="BAP.action(\'' +
+                      pageId +
+                      "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+                      pageId +
+                      "')\">" +
+                      sm + rigthArrow + //opt out and more info
+                    "</a>\
                   </div>" +
                   // *** end link - opt out
                   
                   // ** start WHAT IS IAB
                     (BAP.options[pageId].hideWhatIs
                       ? ""
-                      : '<div class="bap-link-div"' +
-                          lds +
-                          '> \
+                      : '<div class="bap-link-div">\
                           <a href="about:blank" id="bap-link-2-' +
                             pageId +
                             '" target="_blank" onclick="BAP.action(\'' +
@@ -3099,8 +3091,8 @@ var BAP =
                             pageId +
                             "')\">" +
                             sw  + rigthArrow +
-                      "</a> \
-                    </div>") + 
+                          '</a>\
+                        </div>') + 
                 // ** end WHAT IS IAB
                 '<div class="bap-link-div"> \
                     <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
@@ -3134,10 +3126,6 @@ var BAP =
 
 
       if (reg === 1) {
-        lds = browser.QuirksMode ? ' style="width:294px !important"' : "";
-          // qw = browser.QuirksMode
-          //   ? "width:296px !important;"
-          //   : "width:auto !important;max-width:299px;min-width:276px;";
         if (BAP.options[pageId].new_l2) {
           noticeHTML =
             '<div id="bap-notice-' + pageId +
@@ -3218,12 +3206,6 @@ var BAP =
         }
         
       } else if (reg === 6) {
-        qw = browser.QuirksMode
-          ? "width: 728px !important;"
-          : "min-width: 675px !important; width: auto !important;";
-        lds = browser.QuirksMode
-          ? ' style="width:275px !important; height: 20px;"'
-          : ""; 
           noticeHTML = 
           '<div id="bap-notice-' + pageId + 
                   '" class="bap-notice" style=" \
