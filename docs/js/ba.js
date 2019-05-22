@@ -3079,7 +3079,8 @@ var BAP =
           bapLinkDivClassList =  "border-bottom";
         }
 
-        BAP_LINKS = '<div class="bap-links">\
+        BAP_LINKS = 
+                '<div class="bap-links">\
                   <div class="' + bapLinkDivClassList + '">\
                     <a href="about:blank" id="bap-link-1-' +
                       pageId +
@@ -3255,7 +3256,6 @@ var BAP =
                                 left: 274px;">' +
                       CLOSE_BTN +
               '<div class="border-gray" \
-                    style="padding:2px"> \
                   <div class="center-vert" style="\
                                               display: inline-block;\
                                               max-width: 280px;\
