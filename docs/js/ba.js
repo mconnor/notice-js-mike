@@ -3019,7 +3019,7 @@ var BAP =
       }
 
       var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
-
+      var bapLinkDivClassList;
       BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
             ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
@@ -3067,8 +3067,11 @@ var BAP =
                   // ** end WHAT IS IAB
                 '</div>';
       } else {
-
-        var bapLinkDivClassList =  "bap-link-div";
+        if (reg === 6 && BAP.options[pageId].new_l2 ) {
+          bapLinkDivClassList =  "bap-link-div";
+        } else {
+          bapLinkDivClassList =  "bap-link-div padding4_10_4_10";
+        }
 
         BAP_LINKS = '<div class="bap-links">\
                   <div class="' + bapLinkDivClassList + '">\
@@ -3099,9 +3102,9 @@ var BAP =
                           '</a>\
                         </div>') + 
                 // ** end WHAT IS IAB
-                '<div class="bap-link-div"> \
+                '<div class="' + bapLinkDivClassList + '"> \
                     <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
-                '<div class="bap-link-div"> \
+                '<div class="' + bapLinkDivClassList + '"> \
                   Privacy Controls by Evidon, Inc. \
                 </div>' +
               '</div>';
