@@ -3073,7 +3073,7 @@ var BAP =
         if (reg === 6 && BAP.options[pageId].new_l2 ) {
           bapLinkDivClassList =  "bap-link-div padding4_10_4_10";
         } else {
-          bapLinkDivClassList =  "bap-link-div";
+          bapLinkDivClassList =  "bottom-border";
         }
 
         BAP_LINKS = '<div class="bap-links">\
