@@ -3206,6 +3206,7 @@ var BAP =
         }
         
       } else if (reg === 6) {
+        if (BAP.options[pageId].new_l2) { 
           noticeHTML = 
           '<div id="bap-notice-' + pageId + 
                   '" class="bap-notice" style=" \
@@ -3230,6 +3231,37 @@ var BAP =
               </div>' +
               BAP_EVIDON_LOGO +
           '</div>';
+        } else {
+          noticeHTML = 
+          '<div id="bap-notice-' + pageId + 
+                  '" class="bap-notice" style=" \
+                                        width: 726px; \
+                                        height: 118px; \
+                                        left: 274px;">' +
+                      CLOSE_BTN +
+              '<div> \
+                  <div class="center-vert" style="\
+                                              display: inline-block;\
+                                              max-width: 280px;\
+                                              min-width: 230px; \
+                                              ">' +
+                    BAP_LINKS +
+                  '</div>\
+                  <div class="center-vert" style="\
+                                            display: inline-block; \
+                                            left: 25%; \
+                                            width:50%;">' + 
+                     MAIN_COPY +
+                  '</div> \
+                  <div class="center-vert" style="\
+                                            display:inline-block; \
+                                            right: 20px;>' +
+                      BAP_ADVERTISER_LOGO +  
+                  '</div> \
+              </div>\
+          </div>';
+        }
+          
 
 
       }
