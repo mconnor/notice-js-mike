@@ -3081,7 +3081,7 @@ var BAP =
         // } else {
         //   bapLinkDivClassList =  "border-bottom padding4_10_4_10";
         // }
-        bapLinkDivClassList =  "border-bottom padding4_10_4_10";
+        bapLinkDivClassList =  "border-top padding4_10_4_10";
         BAP_LINKS = 
                 '<div class="bap-links">\
                   <div class="' + bapLinkDivClassList + '">\
