@@ -320,6 +320,9 @@ var BAP =
       .height-33 { \
         height: 33%; \
       } \
+      .padding-top-5percent { \
+        padding-top: 5%; \
+      } \
       .border-gray { \
         border: 1px gray solid; \
         width: 100%; \
@@ -3196,7 +3199,7 @@ var BAP =
               '<div class="center-vert" \
                     style="width:299px; \
                           padding: 0 25px 0 25px;"> \
-                  <div class="bap-img-container">' + 
+                  <div class="bap-img-container center-horiz">' + 
                     BAP_ADVERTISER_LOGO + 
                   '</div>' + 
                   BAP_LINKS + 
@@ -3207,7 +3210,7 @@ var BAP =
             '<div id="bap-notice-' + pageId +
               '" class="bap-notice bap-notice-old-l2 dimensions-reg5">' +
               CLOSE_BTN +
-              '<div class="center-vert border-gray ">' + 
+              '<div class="center-vert border-gray padding-top-5percent">' + 
                 BAP_ADVERTISER_LOGO +  
                 BAP_LINKS + 
               '</div>' + //close center-vert
