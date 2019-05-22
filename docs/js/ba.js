@@ -360,11 +360,14 @@ var BAP =
         user-select: none; \
       } \
       .gray-light {color: #707070;} \
-      .bap-link-div { \
+      .border-top { \
         border-top: 1px #ababab solid; \
       } \
-      .bottom-border {\
+      .border-bottom {\
         border-bottom: 1px #ababab solid;\
+      }\
+      .border-right {\
+        border-right: 1px #ababab solid;\
       }\
       .padding4_10_4_10 { \
         padding: 4px 10px 4px 10px; \
@@ -3071,9 +3074,9 @@ var BAP =
                 '</div>';
       } else {
         if (reg === 6 && BAP.options[pageId].new_l2 ) {
-          bapLinkDivClassList =  "bap-link-div padding4_10_4_10";
+          bapLinkDivClassList =  "border-top padding4_10_4_10";
         } else {
-          bapLinkDivClassList =  "bottom-border";
+          bapLinkDivClassList =  "border-bottom";
         }
 
         BAP_LINKS = '<div class="bap-links">\
@@ -3093,7 +3096,7 @@ var BAP =
                   // ** start WHAT IS IAB
                     (BAP.options[pageId].hideWhatIs
                       ? ""
-                      : '<div class="bottom-border ' + bapLinkDivClassList + '">\
+                      : '<div class="' + bapLinkDivClassList + '">\
                           <a href="about:blank" id="bap-link-2-' +
                             pageId +
                             '" target="_blank" onclick="BAP.action(\'' +
@@ -3105,9 +3108,9 @@ var BAP =
                           '</a>\
                         </div>') + 
                 // ** end WHAT IS IAB
-                '<div class="bottom-border ' + bapLinkDivClassList + '"> \
-                    <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
                 '<div class="' + bapLinkDivClassList + '"> \
+                    <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
+                '<div class="border-right"> \
                   Privacy Controls by Evidon, Inc. \
                 </div>' +
               '</div>';
