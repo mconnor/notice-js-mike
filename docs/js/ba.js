@@ -3113,7 +3113,8 @@ var BAP =
                         </div>') + 
                 // ** end WHAT IS IAB
                 '<div class="' + bapLinkDivClassList + '"> \
-                    <a href="#" target="_blank">' + se + rigthArrow + '</a></div>' + //privacy policy
+                    <a href="#" target="_blank">' + se + rigthArrow + '</a>\
+                </div>' + //privacy policy
                 '<div class="' + bapLinkDivClassList + '"style="font-size:.7em;">\
                   Privacy Controls by Evidon, Inc.\
                 </div>' +
@@ -3258,25 +3259,16 @@ var BAP =
                                 height: 84px; \
                                 left: 274px;">' +
                       CLOSE_BTN +
-              '<div class="border-gray" \
-                  <div class="center-vert" style="\
-                                              display: inline-block;\
-                                              max-width: 30%;\
-                                              min-width: 230px; \
-                                              ">' +
+              '<div class="border-gray">\
+                  <div class="center-vert" style="display: inline-block;max-width: 30%;min-width: 230px;">' +
                     BAP_LINKS +
                   '</div>\
-                  <div class="center-vert" style="\
-                                            display: inline-block; \
-                                            left: 33%; \
-                                            width:46%;">' + 
+                  <div class="center-vert" style="display: inline-block;left: 33%;width:46%;">' + 
                      MAIN_COPY +
-                  '</div> \
-                  <div class="center-vert" style="\
-                                            display:inline-block; \
-                                            right: 20px;>' +
+                  '</div>\
+                  <div class="center-vert" style="display:inline-block;right: 20px;>' +
                       BAP_ADVERTISER_LOGO +  
-                  '</div> \
+                  '</div>\
               </div>\
           </div>';
         }
