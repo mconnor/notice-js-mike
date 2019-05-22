@@ -3240,7 +3240,8 @@ var BAP =
                                 height: 84px; \
                                 left: 274px;">' +
                       CLOSE_BTN +
-              '<div> \
+              '<div class="border-gray" \
+                    style="padding:2px"> \
                   <div class="center-vert" style="\
                                               display: inline-block;\
                                               max-width: 280px;\
