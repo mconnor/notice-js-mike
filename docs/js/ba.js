@@ -3071,7 +3071,7 @@ var BAP =
         var bapLinkDivClassList =  "bap-link-div";
 
         BAP_LINKS = '<div class="bap-links">\
-                  <div class="bap-link-div">\
+                  <div class="' + bapLinkDivClassList + '">\
                     <a href="about:blank" id="bap-link-1-' +
                       pageId +
                       '" target="_blank" onclick="BAP.action(\'' +
