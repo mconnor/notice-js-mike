@@ -3137,7 +3137,14 @@ var BAP =
                                           alt="evidon logo"> \
                             </a> \
                           </div>';
-          MAIN_COPY = "<p class='main-copy-new-l2'>" + generic_msg + '</p>';
+          
+          if (reg === 2) {
+            MAIN_COPY = "<p class='main-copy-new-l2' style='line-height:1.6em;'>" + generic_msg + '</p>';
+          } else {
+            MAIN_COPY = "<p class='main-copy-new-l2'>" + generic_msg + '</p>';
+          }
+
+
           CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
           MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
