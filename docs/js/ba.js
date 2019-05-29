@@ -331,7 +331,7 @@ var BAP =
       .bap-links { \
         font-size: .9em; \
         font-weight: bold; \
-        postion: absolute; \
+        position: absolute; \
         bottom: 0; \
       } \
       .bap-links-new-l2 { \
