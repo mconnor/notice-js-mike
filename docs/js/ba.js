@@ -3115,7 +3115,7 @@ var BAP =
                 '<div class="' + bapLinkDivClassList + '"> \
                     <a href="#" target="_blank">' + se + rigthArrow + '</a>\
                 </div>' + //privacy policy
-                '<div class="' + bapLinkDivClassList + '"style="font-size:.7em;">\
+                '<div class="' + bapLinkDivClassList + '">\
                   Privacy Controls by Evidon, Inc.\
                 </div>' +
               '</div>';
