@@ -333,6 +333,7 @@ var BAP =
         font-weight: bold; \
         position: absolute; \
         bottom: 0; \
+        width: 100%; \
       } \
       .bap-links-new-l2 { \
         text-align: center; \
