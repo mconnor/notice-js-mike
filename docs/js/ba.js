@@ -351,10 +351,8 @@ var BAP =
         position: absolute; \
         top: -1px; \
         right: 5px; \
-        z-index: 2; \
-        font-weight: 100; \
+        font-weight: bold; \
         font-size: 1em; \
-        font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
         -webkit-user-select: none; \
         -moz-user-select: none; \
         -ms-user-select: none; \
