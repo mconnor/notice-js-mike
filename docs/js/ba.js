@@ -338,6 +338,7 @@ var BAP =
       .bap-links-new-l2 { \
         text-align: center; \
         font-size: 1em; \
+        margin-top: 4px; \
       } \
       .bap-links a { \
         color: #2b2f98; \
@@ -447,7 +448,7 @@ var BAP =
       .main-copy-new-l2 { \
         color: rgb(138, 135, 135); \
         margin: 0 0 0 0; \
-        font-size: 1em; \
+        line-height: 1.2em; \
       } \
       .bap-trigger { \
         cursor: pointer; \
