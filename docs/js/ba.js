@@ -448,9 +448,6 @@ var BAP =
       } \
       .bap-trigger { \
         cursor: pointer; \
-        display:block; \
-        font-family:Arial; \font-size:8pt; \
-        white-space:nowrap; \
       } \
       .bap-trigger img { \
         width: auto; \
