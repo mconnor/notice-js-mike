@@ -3087,7 +3087,7 @@ var BAP =
       } else {
         bapLinkClassList = "bap-links position-absolute";
         bapLinkDivClassList =  "border-top padding2_10_2_10";
-        if (reg === 6 && !BAP.options[pageId].new_l2 ) {
+        if (reg === 6) {
           bapLinkDivClassList =  "border-top padding2_4_2_4";
           bapLinkClassList = "bap-links position-relative";
         }
