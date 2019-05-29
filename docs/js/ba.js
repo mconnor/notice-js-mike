@@ -331,9 +331,14 @@ var BAP =
       .bap-links { \
         font-size: .9em; \
         font-weight: bold; \
-        position: absolute; \
         bottom: 0; \
         width: 100%; \
+      } \
+      .position-relative { \
+        position: relative; \
+      } \
+      .position-absolute { \
+        position: absolute; \
       } \
       .bap-links-new-l2 { \
         text-align: center; \
@@ -3032,7 +3037,7 @@ var BAP =
       }
 
       var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
-      var bapLinkDivClassList;
+      var bapLinkDivClassList, bapLinkClassList;
       BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
             ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
@@ -3080,14 +3085,15 @@ var BAP =
                   // ** end WHAT IS IAB
                 '</div>';
       } else {
-
+        bapLinkClassList = "bap-links position-absolute";
         bapLinkDivClassList =  "border-top padding2_10_2_10";
         if (reg === 6 && !BAP.options[pageId].new_l2 ) {
           bapLinkDivClassList =  "border-top padding2_4_2_4";
+          bapLinkClassList = "bap-links position-relative";
         }
         
         BAP_LINKS = 
-                '<div class="bap-links">\
+                '<div class=' + bapLinkClassList + '>\
                   <div class="' + bapLinkDivClassList + '">\
                     <a href="about:blank" id="bap-link-1-' +
                       pageId +
