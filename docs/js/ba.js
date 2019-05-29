@@ -3140,7 +3140,7 @@ var BAP =
           CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
           MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
-          CLOSE_BTN = '<div class="bap-close font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[x]</div>';
+          CLOSE_BTN = '<div class="bap-close font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[ x ]</div>';
         }
        
 
