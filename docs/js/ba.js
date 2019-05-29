@@ -369,8 +369,8 @@ var BAP =
       .border-right {\
         border-right: 1px #ababab solid;\
       }\
-      .padding4_10_4_10 { \
-        padding: 4px 10px 4px 10px; \
+      .padding2_10_2_10 { \
+        padding: 2px 10px 2px 10px; \
       }\
       .padding2_4_2_4 { \
         padding: 2px 4px 2px 14px; \
@@ -3077,7 +3077,7 @@ var BAP =
                 '</div>';
       } else {
 
-        bapLinkDivClassList =  "border-top padding4_10_4_10";
+        bapLinkDivClassList =  "border-top padding2_10_2_10";
         if (reg === 6 && !BAP.options[pageId].new_l2 ) {
           bapLinkDivClassList =  "border-top padding2_4_2_4";
         }
