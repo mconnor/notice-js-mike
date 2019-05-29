@@ -382,7 +382,7 @@ var BAP =
         font-size: .8em; \
       } \
       .dimensions-reg1 { \
-        width: 299px; height: 232px; \
+        width: 299px; height: 214px; \
       } \
       .dimensions-reg2 { \
         width: 159px; height: 342px; \
@@ -435,7 +435,7 @@ var BAP =
         z-index: 9990; \
       } \
       .main-copy { \
-        line-height: 13px; \
+        line-height: 12px; \
         color: rgb(0, 0, 0); \
         margin: 0 0 0 0; \
         font-size: .9em; \
