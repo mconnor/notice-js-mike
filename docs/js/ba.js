@@ -332,7 +332,7 @@ var BAP =
       .width100p { \
         width: 100%; \
       } \
-      .heigth100p { \
+      .height100p { \
         width: 100%; \
       } \
       .bap-links { \
@@ -3229,7 +3229,7 @@ var BAP =
           '<div id="bap-notice-' + pageId +
             '" class="bap-notice bap-notice-old-l2 dimensions-reg2">' +
             CLOSE_BTN +
-            '<div class="center-vert border-gray heigth100p">' +
+            '<div class="center-vert border-gray height100p">' +
               BAP_ADVERTISER_LOGO +  
               MAIN_COPY +
               BAP_LINKS + 
@@ -3290,12 +3290,9 @@ var BAP =
           noticeHTML = 
           '<div id="bap-notice-' + pageId + 
                   '" class="bap-notice bap-notice-old-l2"\
-                             style=" \
-                                width: 726px; \
-                                height: 84px; \
-                                left: 274px;">' +
+                             style="left: 274px;">' +
                       CLOSE_BTN +
-              '<div class="border-gray">\
+              '<div class="border-gray dimensions-reg6">\
                   <div class="center-vert inline-block" style="max-width:30%; min-width: 230px;">' +
                     BAP_LINKS +
                   '</div>\
