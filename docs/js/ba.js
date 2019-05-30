@@ -355,6 +355,7 @@ var BAP =
         text-decoration: none; \
       } \
       .bap-close { \
+        z-index: 2; \
         position: absolute; \
         top: -1px; \
         right: 5px; \
