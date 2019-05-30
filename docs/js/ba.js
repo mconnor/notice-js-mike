@@ -333,7 +333,7 @@ var BAP =
         width: 100%; \
       } \
       .height100p { \
-        width: 100%; \
+        height: 100%; \
       } \
       .bap-links { \
         font-size: .9em; \
@@ -3211,7 +3211,7 @@ var BAP =
               '<div id="bap-notice-' + pageId +
                 '" class="bap-notice bap-notice-old-l2 dimensions-reg1">' +
                 CLOSE_BTN +
-              '<div class="center-vert border-gray width100p">' + 
+              '<div class="center-vert border-gray width100p heigth100p">' + 
                 BAP_ADVERTISER_LOGO + 
                 MAIN_COPY + 
                 BAP_LINKS + 
