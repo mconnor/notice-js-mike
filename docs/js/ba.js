@@ -414,6 +414,9 @@ var BAP =
       .dimensions-reg6 { \
         min-width: 688px; height: 84px; \
       } \
+      .heightReg6 { \
+        height: 84px; \
+      } \
       .bap-notice { \
         background-color: #FFFFFF; \
         position: absolute; \
@@ -3113,7 +3116,7 @@ var BAP =
           
           bapLinkDivClassList =  "border-top padding2_4_2_4";
           bapLinkDivClassList01 = "padding2_4_2_4";
-          bapLinkClassList = "bap-links position-relative border-right";
+          bapLinkClassList = "bap-links position-relative border-right heightReg6";
           
         } 
         
