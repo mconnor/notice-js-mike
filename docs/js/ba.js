@@ -303,7 +303,7 @@ var BAP =
       ".bap-img-container { \
         width: 124px; \
         height: 45px; \
-        padding: 4px 0 0 10px; \
+        margin: 10px 0 0 10px; \
       } \
       .center-horiz { \
         margin: 0 auto 0 auto; \
