@@ -328,8 +328,12 @@ var BAP =
       } \
       .border-gray { \
         border: 1px gray solid; \
+      } \
+      .width100p { \
         width: 100%; \
-        height: 100%; \
+      } \
+      .heigth100p { \
+        width: 100%; \
       } \
       .bap-links { \
         font-size: .9em; \
@@ -406,6 +410,9 @@ var BAP =
       } \
       .dimensions-reg5 { \
         width: 299px; height: 199px; \
+      } \
+      .dimensions-reg6 { \
+        min-width: 688px; height: 84px; \
       } \
       .bap-notice { \
         background-color: #FFFFFF; \
@@ -3196,14 +3203,14 @@ var BAP =
               '<div id="bap-notice-' + pageId +
                 '" class="bap-notice bap-notice-old-l2 dimensions-reg1">' +
                 CLOSE_BTN +
-              '<div class="center-vert border-gray">' + 
+              '<div class="center-vert border-gray width100p">' + 
                 BAP_ADVERTISER_LOGO + 
                 MAIN_COPY + 
                 BAP_LINKS + 
               '</div>' + //close center-vert
             '</div>';
         }
-      } else if (reg === 2) {
+      } else if (reg === 2) { //skyscraper
         if (BAP.options[pageId].new_l2) { 
           noticeHTML =
           '<div id="bap-notice-' + pageId +
@@ -3222,7 +3229,7 @@ var BAP =
           '<div id="bap-notice-' + pageId +
             '" class="bap-notice bap-notice-old-l2 dimensions-reg2">' +
             CLOSE_BTN +
-            '<div class="center-vert border-gray">' +
+            '<div class="center-vert border-gray heigth100p">' +
               BAP_ADVERTISER_LOGO +  
               MAIN_COPY +
               BAP_LINKS + 
