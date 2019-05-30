@@ -3307,7 +3307,7 @@ var BAP =
                   <div class="center-vert inline-block" style="left:34%; width:44%;">' + 
                      MAIN_COPY +
                   '</div>\
-                  <div class="center-vert inline-block" style="right:20px;">' +
+                  <div class="center-vert inline-block" style="right:0;">' +
                       BAP_ADVERTISER_LOGO +  
                   '</div>\
               </div>\
