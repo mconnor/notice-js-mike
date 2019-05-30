@@ -3304,7 +3304,7 @@ var BAP =
                   <div class="center-vert inline-block" style="max-width:30%; min-width: 230px;">' +
                     BAP_LINKS +
                   '</div>\
-                  <div class="center-vert inline-block" style="left:33%; width:46%;">' + 
+                  <div class="center-vert inline-block" style="left:34%; width:44%;">' + 
                      MAIN_COPY +
                   '</div>\
                   <div class="center-vert inline-block" style="right:20px;">' +
