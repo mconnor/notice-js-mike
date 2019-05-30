@@ -393,8 +393,8 @@ var BAP =
       .padding2_10_2_10 { \
         padding: 2px 10px 2px 10px; \
       }\
-      .padding2_4_2_4 { \
-        padding: 2px 4px 2px 14px; \
+      .paddingLinksReg6 { \
+        padding: 3px 4px 3px 14px; \
       }\
       .font-8 { \
         font-size: .8em; \
@@ -3114,8 +3114,8 @@ var BAP =
         bapLinkDivClassList01 = bapLinkDivClassList;
         if (reg === 6) {
           
-          bapLinkDivClassList =  "border-top padding2_4_2_4";
-          bapLinkDivClassList01 = "padding2_4_2_4";
+          bapLinkDivClassList =  "border-top paddingLinksReg6";
+          bapLinkDivClassList01 = "paddingLinksReg6";
           bapLinkClassList = "bap-links position-relative border-right heightReg6";
           
         } 
