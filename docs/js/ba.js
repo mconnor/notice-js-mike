@@ -3090,10 +3090,10 @@ var BAP =
         if (reg === 6) {
           bapLinkDivClassList =  "border-top padding2_4_2_4";
           bapLinkClassList = "bap-links position-relative";
-        }
+        } 
         
         BAP_LINKS = 
-                '<div class=' + bapLinkClassList + '>\
+                '<div class="' + bapLinkClassList + '">\
                   <div class="' + bapLinkDivClassList + '">\
                     <a href="about:blank" id="bap-link-1-' +
                       pageId +
