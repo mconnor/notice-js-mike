@@ -317,6 +317,9 @@ var BAP =
         transform: translateY(-50%); \
         position: absolute; \
       } \
+      .inline-block { \
+        display:inline-block; \
+      } \
       .height-33 { \
         height: 33%; \
       } \
@@ -3264,17 +3267,13 @@ var BAP =
                                         left: 274px;">' +
                       CLOSE_BTN +
               '<div> \
-                  <div class="center-vert" style="display:inline-block; \
-                                            left: 20px;">' +
+                  <div class="center-vert inline-block" style="left: 20px;">' +
                       BAP_ADVERTISER_LOGO +  
                   '</div> \
-                  <div class="center-vert" style="display: inline-block; \
-                                            left: 25%; \
-                                            width:50%;">' + 
+                  <div class="center-vert inline-block" style="left: 25%; width:50%;">' + 
                      MAIN_COPY +
                   '</div> \
-                  <div class="center-vert" style="display: inline-block; \
-                                            right: 20px;">' +
+                  <div class="center-vert inline-block" style="right: 20px;">' +
                       BAP_LINKS +
                   '</div> \
               </div>' +
@@ -3290,13 +3289,13 @@ var BAP =
                                 left: 274px;">' +
                       CLOSE_BTN +
               '<div class="border-gray">\
-                  <div class="center-vert" style="display: inline-block;max-width: 30%;min-width: 230px;">' +
+                  <div class="center-vert inline-block" style="max-width:30%; min-width: 230px;">' +
                     BAP_LINKS +
                   '</div>\
-                  <div class="center-vert" style="display: inline-block;left: 33%;width:46%;">' + 
+                  <div class="center-vert inline-block" style="left:33%; width:46%;">' + 
                      MAIN_COPY +
                   '</div>\
-                  <div class="center-vert" style="display:inline-block;right: 20px;>' +
+                  <div class="center-vert inline-block" style="right:20px;">' +
                       BAP_ADVERTISER_LOGO +  
                   '</div>\
               </div>\
