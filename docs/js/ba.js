@@ -451,9 +451,14 @@ var BAP =
         line-height: 12px; \
         color: rgb(0, 0, 0); \
         margin: 0 0 0 0; \
-        font-size: .85em; \
         padding: 4px 5px 6px 8px; \
       } \
+      .main-copy-font { \
+        font-size: .9em; \
+      } \
+      .main-copy-font-skyscraper { \
+        font-size: .85em; \
+      }\
       .main-copy-new-l2 { \
         color: rgb(138, 135, 135); \
         margin: 0 0 0 0; \
@@ -3157,7 +3162,12 @@ var BAP =
 
           CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
-          MAIN_COPY = "<p class='main-copy'>" + generic_msg + '</p>';
+          if (reg === 2) { 
+            MAIN_COPY = "<p class='main-copy main-copy-font-skyscraper'>" + generic_msg + '</p>';
+          } else {
+            MAIN_COPY = "<p class='main-copy main-copy-font'>" + generic_msg + '</p>';
+          }
+          
           CLOSE_BTN = '<div class="bap-close font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[ x ]</div>';
         }
        
