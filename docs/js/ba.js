@@ -333,6 +333,7 @@ var BAP =
         font-weight: bold; \
         bottom: 0; \
         width: 100%; \
+        line-height: 1.3em; \
       } \
       .position-relative { \
         position: relative; \
