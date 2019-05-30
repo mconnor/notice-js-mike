@@ -3057,7 +3057,8 @@ var BAP =
       }
 
       var logoCssClasses = BAP.options[pageId].new_l2 ? "bap-img-container center-horiz" : "bap-img-container";
-      var bapLinkDivClassList, bapLinkClassList;
+      var bapLinkDivClassList, bapLinkClassList,
+        bapLinkDivClassList01;
       BAP_ADVERTISER_LOGO = '<div class="' + logoCssClasses +'">' +
           (BAP.options[pageId].advLogo
             ? BAP.options[pageId].advLink && !BAP.options[pageId].hideCustom
@@ -3107,14 +3108,17 @@ var BAP =
       } else {
         bapLinkClassList = "bap-links position-absolute";
         bapLinkDivClassList =  "border-top padding2_10_2_10";
+        bapLinkDivClassList01 = bapLinkDivClassList;
         if (reg === 6) {
+          
           bapLinkDivClassList =  "border-top padding2_4_2_4";
-          bapLinkClassList = "bap-links position-relative";
+          bapLinkClassList = "bap-links position-relative border-right";
+          bapLinkDivClassList01 = "bap-links position-relative";
         } 
         
         BAP_LINKS = 
                 '<div class="' + bapLinkClassList + '">\
-                  <div class="' + bapLinkDivClassList + '"  style="border:none;">\
+                  <div class="' + bapLinkDivClassList01 + '">\
                     <a href="about:blank" id="bap-link-1-' +
                       pageId +
                       '" target="_blank" onclick="BAP.action(\'' +
