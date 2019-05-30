@@ -3112,8 +3112,9 @@ var BAP =
         if (reg === 6) {
           
           bapLinkDivClassList =  "border-top padding2_4_2_4";
+          bapLinkDivClassList01 = "padding2_4_2_4";
           bapLinkClassList = "bap-links position-relative border-right";
-          bapLinkDivClassList01 = "bap-links position-relative";
+          
         } 
         
         BAP_LINKS = 
