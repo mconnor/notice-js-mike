@@ -397,7 +397,7 @@ var BAP =
         padding: 3px 4px 3px 14px; \
       }\
       .paddingLinksReg5 { \
-        padding: 3px 0 3px 0; \
+        padding: 0 0 3px 8px; \
       }\
       .font-8 { \
         font-size: .8em; \
@@ -3126,7 +3126,7 @@ var BAP =
         }
         if (reg === 5) {
           BAP_LINKS = 
-            '<div class="' + bapLinkClassList + '">\
+            '<div class="' + bapLinkClassList + '" style="font-size=.8em;">\
               <div class="' + bapLinkDivClassList01 + '">\
                 <a href="about:blank" id="bap-link-1-' +
                   pageId +
