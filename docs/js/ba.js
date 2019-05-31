@@ -3117,8 +3117,24 @@ var BAP =
           bapLinkClassList = "bap-links position-relative border-right heightReg6";
           
         } 
-        
-        BAP_LINKS = 
+        if (reg === 5) {
+          BAP_LINKS = 
+            '<div class="' + bapLinkClassList + '">\
+              <div class="' + bapLinkDivClassList01 + '">\
+                <a href="about:blank" id="bap-link-1-' +
+                  pageId +
+                  '" target="_blank" onclick="BAP.action(\'' +
+                  pageId +
+                  "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+                  pageId +
+                  "')\">" +
+                  sl + rigthArrow + //opt out and more info
+                "</a>\
+              </div>" +
+              // *** end link - opt out
+            '</div>';
+        } else {
+          BAP_LINKS = 
                 '<div class="' + bapLinkClassList + '">\
                   <div class="' + bapLinkDivClassList01 + '">\
                     <a href="about:blank" id="bap-link-1-' +
@@ -3154,6 +3170,7 @@ var BAP =
                 '<div class="' + bapLinkDivClassList + '">' + privacyControls + '</div>' +
               '</div>';
         }
+      }
         
         
 
@@ -3269,7 +3286,7 @@ var BAP =
                 CLOSE_BTN +
                 '<div class="border-gray">' + 
                     MAIN_COPY + 
-                    '<div>' + sl + '</div>' +
+                    BAP_LINKS +
                     '<div class="font-bold" style="font-size:.7em;background:#dcdcdc;">' + privacyControls + '</div>' +
                 '</div>' +
               '</div>';
