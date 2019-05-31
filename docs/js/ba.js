@@ -3262,14 +3262,15 @@ var BAP =
           '</div>'; //close L2
         } else {
           noticeHTML =
-            '<div id="bap-notice-' + pageId +
-              '" class="bap-notice bap-notice-old-l2 dimensions-reg5">' +
-              CLOSE_BTN +
-              '<div class="center-vert border-gray padding-top-5percent">' + 
-                BAP_ADVERTISER_LOGO +  
-                BAP_LINKS + 
+              '<div id="bap-notice-' + pageId +
+                '" class="bap-notice bap-notice-old-l2 dimensions-reg5">' +
+                CLOSE_BTN +
+              '<div class="center-vert border-gray width100p height100p">' + 
+              
+                MAIN_COPY + 
+                
               '</div>' + //close center-vert
-          '</div>';
+            '</div>';
         }
         
       } else if (reg === 6) {
