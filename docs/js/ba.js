@@ -3294,7 +3294,11 @@ var BAP =
                 '<div class="border-gray">' + 
                     MAIN_COPY + 
                     BAP_LINKS +
-                    '<div class="font-bold" style="font-size:.7em;background:#dcdcdc;">' + privacyControls + '</div>' +
+                    '<div class="font-bold border-top" \
+                          style="font-size:.67em; \
+                                background:#dcdcdc;">' +
+                      privacyControls + 
+                    '</div>' +
                 '</div>' +
               '</div>';
         }
