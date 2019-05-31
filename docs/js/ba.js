@@ -3268,12 +3268,11 @@ var BAP =
               '<div id="bap-notice-' + pageId +
                 '" class="bap-notice bap-notice-old-l2 dimensions-reg5">' +
                 CLOSE_BTN +
-              '<div class="center-vert border-gray width100p height100p">' + 
-              
-                MAIN_COPY + 
-                
-              '</div>' + //close center-vert
-            '</div>';
+                '<div class="border-gray">' + 
+                    MAIN_COPY + 
+                '</div>' +
+                '<div style="background: gray;">Privacy Controls by Evidon, Inc.</div>' +
+              '</div>';
         }
         
       } else if (reg === 6) {
