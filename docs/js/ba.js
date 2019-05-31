@@ -3184,7 +3184,7 @@ var BAP =
           if (reg === 2) { 
             MAIN_COPY = "<p class='main-copy' style='font-size:.85em;'>" + generic_msg + '</p>';
           } else if (reg === 5){
-            MAIN_COPY = "<p class='main-copy' style='font-size:.8em;'>" + generic_msg + '</p>';
+            MAIN_COPY = "<p class='main-copy' style='font-size:.8em;  margin-top:12px;'>" + generic_msg + '</p>';
           } else {
             MAIN_COPY = "<p class='main-copy' style='font-size:.9em;'>" + generic_msg + '</p>';
           }
@@ -3269,8 +3269,9 @@ var BAP =
                 CLOSE_BTN +
                 '<div class="border-gray">' + 
                     MAIN_COPY + 
+                    '<div>' + sl + '</div>' +
+                    '<div class="font-bold" style="font-size:.7em;background:#dcdcdc;">' + privacyControls + '</div>' +
                 '</div>' +
-                '<div class="font-bold" style="font-size:.7em;background:#dcdcdc;">' + privacyControls + '</div>' +
               '</div>';
         }
         
