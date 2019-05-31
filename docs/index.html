@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -22,32 +23,22 @@
         Note: <i>REG</i> refers different L2 layouts corresponding to ad sizes.
     </p>
     <div>
-        <h2>Old L2</h2>
+        <h2>Ad Size 'REG 1' (width >= 300 && height >= 250)</h2>
         <ul>
             <li>
-                <a href="./top-left.html">"REG 1 ad" top-left</a>
+                Old L2 <a href="./top-left.html">"REG 1 ad" top-left</a>
             </li>
             <li>
-                <a href="./top-right.html">"REG 1 ad" top-right</a>
+                New L2 <a href="./top-right.html">top-right</a>
             </li>
             <li>
-                <a href="./bottom-left.html">"REG 1 ad" bottom-left</a>
+                Old L2 . <a href="./bottom-left.html">bottom-left</a>
             </li>
             <li>
-                <a href="./bottom-right.html">"REG 1 ad" bottom-right</a>
+                Old L2 <a href="./bottom-right.html">bottom-right</a>
             </li>
-            <li>
-                "REG 2 ad" skyscraper.  <a href="./skyscraper.html">Old L2</a>, <a href="./skyscraper-newl2.html">New L2</a>
-            </li>
-            <li>
-                "REG 5 ad" 300x200 <a href="./reg5.html">Old L2</a>, <a href="./reg5-newl2.html">New L2</a>
-            </li>
-            <li>
-                <a href="./reg6.html">"REG 6 ad" banner 990x125</a>
-            </li>
-            <li>
-                <a href="./vpaid-tag-test.html">iframe - calling vpaid tag (no vpaid ad)</a>
-            </li>
+            
+        
 
             <!-- <li>
                 <a href="./iframe-parent.html">dm = 5. icon scripts applied inside iframes. </a>
@@ -57,10 +48,49 @@
                 </li> -->
 
         </ul>
+
+        <h2>Ad Size 'REG 2' - Skyscraper</h2>
+        <ul>
+            <li>
+                <a href="./skyscraper.html">Old L2</a>, 
+            </li>
+            <li>
+                    <a href="./skyscraper-newl2.html">New L2</a>
+            </li>
+        </ul>
+
+        <h2>Ad Size 'REG 5' - smaller rect ad (width < 300 OR height < 250) </h2>
+        <ul>
+            <li>
+                    <a href="./reg5.html">Old L2</a>, 
+            </li>
+            <li>
+                    <a href="./reg5-newl2.html">New L2</a>
+            </li>
+        </ul>
+
+
+        <h2>Ad Size 'REG 6' - banner ad </h2>
+        <ul>
+            <li>
+                <a href="./reg6.html">Old L2</a>, 
+            </li>
+            <li>
+                <a href="./reg6-newl2.html">New L2</a>
+            </li>
+        </ul>
+
+
        
         <h2>iframe set ups</h2>
         <p>In iframes, icons will attach to BAP-holder div at bottom of page and be positioned absolutely</p>
+
+        
         <ul>
+
+                <li>
+                        <a href="./vpaid-tag-test.html">iframe - calling vpaid tag (no vpaid ad)</a>
+                    </li>
             <li>
                 <a href="./iframe-parent.html">Marked up page with iframes that contain icon script</a>
             </li>
