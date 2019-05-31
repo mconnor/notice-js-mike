@@ -3208,7 +3208,9 @@ var BAP =
           if (reg === 2) { 
             MAIN_COPY = "<p class='main-copy' style='font-size:.85em;'>" + generic_msg + '</p>';
           } else if (reg === 5){
-            MAIN_COPY = "<p class='main-copy' style='font-size:.8em;  margin-top:12px;'>" + generic_msg + '</p>';
+            MAIN_COPY = "<p class='main-copy' style='font-size:.8em;\
+                                                      line-height:11px;\
+                                                      margin-top:12px;'>" + generic_msg + '</p>';
           } else {
             MAIN_COPY = "<p class='main-copy' style='font-size:.9em;'>" + generic_msg + '</p>';
           }
@@ -3296,7 +3298,8 @@ var BAP =
                     BAP_LINKS +
                     '<div class="font-bold border-top" \
                           style="font-size:.67em; \
-                                background:#dcdcdc;">' +
+                                background:#dcdcdc;\
+                                padding:0 0 0 8px;">' +
                       privacyControls + 
                     '</div>' +
                 '</div>' +
