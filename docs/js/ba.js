@@ -3299,7 +3299,7 @@ var BAP =
                     '<div class="font-bold border-top" \
                           style="font-size:.67em; \
                                 background:#dcdcdc;\
-                                padding:0 0 0 8px;">' +
+                                padding:4px 0 4px 8px;">' +
                       privacyControls + 
                     '</div>' +
                 '</div>' +
