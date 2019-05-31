@@ -2970,6 +2970,7 @@ var BAP =
         } else {
           sm = "More information & opt-out options";
         }
+        privacyControls = 'Privacy Controls by Evidon, Inc.';
 
       function trans(z) {
         try {
@@ -3150,7 +3151,7 @@ var BAP =
                 '<div class="' + bapLinkDivClassList + '"> \
                     <a href="#" target="_blank">' + se + rigthArrow + '</a>\
                 </div>' + //privacy policy
-                '<div class="' + bapLinkDivClassList + '">Privacy Controls by Evidon, Inc.</div>' +
+                '<div class="' + bapLinkDivClassList + '">' + privacyControls + '</div>' +
               '</div>';
         }
         
@@ -3269,7 +3270,7 @@ var BAP =
                 '<div class="border-gray">' + 
                     MAIN_COPY + 
                 '</div>' +
-                '<div style="background: gray;">Privacy Controls by Evidon, Inc.</div>' +
+                '<div class="font-bold" style="font-size:.7em;background:#dcdcdc;">' + privacyControls + '</div>' +
               '</div>';
         }
         
