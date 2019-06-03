@@ -3173,7 +3173,9 @@ var BAP =
                 '<div class="' + bapLinkDivClassList + '"> \
                     <a href="#" target="_blank">' + se + rigthArrow + '</a>\
                 </div>' + //privacy policy
-                '<div class="' + bapLinkDivClassList + '">' + privacyControls + '</div>' +
+                '<div class="' + bapLinkDivClassList + 
+                (reg === 6 ? 'style="font-size:.7em"' : '') +
+                '">' + privacyControls + '</div>' +
               '</div>';
         }
       }
