@@ -301,9 +301,8 @@ var BAP =
 
       BAP.CSS_COMMON =
       ".bap-img-container { \
-        //width: 124px; \
         height: 45px; \
-        margin: 10px 0 0 10px; \
+        margin: 10px 10px 0 10px; \
       } \
       .center-horiz { \
         margin: 0 auto 0 auto; \
