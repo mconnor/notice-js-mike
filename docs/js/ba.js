@@ -3155,8 +3155,9 @@ var BAP =
                     "</a>\
                   </div>" +
                   // *** end link - opt out
-                  ((reg === 5) ? "" : +
-                          // ** start WHAT IS IAB
+                  ((reg === 5) 
+                    ? "" 
+                    : // ** start WHAT IS IAB
                             (BAP.options[pageId].hideWhatIs
                               ? ""
                               : '<div class="' + bapLinkDivClassList + '">\
@@ -3178,7 +3179,7 @@ var BAP =
                         (reg === 2 ? '" style="font-size:.7em"' : '"') +
                         '">' + se + '</div>' 
                   ) +
-                  '</div>'
+                  '</div>';
                    
         //}
 
