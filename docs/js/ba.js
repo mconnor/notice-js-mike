@@ -3141,6 +3141,22 @@ var BAP =
         //       // *** end link - opt out
         //     '</div>';
         // } else {
+
+        var whatis = (BAP.options[pageId].hideWhatIs
+          ? ""
+          : '<div class="' + bapLinkDivClassList + '">\
+              <a href="about:blank" id="bap-link-2-' +
+                pageId +
+                '" target="_blank" onclick="BAP.action(\'' +
+                pageId +
+                "', 'B');\" onmouseover=\"BAP.iabLink('" +
+                pageId +
+                "')\">" +
+                sw  + rigthArrow +
+              '</a>\
+            </div>');
+
+    // ** end WHAT IS IAB
           BAP_LINKS = 
                 '<div class="' + bapLinkClassList + '">\
                   <div class="' + bapLinkDivClassList01 + '">\
@@ -3157,21 +3173,7 @@ var BAP =
                   // *** end link - opt out
                   ((reg === 5) 
                     ? "" 
-                    : // ** start WHAT IS IAB
-                            (BAP.options[pageId].hideWhatIs
-                              ? ""
-                              : '<div class="' + bapLinkDivClassList + '">\
-                                  <a href="about:blank" id="bap-link-2-' +
-                                    pageId +
-                                    '" target="_blank" onclick="BAP.action(\'' +
-                                    pageId +
-                                    "', 'B');\" onmouseover=\"BAP.iabLink('" +
-                                    pageId +
-                                    "')\">" +
-                                    sw  + rigthArrow +
-                                  '</a>\
-                                </div>') + 
-                        // ** end WHAT IS IAB
+                    : whatis +
                         '<div class="' + bapLinkDivClassList + '"> \
                             <a href="#" target="_blank">' + se + rigthArrow + '</a>\
                         </div>' + //privacy policy
