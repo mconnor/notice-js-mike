@@ -3123,8 +3123,8 @@ var BAP =
           bapLinkDivClassList =  "border-top padding2_10_2_10";
           bapLinkDivClassList01 = bapLinkDivClassList;
         }
-
-        var whatis = (BAP.options[pageId].hideWhatIs
+//nested ternary logic is ugly. Pull this out. 
+        var whatisLink = (BAP.options[pageId].hideWhatIs
           ? ""
           : '<div class="' + bapLinkDivClassList + '">\
               <a href="about:blank" id="bap-link-2-' +
@@ -3154,7 +3154,7 @@ var BAP =
               // *** end link - opt out
               ((reg === 5) 
                 ? "" 
-                : whatis +
+                : whatisLink +
                   '<div class="' + bapLinkDivClassList + '"> \
                       <a href="#" target="_blank">' + se + rigthArrow + '</a>\
                   </div>' + //privacy policy
@@ -3169,20 +3169,16 @@ var BAP =
           BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
                             <a href="https://www.evidon.com/solutions/ad-notice/"> \
                                 <img style=" \
-                                          width:50px; height:15px;" \
-                                          src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
-                                          alt="evidon logo"> \
+                                  width:50px; height:15px;" \
+                                  src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
+                                  alt="evidon logo"> \
                             </a> \
                           </div>';
           
-          if (reg === 2) {
-            MAIN_COPY = "<p class='main-copy-new-l2' style='line-height:1.6em;'>" + generic_msg + '</p>';
-          
-
-          } else {
-            MAIN_COPY = "<p class='main-copy-new-l2'>" + generic_msg + '</p>';
-          }
-
+          MAIN_COPY = 
+            "<p class='main-copy-new-l2'" +
+                ((reg ===2) ? " style='line-height:1.6em;'>" : ">") +
+            generic_msg + '</p>';
 
           CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
