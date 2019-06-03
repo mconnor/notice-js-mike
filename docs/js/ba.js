@@ -3123,7 +3123,7 @@ var BAP =
           bapLinkDivClassList =  "border-top padding2_10_2_10";
           bapLinkDivClassList01 = bapLinkDivClassList;
         }
-//nested ternary logic is ugly. Pull this out. 
+        //nested ternary logic is ugly. Pull this out. 
         var whatisLink = (BAP.options[pageId].hideWhatIs
           ? ""
           : '<div class="' + bapLinkDivClassList + '">\
@@ -3182,22 +3182,18 @@ var BAP =
 
           CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
-          var _mainCopyStyle
+          var _inlineStyle;
           if (reg === 2) { 
-            MAIN_COPY = "<p class='main-copy' style='font-size:.85em;'>" + generic_msg + '</p>';
-          } else if (reg === 5){
-            MAIN_COPY = "<p class='main-copy' style='font-size:.8em;\
-                                                      line-height:11px;\
-                                                      margin-top:12px;'>" + generic_msg + '</p>';
+            _inlineStyle = 'font-size:.85em;';
+          } else if (reg === 5) {
+            _inlineStyle = 'font-size:.8em;line-height:11px;margin-top:12px;'
           } else {
-            MAIN_COPY = "<p class='main-copy' style='font-size:.9em;'>" + generic_msg + '</p>';
+            _inlineStyle = 'font-size:.9em;'
           }
-          
+          MAIN_COPY = "<p class='main-copy' style='" + _inlineStyle + "'>" + generic_msg + '</p>';
           CLOSE_BTN = '<div class="bap-close font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[ x ]</div>';
         }
-       
-
-
+ 
       if (reg === 1) {
         if (BAP.options[pageId].new_l2) {
           noticeHTML =
