@@ -3124,24 +3124,6 @@ var BAP =
           bapLinkDivClassList01 = bapLinkDivClassList;
         }
 
-        // if (reg === 5) {
-        //   BAP_LINKS = 
-        //     '<div class="' + bapLinkClassList + '" style="font-size=.8em;">\
-        //       <div class="' + bapLinkDivClassList01 + '">\
-        //         <a href="about:blank" id="bap-link-1-' +
-        //           pageId +
-        //           '" target="_blank" onclick="BAP.action(\'' +
-        //           pageId +
-        //           "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
-        //           pageId +
-        //           "')\">" +
-        //           sl + rigthArrow + //opt out and more info
-        //         "</a>\
-        //       </div>" +
-        //       // *** end link - opt out
-        //     '</div>';
-        // } else {
-
         var whatis = (BAP.options[pageId].hideWhatIs
           ? ""
           : '<div class="' + bapLinkDivClassList + '">\
@@ -3156,42 +3138,33 @@ var BAP =
               '</a>\
             </div>');
 
-    // ** end WHAT IS IAB
-          BAP_LINKS = 
-                '<div class="' + bapLinkClassList + '">\
-                  <div class="' + bapLinkDivClassList01 + '">\
-                    <a href="about:blank" id="bap-link-1-' +
-                      pageId +
-                      '" target="_blank" onclick="BAP.action(\'' +
-                      pageId +
-                      "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
-                      pageId +
-                      "')\">" +
-                      sm + rigthArrow + //opt out and more info
-                    "</a>\
-                  </div>" +
-                  // *** end link - opt out
-                  ((reg === 5) 
-                    ? "" 
-                    : whatis +
-                        '<div class="' + bapLinkDivClassList + '"> \
-                            <a href="#" target="_blank">' + se + rigthArrow + '</a>\
-                        </div>' + //privacy policy
-                        '<div class="' + bapLinkDivClassList + 
-                        (reg === 2 ? '" style="font-size:.7em"' : '"') +
-                        '">' + se + '</div>' 
-                  ) +
-                  '</div>';
-                   
-        //}
-
-       
+        BAP_LINKS = 
+          '<div class="' + bapLinkClassList + '">\
+              <div class="' + bapLinkDivClassList01 + '">\
+                <a href="about:blank" id="bap-link-1-' +
+                  pageId +
+                  '" target="_blank" onclick="BAP.action(\'' +
+                  pageId +
+                  "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+                  pageId +
+                  "')\">" +
+                  sm + rigthArrow + //opt out and more info
+                "</a>\
+              </div>" +
+              // *** end link - opt out
+              ((reg === 5) 
+                ? "" 
+                : whatis +
+                  '<div class="' + bapLinkDivClassList + '"> \
+                      <a href="#" target="_blank">' + se + rigthArrow + '</a>\
+                  </div>' + //privacy policy
+                  '<div class="' + bapLinkDivClassList + 
+                  (reg === 2 ? '" style="font-size:.7em"' : '"') +
+                  '">' + sl + '</div>' 
+              ) +
+            '</div>';
       }
-        
 
-        
-
-        
         if (BAP.options[pageId].new_l2) {
           BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
                             <a href="https://www.evidon.com/solutions/ad-notice/"> \
