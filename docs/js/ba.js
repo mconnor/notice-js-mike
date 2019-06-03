@@ -3155,7 +3155,7 @@ var BAP =
                     "</a>\
                   </div>" +
                   // *** end link - opt out
-                  ((reg !== 5) ? "" : +
+                  ((reg === 5) ? "" : +
                           // ** start WHAT IS IAB
                             (BAP.options[pageId].hideWhatIs
                               ? ""
