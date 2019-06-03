@@ -3155,12 +3155,12 @@ var BAP =
               ((reg === 5) 
                 ? "" 
                 : whatisLink +
-                  '<div class="' + bapLinkDivClassList + '"> \
-                      <a href="#" target="_blank">' + se + rigthArrow + '</a>\
-                  </div>' + //privacy policy
-                  '<div class="' + bapLinkDivClassList + 
-                  (reg === 2 ? '" style="font-size:.7em"' : '"') +
-                  '">' + sl + '</div>' 
+                '<div class="' + bapLinkDivClassList + '"> \
+                    <a href="#" target="_blank">' + sl + rigthArrow + '</a>\
+                </div>' + //privacy policy
+                '<div class="' + bapLinkDivClassList + 
+                (reg === 2 ? '" style="font-size:.7em"' : '"') +
+                '">' + se + '</div>' 
               ) +
             '</div>';
       }
@@ -3182,6 +3182,7 @@ var BAP =
 
           CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
         } else {
+          var _mainCopyStyle
           if (reg === 2) { 
             MAIN_COPY = "<p class='main-copy' style='font-size:.85em;'>" + generic_msg + '</p>';
           } else if (reg === 5){
