@@ -2958,7 +2958,7 @@ var BAP =
         sm,
         sw = "Privacy Policy",
         sl = "Learn about your choices",
-        se = "Privacy Policy";
+        se = "Privacy controls by Evidon&#153;",
         sg1 =
           "This ad has been matched to your interests. It was selected for you based on your browsing activity.",
         sg2 =
@@ -2972,7 +2972,6 @@ var BAP =
         } else {
           sm = "More information & opt-out options";
         }
-        privacyControls = 'Privacy Controls by Evidon, Inc.';
 
       function trans(z) {
         try {
@@ -2988,6 +2987,8 @@ var BAP =
           sm = z.link1; //"Opt Out & More Info"
           sw = z.link2; // what is IAB
           sl = z.link3; //"Learn about your choices"
+          se = z.footer;
+          se = se.replace("Ghostery", "Evidon"); 
           BAP.options[pageId].advName = BAP.options[pageId].advName.replace("Ghostery", "Evidon");
         } catch (err) {}
       }
@@ -3109,20 +3110,20 @@ var BAP =
                   // ** end WHAT IS IAB
                 '</div>';
       } else {
-        bapLinkClassList = "bap-links position-absolute";
-        bapLinkDivClassList =  "border-top padding2_10_2_10";
-        bapLinkDivClassList01 = bapLinkDivClassList;
-        if (reg === 6) {
-          
+        if (reg === 6) { // banner
+          bapLinkClassList = "bap-links position-relative border-right heightReg6";
           bapLinkDivClassList =  "border-top paddingLinksReg6";
           bapLinkDivClassList01 = "paddingLinksReg6";
-          bapLinkClassList = "bap-links position-relative border-right heightReg6";
-          
         } else if (reg ===5) {
           
           bapLinkDivClassList01 = "paddingLinksReg5";
           bapLinkClassList = "bap-links position-relative";
+        } else {
+          bapLinkClassList = "bap-links position-absolute";
+          bapLinkDivClassList =  "border-top padding2_10_2_10";
+          bapLinkDivClassList01 = bapLinkDivClassList;
         }
+
         if (reg === 5) {
           BAP_LINKS = 
             '<div class="' + bapLinkClassList + '" style="font-size=.8em;">\
