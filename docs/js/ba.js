@@ -3155,32 +3155,34 @@ var BAP =
                     "</a>\
                   </div>" +
                   // *** end link - opt out
-                  
-                  // ** start WHAT IS IAB
-                    (BAP.options[pageId].hideWhatIs
-                      ? ""
-                      : '<div class="' + bapLinkDivClassList + '">\
-                          <a href="about:blank" id="bap-link-2-' +
-                            pageId +
-                            '" target="_blank" onclick="BAP.action(\'' +
-                            pageId +
-                            "', 'B');\" onmouseover=\"BAP.iabLink('" +
-                            pageId +
-                            "')\">" +
-                            sw  + rigthArrow +
-                          '</a>\
-                        </div>') + 
-                // ** end WHAT IS IAB
-                '<div class="' + bapLinkDivClassList + '"> \
-                    <a href="#" target="_blank">' + se + rigthArrow + '</a>\
-                </div>' + //privacy policy
-                '<div class="' + bapLinkDivClassList + 
-                (reg === 2 ? '" style="font-size:.7em"' : '"') +
-                '">' + privacyControls + '</div>' +
-              '</div>';
+                  ((reg === 5) ? "" : +
+                          // ** start WHAT IS IAB
+                            (BAP.options[pageId].hideWhatIs
+                              ? ""
+                              : '<div class="' + bapLinkDivClassList + '">\
+                                  <a href="about:blank" id="bap-link-2-' +
+                                    pageId +
+                                    '" target="_blank" onclick="BAP.action(\'' +
+                                    pageId +
+                                    "', 'B');\" onmouseover=\"BAP.iabLink('" +
+                                    pageId +
+                                    "')\">" +
+                                    sw  + rigthArrow +
+                                  '</a>\
+                                </div>') + 
+                        // ** end WHAT IS IAB
+                        '<div class="' + bapLinkDivClassList + '"> \
+                            <a href="#" target="_blank">' + se + rigthArrow + '</a>\
+                        </div>' + //privacy policy
+                        '<div class="' + bapLinkDivClassList + 
+                        (reg === 2 ? '" style="font-size:.7em"' : '"') +
+                        '">' + se + '</div>' +
+                      '</div>'
+                    );
         }
+
+       
       }
-        
         
 
         
@@ -3302,7 +3304,7 @@ var BAP =
                           style="font-size:.67em; \
                                 background:#dcdcdc;\
                                 padding:4px 0 4px 8px;">' +
-                      privacyControls + 
+                      se + 
                     '</div>' +
                 '</div>' +
               '</div>';
