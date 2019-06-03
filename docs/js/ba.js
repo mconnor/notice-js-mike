@@ -3124,23 +3124,23 @@ var BAP =
           bapLinkDivClassList01 = bapLinkDivClassList;
         }
 
-        if (reg === 5) {
-          BAP_LINKS = 
-            '<div class="' + bapLinkClassList + '" style="font-size=.8em;">\
-              <div class="' + bapLinkDivClassList01 + '">\
-                <a href="about:blank" id="bap-link-1-' +
-                  pageId +
-                  '" target="_blank" onclick="BAP.action(\'' +
-                  pageId +
-                  "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
-                  pageId +
-                  "')\">" +
-                  sl + rigthArrow + //opt out and more info
-                "</a>\
-              </div>" +
-              // *** end link - opt out
-            '</div>';
-        } else {
+        // if (reg === 5) {
+        //   BAP_LINKS = 
+        //     '<div class="' + bapLinkClassList + '" style="font-size=.8em;">\
+        //       <div class="' + bapLinkDivClassList01 + '">\
+        //         <a href="about:blank" id="bap-link-1-' +
+        //           pageId +
+        //           '" target="_blank" onclick="BAP.action(\'' +
+        //           pageId +
+        //           "', 'M');\" onmouseover=\"BAP.moreInfoLink('" +
+        //           pageId +
+        //           "')\">" +
+        //           sl + rigthArrow + //opt out and more info
+        //         "</a>\
+        //       </div>" +
+        //       // *** end link - opt out
+        //     '</div>';
+        // } else {
           BAP_LINKS = 
                 '<div class="' + bapLinkClassList + '">\
                   <div class="' + bapLinkDivClassList01 + '">\
@@ -3155,7 +3155,7 @@ var BAP =
                     "</a>\
                   </div>" +
                   // *** end link - opt out
-                  ((reg === 5) ? "" : +
+                  ((reg !== 5) ? "" : +
                           // ** start WHAT IS IAB
                             (BAP.options[pageId].hideWhatIs
                               ? ""
@@ -3176,10 +3176,11 @@ var BAP =
                         </div>' + //privacy policy
                         '<div class="' + bapLinkDivClassList + 
                         (reg === 2 ? '" style="font-size:.7em"' : '"') +
-                        '">' + se + '</div>' +
-                      '</div>'
-                    );
-        }
+                        '">' + se + '</div>' 
+                  ) +
+                  '</div>'
+                   
+        //}
 
        
       }
