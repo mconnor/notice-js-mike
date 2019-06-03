@@ -3115,8 +3115,8 @@ var BAP =
           bapLinkDivClassList =  "border-top paddingLinksReg6";
           bapLinkDivClassList01 = "paddingLinksReg6";
         } else if (reg ===5) {
-          
           bapLinkDivClassList01 = "paddingLinksReg5";
+          bapLinkDivClassList =  "border-top padding2_10_2_10";
           bapLinkClassList = "bap-links position-relative";
         } else {
           bapLinkClassList = "bap-links position-absolute";
@@ -3165,34 +3165,34 @@ var BAP =
             '</div>';
       }
 
-        if (BAP.options[pageId].new_l2) {
-          BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
-                            <a href="https://www.evidon.com/solutions/ad-notice/"> \
-                                <img style=" \
-                                  width:50px; height:15px;" \
-                                  src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
-                                  alt="evidon logo"> \
-                            </a> \
-                          </div>';
-          
-          MAIN_COPY = 
-            "<p class='main-copy-new-l2'" +
-                ((reg ===2) ? " style='line-height:1.6em;'>" : ">") +
-            generic_msg + '</p>';
+      if (BAP.options[pageId].new_l2) {
+        BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
+                          <a href="https://www.evidon.com/solutions/ad-notice/"> \
+                              <img style=" \
+                                width:50px; height:15px;" \
+                                src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
+                                alt="evidon logo"> \
+                          </a> \
+                        </div>';
+        
+        MAIN_COPY = 
+          "<p class='main-copy-new-l2'" +
+              ((reg ===2) ? " style='line-height:1.6em;'>" : ">") +
+          generic_msg + '</p>';
 
-          CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
+        CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
+      } else {
+        var _inlineStyle;
+        if (reg === 2) { 
+          _inlineStyle = 'font-size:.85em;';
+        } else if (reg === 5) {
+          _inlineStyle = 'font-size:.8em;line-height:11px;margin-top:12px;'
         } else {
-          var _inlineStyle;
-          if (reg === 2) { 
-            _inlineStyle = 'font-size:.85em;';
-          } else if (reg === 5) {
-            _inlineStyle = 'font-size:.8em;line-height:11px;margin-top:12px;'
-          } else {
-            _inlineStyle = 'font-size:.9em;'
-          }
-          MAIN_COPY = "<p class='main-copy' style='" + _inlineStyle + "'>" + generic_msg + '</p>';
-          CLOSE_BTN = '<div class="bap-close font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[ x ]</div>';
+          _inlineStyle = 'font-size:.9em;'
         }
+        MAIN_COPY = "<p class='main-copy' style='" + _inlineStyle + "'>" + generic_msg + '</p>';
+        CLOSE_BTN = '<div class="bap-close font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[ x ]</div>';
+      }
  
       if (reg === 1) {
         if (BAP.options[pageId].new_l2) {
