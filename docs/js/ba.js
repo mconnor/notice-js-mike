@@ -440,11 +440,9 @@ var BAP =
         font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
       } \
       .bap-notice-old-l2 { \
-        line-height: 1.6; \
         border: 2px white solid; \
       } \
       .bap-notice-new-l2 { \
-        line-height: 1.6; \
         -webkit-box-shadow: 2px 2px 4px rgb(187, 185, 185); \
         box-shadow: 2px 2px 4px rgb(187, 185, 185); \
       } \
