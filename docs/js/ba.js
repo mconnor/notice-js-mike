@@ -353,6 +353,9 @@ var BAP =
         font-size: 1em; \
         margin-top: 4px; \
       } \
+      .bap-links-new-l2 div { \
+        margin: 6px 0 6px 0;\
+      } \
       .bap-links a { \
         color: #2b2f98; \
         text-decoration: none; \
