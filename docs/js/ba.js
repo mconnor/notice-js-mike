@@ -401,6 +401,9 @@ var BAP =
       .font-8 { \
         font-size: .8em; \
       } \
+      .font-7 { \
+        font-size: .7em; \
+      } \
       .dimensions-reg1 { \
         width: 299px; height: 214px; \
       } \
@@ -3115,7 +3118,7 @@ var BAP =
           bapLinkDivClassList =  "border-top paddingLinksReg6";
           bapLinkDivClassList01 = "paddingLinksReg6";
         } else if (reg ===5) {
-          bapLinkDivClassList01 = "paddingLinksReg5";
+          bapLinkDivClassList01 = "paddingLinksReg5 font-7";
           bapLinkDivClassList =  "border-top padding2_10_2_10";
           bapLinkClassList = "bap-links position-relative";
         } else {
