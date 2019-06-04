@@ -306,6 +306,7 @@ var BAP =
       } \
       .center-horiz { \
         margin: 0 auto 0 auto; \
+        text-align:center; \
       } \
       .center-vert { \
         margin: 0; \
