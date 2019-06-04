@@ -2432,6 +2432,11 @@ var BAP =
       $("trigger-" + pageId).style.top = 'unset';
       $("trigger-box-" + pageId).style.left = 'unset';
       $("trigger-" + pageId).style.left = 'unset';
+
+      $("trigger-box-" + pageId).style.right = 'unset';
+      $("trigger-" + pageId).style.right = 'unset';
+      $("trigger-box-" + pageId).style.bottom = 'unset';
+      $("trigger-" + pageId).style.bottom = 'unset';
       
       $("trigger-box-" + pageId).style.position = 'absolute';
       $("trigger-" + pageId).style.position = 'absolute';
