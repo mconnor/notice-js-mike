@@ -3457,6 +3457,7 @@ var BAP =
         }
         //use key and value here
       });
+      noticePositionCalculate(pageId);
       var _x, _y,
         _changeFlag = false;
 
