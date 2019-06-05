@@ -406,7 +406,7 @@ var BAP =
         padding: 4px 4px 3px 10px; \
       }\
       .paddingLinksReg5 { \
-        padding: 0 0 3px 8px; \
+        padding: 0 0 3px 10px; \
       }\
       .font-8 { \
         font-size: .8em; \
