@@ -3171,12 +3171,12 @@ var BAP =
               ((reg === 5) 
                 ? "" 
                 : whatisLink +
-                '<div class="bap-gray ' + bapLinkDivClassList + '"> \
+                '<div class="' + bapLinkDivClassList + '"> \
                     <a href="#" target="_blank">' + sl + rigthArrow + '</a>\
-                </div>' + //privacy policy
-                '<div class="' + bapLinkDivClassList + 
+                </div>' + 
+                '<div class="bap-gray ' + bapLinkDivClassList + 
                 (reg === 2 ? '" style="font-size:.7em"' : '"') +
-                '">' + se + '</div>' 
+                '">' + se + '</div>' //privacy policy
               ) +
             '</div>';
       }
