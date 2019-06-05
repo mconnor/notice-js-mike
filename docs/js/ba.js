@@ -367,8 +367,6 @@ var BAP =
       .bap-close { \
         z-index: 2; \
         position: absolute; \
-        top: -1px; \
-        right: 5px; \
         font-size: 1em; \
         -webkit-user-select: none; \
         -moz-user-select: none; \
@@ -377,6 +375,14 @@ var BAP =
         cursor: pointer; \
         user-select: none; \
       } \
+      .bap-close-old-l2 { \
+        top: 3px; \
+        right: 10px; \
+      }\
+      .bap-close-new-l2 { \
+        top: -1px; \
+        right: 5px; \
+      }\
       .font-100 { \
         font-weight: 100; \
       } \
@@ -3190,7 +3196,7 @@ var BAP =
               ((reg ===2) ? " style='line-height:1.6em;'>" : ">") +
           generic_msg + '</p>';
 
-        CLOSE_BTN = '<div class="bap-close font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
+        CLOSE_BTN = '<div class="bap-close bap-close-new-l2 font-100" onclick="BAP.toggle(' + pageId + ');return false;">&times</div>';
       } else {
         var _inlineStyle;
         if (reg === 2) { 
@@ -3201,7 +3207,7 @@ var BAP =
           _inlineStyle = 'font-size:.9em;'
         }
         MAIN_COPY = "<p class='main-copy' style='" + _inlineStyle + "'>" + generic_msg + '</p>';
-        CLOSE_BTN = '<div class="bap-close font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[ x ]</div>';
+        CLOSE_BTN = '<div class="bap-close bap-close-old-l2 font-bold gray-light" onclick="BAP.toggle(' + pageId + ');return false;">[ x ]</div>';
       }
  
       if (reg === 1) {
