@@ -3216,8 +3216,7 @@ var BAP =
             '<div id="bap-notice-' + pageId +
               '" class="bap-notice bap-notice-new-l2 dimensions-reg1">' +
               CLOSE_BTN +
-            '<div class="center-vert" \
-                  style="padding: 0 25px 0 25px;">' + 
+            '<div style="padding: 0 25px 0 25px;">' + 
               BAP_ADVERTISER_LOGO + 
               MAIN_COPY + 
               BAP_LINKS + 
