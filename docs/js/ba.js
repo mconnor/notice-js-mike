@@ -397,7 +397,7 @@ var BAP =
         padding: 2px 10px 2px 10px; \
       }\
       .paddingLinksReg6 { \
-        padding: 3px 4px 3px 14px; \
+        padding: 4px 4px 3px 10px; \
       }\
       .paddingLinksReg5 { \
         padding: 0 0 3px 8px; \
@@ -3319,7 +3319,7 @@ var BAP =
                              style="left: 274px;">' +
                       CLOSE_BTN +
               '<div class="border-gray dimensions-reg6">\
-                  <div class="center-vert inline-block" style="max-width:30%; min-width: 230px;">' +
+                  <div class="center-vert inline-block" style="max-width:280px; min-width: 230px;">' +
                     BAP_LINKS +
                   '</div>\
                   <div class="center-vert inline-block" style="left:34%; width:310px;">' + 
@@ -3442,7 +3442,9 @@ var BAP =
     } 
 
     BAP.changePosition = function(arg1, position, offsetObj){
-      var ad, pageId;
+      var ad, pageId,
+        _x, _y,
+        _changeFlag = false;
       if (isElement(arg1)){
         el = arg1;
       } else if (typeof arg1 === 'string') {
@@ -3457,10 +3459,6 @@ var BAP =
         }
         //use key and value here
       });
-     
-      var _x, _y,
-        _changeFlag = false;
-
 
       if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right' || _x) {
         if (BAP.options[pageId].position !== position) {
