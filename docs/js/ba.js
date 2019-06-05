@@ -3457,7 +3457,7 @@ var BAP =
         }
         //use key and value here
       });
-      noticePositionCalculate(pageId);
+     
       var _x, _y,
         _changeFlag = false;
 
@@ -3489,6 +3489,7 @@ var BAP =
         }
       }
       if (_changeFlag) positionDM3(pageId);
+      noticePositionCalculate(pageId);
     };
 
     function isElement(obj) {
