@@ -427,7 +427,7 @@ var BAP =
         width: 299px; height: 199px; \
       } \
       .dimensions-reg5 { \
-        width: 190px; min-height: 120px; \
+        width: 190px; \
       } \
       .dimensions-reg6 { \
         min-width: 688px; height: 84px; \
