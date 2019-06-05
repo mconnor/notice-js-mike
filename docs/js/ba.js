@@ -387,7 +387,7 @@ var BAP =
         font-weight: 100; \
       } \
       .font-bold { \
-        font-weight: bold; \
+        font-weight: 500; \
       } \
       .gray-light {color: #707070;} \
       .border-top { \
