@@ -3171,7 +3171,7 @@ var BAP =
               ((reg === 5) 
                 ? "" 
                 : whatisLink +
-                '<div class="' + bapLinkDivClassList + '"> \
+                '<div class="bap-gray ' + bapLinkDivClassList + '"> \
                     <a href="#" target="_blank">' + sl + rigthArrow + '</a>\
                 </div>' + //privacy policy
                 '<div class="' + bapLinkDivClassList + 
