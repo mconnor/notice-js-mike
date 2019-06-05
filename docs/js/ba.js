@@ -3229,7 +3229,7 @@ var BAP =
               '<div id="bap-notice-' + pageId +
                 '" class="bap-notice bap-notice-old-l2 dimensions-reg1">' +
                 CLOSE_BTN +
-              '<div class="border-gray width100p height100p">' + 
+              '<div class="border-gray">' + 
                 BAP_ADVERTISER_LOGO + 
                 MAIN_COPY + 
                 BAP_LINKS + 
