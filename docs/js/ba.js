@@ -478,7 +478,7 @@ var BAP =
         z-index: 9990; \
       } \
       .main-copy { \
-        line-height: 12px; \
+        line-height: 13px; \
         color: rgb(0, 0, 0); \
         margin: 0 0 0 0; \
         padding: 5px 0 0 10px; \
@@ -3328,7 +3328,7 @@ var BAP =
                   <div class="center-vert inline-block" style="max-width:280px; min-width: 230px;">' +
                     BAP_LINKS +
                   '</div>\
-                  <div class="center-vert inline-block" style="left:34%; width:310px;">' + 
+                  <div class="center-vert inline-block" style="left:34%; width:326px;">' + 
                      MAIN_COPY +
                   '</div>\
                   <div class="center-vert inline-block" style="right:0;">' +
