@@ -415,7 +415,7 @@ var BAP =
         font-size: .7em; \
       } \
       .dimensions-reg1 { \
-        width: 299px; height: 214px; \
+        width: 299px; \
       } \
       .dimensions-reg2-newl2 { \
         width: 159px; height: 342px; \
@@ -3135,7 +3135,7 @@ var BAP =
           bapLinkDivClassList =  "border-top padding2_10_2_10";
           bapLinkClassList = "bap-links position-relative";
         } else {
-          bapLinkClassList = "bap-links position-absolute";
+          bapLinkClassList = "bap-links position-relative";
           bapLinkDivClassList =  "border-top padding2_10_2_10";
           bapLinkDivClassList01 = bapLinkDivClassList;
         }
