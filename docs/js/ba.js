@@ -500,8 +500,6 @@ var BAP =
         position: absolute; \
         bottom: 5px; \
         left: 10px; \
-        width: 50px; \
-        height: 15px; \
       }";
       BAP.CSS_1 = ".bap1 { \
         width: 299px; \
@@ -3184,8 +3182,9 @@ var BAP =
 
       if (BAP.options[pageId].new_l2) {
         BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
+                          <div style="font-size:.5em;">powered by</div>\
                           <a href="https://www.evidon.com/solutions/ad-notice/"> \
-                              <img style=" \
+                              <img style="\
                                 width:50px; height:15px;" \
                                 src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
                                 alt="evidon logo"> \
