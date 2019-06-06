@@ -322,7 +322,6 @@ var BAP =
       .center-vert { \
         margin: 0; \
         top: 50%; \
-        box-sizing: border-box; \
         -webkit-transform: translateY(-50%); \
         -ms-transform: translateY(-50%); \
         transform: translateY(-50%); \
@@ -439,6 +438,7 @@ var BAP =
       } \
       .dimensions-reg5 { \
         width: 190px; \
+        max-height: 249px;\
       } \
       .dimensions-reg6 { \
         min-width: 688px; height: 84px; \
@@ -453,8 +453,6 @@ var BAP =
         background-color: #FFFFFF; \
         position: absolute; \
         font-size: 12px; \
-        -webkit-box-sizing: border-box; \
-        box-sizing: border-box; \
         z-index: 9991; \
         display:none; \
         font-family: -apple-system, BlinkMacSystemFont, Helvetica, sans-serif; \
