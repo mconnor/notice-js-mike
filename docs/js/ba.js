@@ -485,7 +485,7 @@ var BAP =
         line-height: 13px; \
         color: rgb(0, 0, 0); \
         margin: 0 0 0 0; \
-        padding: 5px 0 4px 10px; \
+        padding: 5px 10px 4px 10px; \
       } \
       .main-copy-new-l2 { \
         color: rgb(138, 135, 135); \
