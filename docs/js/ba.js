@@ -3279,6 +3279,7 @@ var BAP =
                   '</div>' + 
                   BAP_LINKS + 
               '</div>' + //close center-vert
+              BAP_EVIDON_LOGO +
           '</div>'; //close L2
         } else {
           noticeHTML =
