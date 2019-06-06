@@ -413,7 +413,7 @@ var BAP =
         padding: 2px 10px 2px 10px; \
       }\
       .paddingLinksReg6 { \
-        padding: 4px 4px 3px 10px; \
+        padding: 3px 4px 3px 10px; \
       }\
       .paddingLinksReg5 { \
         padding: 0 0 3px 10px; \
