@@ -300,7 +300,17 @@ var BAP =
 
 
       BAP.CSS_COMMON =
-      ".bap-img-container { \
+      "html {\
+        -webkit-box-sizing: border-box;\
+        -moz-box-sizing: border-box;\
+        box-sizing: border-box;\
+      }\
+      *, *:before, *:after {\
+        -webkit-box-sizing: inherit;\
+        -moz-box-sizing: inherit;\
+        box-sizing: inherit;\
+      }\
+      .bap-img-container { \
         max-height: 46px; \
         max-width: 118px; \
         padding: 3px 10px 3px 10px;\
