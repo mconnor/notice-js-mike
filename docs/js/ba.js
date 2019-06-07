@@ -311,6 +311,7 @@ var BAP =
         box-sizing: inherit;\
       }\
       .bap-img-container { \
+        height: 42px;\
         max-height: 46px; \
         max-width: 118px; \
         padding: 3px 10px 3px 10px;\
