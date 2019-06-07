@@ -3189,7 +3189,7 @@ var BAP =
                 (reg === 2 ? '" style="font-size:.7em"' : '"') +
                 '">' + se + '</div>' //privacy policy
               ) +
-            '</div>';
+          '</div>';
       }
 
       if (BAP.options[pageId].new_l2) {
@@ -3349,6 +3349,8 @@ var BAP =
           
 
 
+      } else {
+        console.warn("Reg values indicate ad size. Valid reg values - which are 1,2,5, or 6")
       }
       if (!div) {
         div = document.createElement("div");
