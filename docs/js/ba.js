@@ -1953,15 +1953,10 @@ var BAP =
       } else if (BAP.options[pageId].dm === 3) {
         spotWidth = BAP.options[pageId].ad.clientWidth;
         spotHeight = BAP.options[pageId].ad.clientHeight;
-
-        
         pixLeft = _offset(ad).left;
         pixTop = _offset(ad).top;
         spotLeft = pixLeft;
         spotTop = pixTop;
-
-
-
       } else if (/^(1|2|4|4.1|4.2|7|8|9)$/.test(BAP.options[pageId].dm)) {
         spotWidth = BAP.options[pageId].ad.clientWidth;
         spotHeight = BAP.options[pageId].ad.clientHeight;
