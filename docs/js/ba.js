@@ -459,7 +459,6 @@ var BAP =
       } \
       .bap-notice-old-l2 { \
         border: 2px white solid; \
-        margin: 2px;\
       } \
       .bap-notice-new-l2 { \
         -webkit-box-shadow: 2px 2px 4px rgb(187, 185, 185); \
