@@ -720,8 +720,10 @@ var BAP = (function() {
                         function testResize() {
                           var pageId;
                           for (pageId in BAP.options) {
-                            noticePositionCalculate(pageId);
-                            noticePosition(pageId);
+                            if (!isNonTimerDm(BAP.options[pageId].dm)) {
+                              noticePositionCalculate(pageId);
+                              noticePosition(pageId);
+                            }
                           }
                         }
                         /**
@@ -1341,10 +1343,19 @@ var BAP = (function() {
                          * This method positions the notice.
                          */
                         function noticePosition(pageId) {
-                          var t = $("trigger-" + pageId);
-                          //tc = $("trigger-box-" + pageId);
-                          t.style.top = BAP.options[pageId].posTop + "px";
-                          t.style.left = BAP.options[pageId].posLeft + "px";
+                          if (!isNonTimerDm(BAP.options[pageId].dm)) {
+                            var t = $("trigger-" + pageId);
+                            t.style.top = BAP.options[pageId].posTop + "px";
+                            t.style.left = BAP.options[pageId].posLeft + "px";
+                          }
+                        }
+
+                        function isNonTimerDm(_dm){
+                          if (_dm === 3 || _dm === 9 || _dm === 5){
+                            return true;
+                          } else {
+                            return false;
+                          }
                         }
                         /**
                          * This method calculates new notice location points based on the mode
@@ -1733,7 +1744,67 @@ var BAP = (function() {
                               }
                             );
                           }
-                          div.innerHTML = div.innerHTML + icon;
+                          //
+                          if (BAP.options[pageId].dm === 5) { 
+                            // iframe containing durly
+                            div.innerHTML = div.innerHTML + icon;
+                            setTimeout(positionDM3(pageId),1000);
+                          } else  {
+                            try {
+                              var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
+                              if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
+                                appenIconToAd(pageId, icon);
+                              } else {
+                                div.innerHTML = div.innerHTML + icon;
+                              }
+                            } catch (e) {
+                              div.innerHTML = div.innerHTML + icon;
+                            }
+                          }
+                          //
+                        }
+
+                        function appenIconToAd(pageId, icon){
+                          var _iconDomElement =  $("BAP-icon-"+ BAP.options[pageId].ad.notice);
+                          if (!_iconDomElement) {
+                            _iconDomElement = document.createElement('div');
+                            _iconDomElement.innerHTML += icon;
+                            try {
+                              _iconDomElement.setAttribute("id", "BAP-icon-"+ BAP.options[pageId].ad.notice);
+                            } catch(e) {
+                              console.warn(e.message)
+                            }
+                          }
+                          BAP.options[pageId].ad.appendChild(_iconDomElement);
+                          setTimeout(positionDM3(pageId),1000);
+                        }
+                    
+                        function positionDM3(pageId){
+                          $("trigger-" + pageId).style.top = 'unset';
+                    
+                          $("trigger-" + pageId).style.left = 'unset';
+                    
+                          $("trigger-" + pageId).style.right = 'unset';
+                          $("trigger-" + pageId).style.bottom = 'unset';
+                          
+                          $("trigger-" + pageId).style.position = 'absolute';
+                    
+                          var _nudgeY = BAP.options[pageId].offsetTop + 'px';
+                          var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
+                    
+                          if (BAP.options[pageId].position === 'top-left') {
+                            $("trigger-" + pageId).style.top = _nudgeY;
+                            $("trigger-" + pageId).style.left = _nudgeX;
+                          } else if (BAP.options[pageId].position === 'top-right') {
+                            $("trigger-" + pageId).style.top = _nudgeY;
+                            $("trigger-" + pageId).style.right = _nudgeX;
+                          } else if (BAP.options[pageId].position === 'bottom-left') {
+                            $("trigger-" + pageId).style.bottom = _nudgeY;
+                            $("trigger-" + pageId).style.left = _nudgeX;
+                          } else if (BAP.options[pageId].position === 'bottom-right') {
+                            $("trigger-" + pageId).style.bottom = _nudgeY;
+                            $("trigger-" + pageId).style.right = _nudgeX;
+                          }
                         }
 
                         function showNoticeHelper(pageId) {
