@@ -795,25 +795,11 @@ var BAP = (function() {
                               } else {
                                 // TODO: this is a part of noticeMode.  Maybe move it out?
                                 pEl = proximityDetection(BAP.options[pageId].proximityId, BAP.options[pageId].ad_w, BAP.options[pageId].ad_h);
-                                var ad2 = pEl;
-                                while (true) {
-                                  ad2 = checkChildren(ad2, BAP.options[pageId].ad_h, BAP.options[pageId].ad_w);
-                                  if (!ad2) {
-                                    break;
-                                  } else if (ad2.nodeName === "EMBED") {
-                                    if (ad2.parentNode.nodeName === "OBJECT") {
-                                      pEl = getObjectEmbed(ad2.parentNode);
-                                      break;
-                                    } else {
-                                      pEl = ad2;
-                                    }
-                                  } else {
-                                    if (ad2.nodeName === "OBJECT") {
-                                      ad2 = getObjectEmbed(ad2);
-                                    }
-                                    pEl = ad2;
-                                  }
-                                }
+                                pEl = pickChildLevel(
+                                  pEl,
+                                  BAP.options[pageId].ad_h,
+                                  BAP.options[pageId].ad_w
+                                );
                                 if (pEl) {
                                   BAP.options[pageId].ad = pEl;
                                 }
@@ -1104,7 +1090,28 @@ var BAP = (function() {
                             return false;
                           }
                         }
-
+                        function pickChildLevel(el, h, w) {
+                          var a = el;
+                          while (true) {
+                            a = checkChildren(a, h, w);
+                            if (!a) {
+                              break;
+                            } else if (a.nodeName === "EMBED") {
+                              if (a.parentNode.nodeName === "OBJECT") {
+                                el = getObjectEmbed(a.parentNode);
+                                break;
+                              } else {
+                                el = a;
+                              }
+                            } else {
+                              if (a.nodeName === "OBJECT") {
+                                ad2 = getObjectEmbed(a);
+                              }
+                              el = a;
+                            }
+                          }
+                          return el;
+                        }
                         function hidePopup(pageId) {
                           try {
                             var popup = $("bap-notice-" + pageId);
@@ -1561,27 +1568,9 @@ var BAP = (function() {
                           }
                           // Check for truste stuff in the path of this notice.
                           BAP.options[pageId]._truste = testTruste(ad);
-                          if (dm === 3 || dm === 7) {
+                          if (dm === 3) {
                             // validate if the level of notice is correct by looking into children
-                            var ad2 = ad;
-                            while (true) {
-                              ad2 = checkChildren(ad2, spotHeight, spotWidth);
-                              if (!ad2) {
-                                break;
-                              } else if (ad2.nodeName === "EMBED") {
-                                if (ad2.parentNode.nodeName === "OBJECT") {
-                                  ad = getObjectEmbed(ad2.parentNode);
-                                  break;
-                                } else {
-                                  ad = ad2;
-                                }
-                              } else {
-                                if (ad2.nodeName === "OBJECT") {
-                                  ad2 = getObjectEmbed(ad2);
-                                }
-                                ad = ad2;
-                              }
-                            }
+                            ad = pickChildLevel(ad, spotHeight, spotWidth);
                           }
                           BAP.options[pageId].dm = dm;
                           BAP.options[pageId].ad = ad;
