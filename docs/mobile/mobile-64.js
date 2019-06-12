@@ -1061,6 +1061,11 @@ var BAP = (function() {
                         function nodeAcceptCheck(el) {
                           return /DIV|IMG|EMBED|OBJECT|IFRAME|CANVAS|VIDEO|svg|ARTICLE|MAIN|ASIDE|FIGURE|NAV|SECTION/.test(el.nodeName);
                         }
+                        function nodeIsContainer(el) {
+                          return /DIV|ARTICLE|MAIN|ASIDE|FIGURE|NAV|SECTION/.test(
+                            el.nodeName
+                          );
+                        }
 
                         function checkChildren(ob, spotHeight, spotWidth) {
                           try {
@@ -1074,17 +1079,17 @@ var BAP = (function() {
                                 return false;
                               }
                               for (o = 0; o < _.length; o++) {
-                                q = getDims(_[o]);
-                                if (checkElement(_[o], spotHeight, spotWidth)) {
-                                  _[o].ds = getAdStandard(q[1], q[0]);
+                                // validate the element
+                                if (!isValidElement(_[o])) {
+                                  continue;
+                                }
+                                if (checkElement(_[o], spotHeight, spotWidth) && nodeIsContainer(_[o])) {
                                   return _[o];
-                                } else if (q && getAdStandard(q[1], q[0]) !== 0) {
-                                  _[o].ds = getAdStandard(q[1], q[0]);
-                                  return _[o];
-                                } else if ((q = checkChildren(_[o], spotHeight, spotWidth))) {
+                                  /*jsl:ignore*/
+                                } else if ((q = checkChildren(_[o], spotHeight, spotWidth)) && nodeIsContainer(_[o]) ) {
+                                  /*jsl:end*/
                                   return q;
                                 }
-                              }
                             }
                           } catch (e) {
                             return false;
