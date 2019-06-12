@@ -2276,7 +2276,7 @@ var BAP = (function() {
                                 // new position
                                 BAP.options[pageId].position = position;
                                 //swap out background art of icon
-                                $("trigger-box-" + pageId).querySelector('img').src="http://dev.betrad.com/icon/box_77_" + position + ".png";
+                                $("trigger-" + pageId).querySelector('img').src="http://dev.betrad.com/icon/box_77_" + position + ".png";
                                 _changeFlag = true;
                               }
                             } else {
