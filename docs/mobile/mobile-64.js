@@ -1090,6 +1090,7 @@ var BAP = (function() {
                                   /*jsl:end*/
                                   return q;
                                 }
+                              }
                             }
                           } catch (e) {
                             return false;
