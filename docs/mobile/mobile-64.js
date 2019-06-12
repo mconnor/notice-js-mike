@@ -2251,6 +2251,72 @@ var BAP = (function() {
                             left = box.left + scrollLeft - clientLeft;
                           return { top: top, left: left };
                         }
+
+                        BAP.changePosition = function(arg1, position, offsetObj){
+                            var ad, pageId,
+                              _x, _y,
+                              _changeFlag = false;
+                            if (isElement(arg1)){
+                              el = arg1;
+                            } else if (typeof arg1 === 'string') {
+                              el = document.querySelector(arg1);
+                            } else {
+                              console.warn('invalid dom argument. Send dom element or string')
+                              return;
+                            }
+                            Object.keys(BAP.options).forEach(key => {
+                              if (BAP.options[key].ad === el) {
+                                pageId = key;
+                              }
+                              //use key and value here
+                            });
+                      
+                            if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right' || _x) {
+                              if (BAP.options[pageId].position !== position) {
+                                // new position
+                                BAP.options[pageId].position = position;
+                                //swap out background art of icon
+                                $("trigger-box-" + pageId).querySelector('img').src="http://dev.betrad.com/icon/box_77_" + position + ".png";
+                                _changeFlag = true;
+                              }
+                            } else {
+                              console.warn('invalid icon position request');
+                            }
+                      
+                            if (offsetObj.x) { 
+                              _x = parseInt(offsetObj.x, 10);
+                              if (BAP.options[pageId].offsetLeft !== _x  )  {
+                                BAP.options[pageId].offsetLeft = _x;
+                                _changeFlag = true;
+                              }
+                            }
+                            if (offsetObj.y) { 
+                              _y = parseInt(offsetObj.y, 10);
+                              if (BAP.options[pageId].offsetTop !== _y  )  {
+                                BAP.options[pageId].offsetTop = _y;
+                                _changeFlag = true;
+                              }
+                            }
+                            if (_changeFlag) positionDM3(pageId);
+                            noticePositionCalculate(pageId);
+                        };
+
+                        function isElement(obj) {
+                            try {
+                              //Using W3 DOM2 (works for FF, Opera and Chrome)
+                              return obj instanceof HTMLElement;
+                            }
+                            catch(e){
+                              //Browsers not supporting W3 DOM2 don't have HTMLElement and
+                              //an exception is thrown and we end up here. Testing some
+                              //properties that all elements have (works on IE7)
+                              return (typeof obj==="object") &&
+                                (obj.nodeType===1) && (typeof obj.style === "object") &&
+                                (typeof obj.ownerDocument ==="object");
+                            }
+                          }
+
+
                         try {
                           addEvent(window, "message", handleMessage);
                         } catch (e) {}
@@ -2278,6 +2344,7 @@ var BAP = (function() {
                         if (window._bao) {
                           start(window._bao);
                         }
+                        API.changePosition = BAP.changePosition;
                         API.options = BAP.options;
                         API.flashPostMessage = flashPostMessage;
                         API.toggle = toggle;
