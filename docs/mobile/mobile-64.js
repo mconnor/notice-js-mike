@@ -2298,6 +2298,7 @@ var BAP = (function() {
                               }
                             }
                             if (_changeFlag) positionDM3(pageId);
+                            noticeCreate(pageId);
                             noticePositionCalculate(pageId);
                         };
 
