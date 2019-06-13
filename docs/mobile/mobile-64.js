@@ -1779,30 +1779,25 @@ var BAP = (function() {
                         }
                     
                         function positionDM3(pageId){
-                          $("trigger-" + pageId).style.top = 'unset';
-                    
-                          $("trigger-" + pageId).style.left = 'unset';
-                    
-                          $("trigger-" + pageId).style.right = 'unset';
-                          $("trigger-" + pageId).style.bottom = 'unset';
-                          
-                          $("trigger-" + pageId).style.position = 'absolute';
+                          var iconContainer = $("trigger-" + pageId);
+                          iconContainer.style.top = iconContainer.style.left = iconContainer.style.right = iconContainer.style.bottom = 'unset';
+                          iconContainer.style.position = 'absolute';
                     
                           var _nudgeY = BAP.options[pageId].offsetTop + 'px';
                           var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
-                    
+
                           if (BAP.options[pageId].position === 'top-left') {
-                            $("trigger-" + pageId).style.top = _nudgeY;
-                            $("trigger-" + pageId).style.left = _nudgeX;
+                            iconContainer.style.top = _nudgeY;
+                            iconContainer.style.left = _nudgeX;
                           } else if (BAP.options[pageId].position === 'top-right') {
-                            $("trigger-" + pageId).style.top = _nudgeY;
-                            $("trigger-" + pageId).style.right = _nudgeX;
+                            iconContainer.style.top = _nudgeY;
+                            iconContainer.style.right = _nudgeX;
                           } else if (BAP.options[pageId].position === 'bottom-left') {
-                            $("trigger-" + pageId).style.bottom = _nudgeY;
-                            $("trigger-" + pageId).style.left = _nudgeX;
+                            iconContainer.style.bottom = _nudgeY;
+                            iconContainer.style.left = _nudgeX;
                           } else if (BAP.options[pageId].position === 'bottom-right') {
-                            $("trigger-" + pageId).style.bottom = _nudgeY;
-                            $("trigger-" + pageId).style.right = _nudgeX;
+                            iconContainer.style.bottom = _nudgeY;
+                            iconContainer.style.right = _nudgeX;
                           }
                         }
 
