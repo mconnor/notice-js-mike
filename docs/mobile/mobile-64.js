@@ -1769,8 +1769,11 @@ var BAP = (function() {
                             } catch(e) {
                               console.warn(e.message)
                             }
+                            BAP.options[pageId].ad.appendChild(_iconDomElement);
+                          } else {
+                            _iconDomElement.innerHTML = icon;
                           }
-                          BAP.options[pageId].ad.appendChild(_iconDomElement);
+                          
                           setTimeout(positionDM3(pageId),1000);
                         }
                     
