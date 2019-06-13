@@ -346,4 +346,4 @@ if (localTestingEnv) {
   } else {
     window.onload = execute;
   }
-})(false);
+})(true);
