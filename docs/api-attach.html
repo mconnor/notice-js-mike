@@ -7,7 +7,8 @@
      <style>
         .mg20 {
             margin: 20px;
-
+display:inline-block;
+border: 1px black solid;
         }
         .w20 {
             width: 60px;
@@ -15,46 +16,52 @@
         .container {
             background-color: lightcoral;
             position: relative;
-            width: 300px;
-            height: 200px;
+            width: 320px;
+            height: 250px;
         }
         .container > p {
             padding: 18px;
         }
         body {
-            background-color:black;
+            background-color:orange;
             color: white;
+        }
+        input {
+            width: 10px;
         }
     </style>
 </head>
 
 <body>
     <div class="mg20">
-        <span>adjust top ad icon: </span>
-
-        <select id="top-select" size="1">
-            <option>top-left</option>
-            <option>top-right</option>
-            <option>bottom-left</option>
-            <option>bottom-right</option>
-        </select>
-        <label id="xLabel" for="xposTop">x offset</label><input class="w20" id="xposTop" type="number">
-        <label id="yLabel" for="yposTop">y offset</label><input class="w20" id="yposTop" type="number">
-
-        <button id="btn" onclick="repositionTop()">
-            adjust
-        </button>
+        <h2>adjust top ad icon: </h2>
+        
+            <select id="top-select" size="1">
+                <option>top-left</option>
+                <option>top-right</option>
+                <option>bottom-left</option>
+                <option>bottom-right</option>
+            </select>
+        
+            <label id="xLabel" for="xposTop">x offset</label><input value="0" class="w20" id="xposTop" type="number">
+         
+            <label id="yLabel" for="yposTop">y offset</label><input value="0" class="w20" id="yposTop" type="number">
+        
+            <button id="btn" onclick="repositionTop()">
+                adjust
+            </button>
+        
     </div>
     <div class="mg20">
-        <span>adjust bottom ad icon:</span>
+        <p>adjust bottom ad icon:</p>
         <select id="bottom-select" size="1">
             <option>top-left</option>
             <option>top-right</option>
             <option>bottom-left</option>
             <option>bottom-right</option>
         </select>
-        <label id="xLabel" for="xposBottom">x offset</label><input class="w20" id="xposBottom" type="number">
-        <label id="yLabel" for="yposBottom">y offset</label><input class="w20" id="yposBottom" type="number">
+        <label id="xLabel" for="xposBottom">x offset</label><input value="0" class="w20" id="xposBottom" type="number">
+        <label id="yLabel" for="yposBottom">y offset</label><input value="0" class="w20" id="yposBottom" type="number">
 
         <button id="btn" onclick="repositionBottom()">
             adust
@@ -64,14 +71,15 @@
 
 
     <div class='container' id="ad1">
-        <p class='mg20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis a harum cupiditate ipsam obcaecati! Nam, consectetur quis repudiandae nostrum officia deleniti, cumque, impedit quam quibusdam magni quo ipsa aut?</p>
-    </div>
-    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=top-left"></script>
 
-    <div class='container' id="ad2">
         <p class='mg20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis a harum cupiditate ipsam obcaecati! Nam, consectetur quis repudiandae nostrum officia deleniti, cumque, impedit quam quibusdam magni quo ipsa aut?</p>
     </div>
-    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=300;ad_h=200;position=bottom-right"></script>
+    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=320;ad_h=250;position=bottom-right"></script>
+
+    <!-- <div class='container' id="ad2">
+        <p class='mg20'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis a harum cupiditate ipsam obcaecati! Nam, consectetur quis repudiandae nostrum officia deleniti, cumque, impedit quam quibusdam magni quo ipsa aut?</p>
+    </div>
+    <script type="text/javascript" data-name="durly" src="./surly/durly.js?;coid=242;nid=64564;ad_w=320;ad_h=250;position=top-left"></script> -->
 
     <script type="text/javascript">
        // (function() {
