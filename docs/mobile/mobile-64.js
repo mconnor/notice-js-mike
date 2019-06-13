@@ -1795,6 +1795,11 @@ var BAP = (function() {
                           } else if (BAP.options[pageId].position === 'bottom-left') {
                             iconContainer.style.bottom = _nudgeY;
                             iconContainer.style.left = _nudgeX;
+                            for (var i = 0; i < iconContainer.length; i++) {
+                                if (iconContainer[i].tagName == "img") {   //or use toUpperCase()
+                                    iconContainer[i].style.verticalAlign = 'middle';  //do styling here
+                                }
+                            }
                           } else if (BAP.options[pageId].position === 'bottom-right') {
                             iconContainer.style.bottom = _nudgeY;
                             iconContainer.style.right = _nudgeX;
