@@ -2276,7 +2276,7 @@ var BAP = (function() {
                                 // new position
                                 BAP.options[pageId].position = position;
                                 //swap out background art of icon
-                                collapseIcon(pageId);
+                                noticeCreate(pageId);
                                 _changeFlag = true;
                               }
                             } else {
@@ -2298,7 +2298,7 @@ var BAP = (function() {
                               }
                             }
                             if (_changeFlag) positionDM3(pageId);
-                            noticeCreate(pageId);
+                            
                             noticePositionCalculate(pageId);
                         };
 
