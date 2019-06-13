@@ -2477,7 +2477,6 @@ var BAP =
         $("trigger-" + pageId).style.bottom = _nudgeY;
         $("trigger-" + pageId).style.right = _nudgeX;
       }
-      
     }
 
 
@@ -3516,8 +3515,6 @@ var BAP =
           (typeof obj.ownerDocument ==="object");
       }
     }
-
-
     
     try {
       addEvent(window, "message", handleMessage);
