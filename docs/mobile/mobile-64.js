@@ -1771,6 +1771,7 @@ var BAP = (function() {
                             }
                             BAP.options[pageId].ad.appendChild(_iconDomElement);
                           } else {
+                            collapseIcon(pageId);
                             _iconDomElement.innerHTML = icon;
                           }
                           
