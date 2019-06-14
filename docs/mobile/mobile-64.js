@@ -938,17 +938,25 @@ var BAP = (function() {
                           if (BAP.options[pageId].expanded) {
                             return;
                           }
+                         
                           var iconCol = BAP.options[pageId].icon === "g" ? b64ig : b64i;
                           var icon = '<img src="' + iconCol["mo_" + BAP.options[pageId].position] + '">',
                             trigger = $("trigger-" + pageId),
                             currLeft = _offset(trigger).left;
-                          if (BAP.options[pageId].positionHorizontal() === "right") {
-                            currLeft = currLeft + BAP.options[pageId].miconWidth - BAP.options[pageId].ciconWidth;
+
+                          if (isNonTimerDm(pageId)) {
+                            positionDM3(pageId);
+                          } else {
+                            if (BAP.options[pageId].positionHorizontal() === "right") {
+                                currLeft = currLeft + BAP.options[pageId].miconWidth - BAP.options[pageId].ciconWidth;
+                              }
+                              trigger.style.left = currLeft + "px";
+                              BAP.options[pageId].posLeft = currLeft;
                           }
-                          trigger.style.left = currLeft + "px";
+                          
                           trigger.innerHTML = icon;
                           BAP.options[pageId].expanded = true;
-                          BAP.options[pageId].posLeft = currLeft;
+                          
                         }
 
                         function collapseIcon(pageId) {
