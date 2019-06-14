@@ -1790,6 +1790,7 @@ var BAP = (function() {
                           var iconContainer = $("trigger-" + pageId);
                           iconContainer.style.top = iconContainer.style.left = iconContainer.style.right = iconContainer.style.bottom = 'unset';
                           iconContainer.style.position = 'absolute';
+                          iconContainer.style.height = '15px';
                     
                           var _nudgeY = BAP.options[pageId].offsetTop + 'px';
                           var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
