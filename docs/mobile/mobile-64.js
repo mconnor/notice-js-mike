@@ -1804,7 +1804,7 @@ var BAP = (function() {
                           } else if (BAP.options[pageId].position === 'bottom-left') {
                             iconContainer.style.bottom = _nudgeY;
                             iconContainer.style.left = _nudgeX;
-                            for (var i = 0; i < iconContainer.length; i++) {
+                            for (var i = 0; i < iconContainer.childElementCount; i++) {
                                 if (iconContainer[i].tagName == "img") {   //or use toUpperCase()
                                     iconContainer[i].style.verticalAlign = 'middle';  //do styling here
                                 }
