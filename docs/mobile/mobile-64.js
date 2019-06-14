@@ -944,7 +944,7 @@ var BAP = (function() {
                             trigger = $("trigger-" + pageId),
                             currLeft = _offset(trigger).left;
 
-                          if (isNonTimerDm(pageId)) {
+                          if (isNonTimerDm(BAP.options[pageId].dm)) {
                             positionDM3(pageId);
                           } else {
                             if (BAP.options[pageId].positionHorizontal() === "right") {
