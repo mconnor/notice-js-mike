@@ -1907,6 +1907,7 @@ var BAP =
         tc = $("trigger-box-" + pageId);
         t.style.top = BAP.options[pageId].posTop + "px";
         t.style.left = BAP.options[pageId].posLeft + "px";
+        t.style.height = "15px";
         tc.style.top = BAP.options[pageId].posTop + "px";
         tc.style.left = BAP.options[pageId].posLeft + "px";
      }
