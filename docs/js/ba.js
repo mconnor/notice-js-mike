@@ -1332,7 +1332,6 @@ var BAP =
       triggerBox.style.left = currLeft + "px";
       triggerBox.style.width =
         BAP.options[pageId].ciconWidth + "px";
-      trigger.style.height = "15px";
       $("trigger-box-image-" + pageId).src = DOMAIN_ROOT + iconDir + "/box_" + BAP.options[pageId].ciconWidth + "_" + BAP.options[pageId].position + ".png";
       BAP.options[pageId].expanded = true;
       setTimeout(function() {
@@ -1907,7 +1906,6 @@ var BAP =
         tc = $("trigger-box-" + pageId);
         t.style.top = BAP.options[pageId].posTop + "px";
         t.style.left = BAP.options[pageId].posLeft + "px";
-        t.style.height = "15px";
         tc.style.top = BAP.options[pageId].posTop + "px";
         tc.style.left = BAP.options[pageId].posLeft + "px";
      }
@@ -2394,7 +2392,7 @@ var BAP =
         pageId +
         '" style="' +
         z +
-        'position:absolute;" class="bap-trigger" onclick="' +
+        'position:absolute;height:15px;" class="bap-trigger" onclick="' +
         click +
         '"' +
         expansion +
