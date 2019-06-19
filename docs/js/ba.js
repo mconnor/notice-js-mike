@@ -1322,15 +1322,17 @@ var BAP =
         iconDir = BAP.options[pageId].icon === "g" ? "/icong" : "/icon",
         icon = DOMAIN_ROOT + iconDir + "/c_" + BAP.options[pageId].icon_grayscale + (BAP.options[pageId].cicon ? BAP.options[pageId].cicon : cicon) + ".png",
         trigger = $("trigger-" + pageId),
+        triggerBox = $("trigger-box-" + pageId),
         currLeft = _offset(trigger).left;
       if (BAP.options[pageId].positionHorizontal() === "right") {
         currLeft = currLeft + iconWidth - BAP.options[pageId].ciconWidth;
       }
       trigger.style.left = currLeft + "px";
       trigger.innerHTML = '<img src="' + icon + '">';
-      $("trigger-box-" + pageId).style.left = currLeft + "px";
-      $("trigger-box-" + pageId).style.width =
+      triggerBox.style.left = currLeft + "px";
+      triggerBox.style.width =
         BAP.options[pageId].ciconWidth + "px";
+      trigger.style.height = "15px";
       $("trigger-box-image-" + pageId).src = DOMAIN_ROOT + iconDir + "/box_" + BAP.options[pageId].ciconWidth + "_" + BAP.options[pageId].position + ".png";
       BAP.options[pageId].expanded = true;
       setTimeout(function() {
