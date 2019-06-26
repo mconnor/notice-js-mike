@@ -361,7 +361,7 @@ var BAP =
       } \
       .bap-links-new-l2 { \
         text-align: center; \
-        font-size: 1em; \
+        font-size: .8em; \
         margin-top: 4px; \
       } \
       .bap-links-new-l2 div { \
