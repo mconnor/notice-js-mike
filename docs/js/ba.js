@@ -2415,7 +2415,7 @@ var BAP =
         try {
           var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
           if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
-            appenIconToAd(pageId, icon);
+            appendIconToAd(pageId, icon);
           } else {
             div.innerHTML = div.innerHTML + icon;
           }
@@ -2425,7 +2425,7 @@ var BAP =
       }
     }
 
-    function appenIconToAd(pageId, icon){
+    function appendIconToAd(pageId, icon){
       var _iconDomElement =  $("BAP-icon-"+ BAP.options[pageId].ad.notice);
       if (!_iconDomElement) {
         _iconDomElement = document.createElement('div');
@@ -2454,7 +2454,7 @@ var BAP =
       $("trigger-box-" + pageId).style.position = 'absolute';
       $("trigger-" + pageId).style.position = 'absolute';
 
-      var _nudgeY = (BAP.options[pageId].offsetTop) + 'px';
+      var _nudgeY = BAP.options[pageId].offsetTop + 'px';
       var _nudgeX = BAP.options[pageId].offsetLeft + 'px';
 
       if (BAP.options[pageId].position === 'top-left') {
@@ -3070,14 +3070,10 @@ var BAP =
       } else if (width >= 300 && height >= 250) {
         // Regular L2
         reg = 1;
-      } else {
-        reg = 5;
-      }
-      if (width === 160 && height === 600) {
+      } else if (width === 160 && height === 600) {
         // wide skyscraper [160x600]
         reg = 2;
-      }
-      if (width >= 728 && width <= 990 && (height >= 90 && height <= 125)) {
+      } else if (width >= 728 && width <= 990 && (height >= 90 && height <= 125)) {
         // banner ad
         reg = 6;
       }
