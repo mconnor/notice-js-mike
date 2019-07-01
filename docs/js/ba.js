@@ -3462,8 +3462,8 @@ var BAP =
         return;
       }
 
-      for (var k=0; k <BAP.options.length; k++ ){
-          if (BAP.options[k].ad === el) {
+      for (var k=0; k < Array(BAP.options).length; k++ ){
+          if (Array(BAP.options)[k].ad === el) {
             pageId = key;
           }
       }
