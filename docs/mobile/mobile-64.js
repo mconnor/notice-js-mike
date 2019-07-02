@@ -2272,12 +2272,11 @@ var BAP = (function() {
                               console.warn('invalid dom argument. Send dom element or string')
                               return;
                             }
-                            Object.keys(BAP.options).forEach(key => {
-                              if (BAP.options[key].ad === el) {
-                                pageId = key;
-                              }
-                              //use key and value here
-                            });
+                            for (var key in BAP.options){
+                                if (BAP.options[key].ad === el) {
+                                  pageId = key;
+                                }
+                            }
                       
                             if (position === 'top-left' || position === 'top-right' || position === 'bottom-left' || position === 'bottom-right' || _x) {
                               if (BAP.options[pageId].position !== position) {
