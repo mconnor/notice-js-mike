@@ -311,9 +311,13 @@ var BAP =
         box-sizing: inherit;\
       }\
       .bap-img-container { \
-        max-height: 34px; \
+        height: 42px;\
+        max-height: 46px; \
         max-width: 118px; \
         padding: 3px 10px 3px 10px;\
+      } \
+      .bap-img-container img { \
+        max-height: 34px; \
       } \
       .center-horiz { \
         margin: 0 auto 0 auto; \
