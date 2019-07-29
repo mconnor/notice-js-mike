@@ -3170,7 +3170,7 @@ var BAP =
                 ? "" 
                 : whatisLink +
                 '<div class="' + bapLinkDivClassList + '"> \
-                    <a href="#" target="_blank">' + sl + rigthArrow + '</a>\
+                    <a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + rigthArrow + '</a>\
                 </div>' + 
                 '<div class="bap-gray ' + bapLinkDivClassList + 
                 (reg === 2 ? '" style="font-size:.7em"' : '"') +
