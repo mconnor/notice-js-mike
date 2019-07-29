@@ -3014,12 +3014,8 @@ var BAP =
           BAP.options[pageId].advName = BAP.options[pageId].advName.replace("Ghostery", "Evidon");
         } catch (err) {}
       }
-      // translation layer
-      if (!BAP.options[pageId].noDefault) {
-        trans(BAP.options[pageId].defTrans);
-      } else if (BAP.options[pageId].translation) {
-        trans(BAP.options[pageId].translation);
-      }
+      
+      
       if (BAP.options[pageId].behavioral === "definitive") {
         generic_msg = sg1;
         if (BAP.options[pageId].advName) {
