@@ -2994,7 +2994,7 @@ var BAP =
         } else {
           sm = "More information & opt-out options";
         }
-
+        if (BAP.options[pageId].advMessage) sl = BAP.options[pageId].advMessage;
       function trans(z) {
         try {
           if (!z.generic1) {
