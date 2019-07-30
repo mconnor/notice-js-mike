@@ -3124,8 +3124,8 @@ var BAP =
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
-                  <a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>' + //privacy policy
-                '</div>';
+                  '<a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>' + //privacy policy
+             '</div>';
       } else {
         if (reg === 6) { // banner
           bapLinkClassList = "bap-links position-relative border-right heightReg6";
