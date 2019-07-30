@@ -3108,8 +3108,7 @@ var BAP =
                       "</a> \
                     </div>" +
                     // *** end link - opt out
-                    '<div> \
-                      <a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>' + //privacy policy
+                    '<div>' + 
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
@@ -3125,6 +3124,7 @@ var BAP =
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
+                  <a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>' + //privacy policy
                 '</div>';
       } else {
         if (reg === 6) { // banner
