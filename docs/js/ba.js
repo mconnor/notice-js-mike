@@ -2981,7 +2981,7 @@ var BAP =
       /* translation scaffold */
       var rigthArrow = " &#187",
         sm,
-        sw = "Privacy Policy",
+        sw = "What is internet based advertising?",
         sl = "Learn about your choices",
         se = "Privacy controls by Evidon&#153;",
         sg1 =
