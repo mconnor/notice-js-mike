@@ -3109,7 +3109,7 @@ var BAP =
                     </div>" +
                     // *** end link - opt out
                     '<div> \
-                      <a href="#" target="_blank">' + se + '</a></div>' + //privacy policy
+                      <a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>' + //privacy policy
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
