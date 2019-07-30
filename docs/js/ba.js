@@ -3185,7 +3185,7 @@ var BAP =
       if (BAP.options[pageId].new_l2) {
         BAP_EVIDON_LOGO = '<div class="evidon-logo"> \
                           <div style="font-size:.5em;">powered by</div>\
-                          <a href="https://www.evidon.com/solutions/ad-notice/"> \
+                          <a href="https://www.evidon.com/solutions/ad-notice/" target="_blank"> \
                               <img style="\
                                 width:50px; height:15px;" \
                                 src="https://s3.amazonaws.com/component-library-files/Production/images/evidon.color@2x.png" \
