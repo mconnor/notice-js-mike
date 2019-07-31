@@ -780,63 +780,95 @@ var BAP =
         BAP.options[pageId].rev = cud.revision || 0;
         BAP.options[pageId].behavioral = cud.behavioral || "definitive";
         BAP.options[pageId].behavioralCustomMessage = cud.generic_text || "";
-        cud.hide_wi && (BAP.options[pageId].hideWhatIs = true);
-        cud.hide_cl && (BAP.options[pageId].hideCustom = true);
+        if(cud.hide_wi ) 
+            BAP.options[pageId].hideWhatIs = true;
+        if(cud.hide_cl ) 
+            BAP.options[pageId].hideCustom = true;
         // default translation
         BAP.options[pageId].defTrans = {};
-        cud.default_generic1 &&
-          (BAP.options[pageId].defTrans.generic1 = cud.default_generic1);
-        cud.default_generic2 &&
-          (BAP.options[pageId].defTrans.generic2 = cud.default_generic2);
-        cud.default_generic3 &&
-          (BAP.options[pageId].defTrans.generic3 = cud.default_generic3);
-        cud.default_generic4 &&
-          (BAP.options[pageId].defTrans.generic4 = cud.default_generic4);
-        cud.default_generic5 &&
-          (BAP.options[pageId].defTrans.generic5 = cud.default_generic5);
-        cud.default_generic6 &&
-          (BAP.options[pageId].defTrans.generic6 = cud.default_generic6);
-        cud.default_link1 &&
-          (BAP.options[pageId].defTrans.link1 = cud.default_link1);
-        cud.default_link2 &&
-          (BAP.options[pageId].defTrans.link2 = cud.default_link2);
-        cud.default_link3 &&
-          (BAP.options[pageId].defTrans.link3 = cud.default_link3);
-        cud.default_footer &&
-          (BAP.options[pageId].defTrans.footer = cud.default_footer);
+
+
+        if (cud.default_generic1) {
+            (BAP.options[pageId].defTrans.generic1 = cud.default_generic1);
+        }
+        if (cud.default_generic2) {
+            (BAP.options[pageId].defTrans.generic2 = cud.default_generic2);
+        }
+        if (cud.default_generic3) {
+            (BAP.options[pageId].defTrans.generic3 = cud.default_generic3);
+        }
+        if (cud.default_generic4) {
+            (BAP.options[pageId].defTrans.generic4 = cud.default_generic4);
+        }
+        if (cud.default_generic5) {
+            (BAP.options[pageId].defTrans.generic5 = cud.default_generic5);
+        }
+        if (cud.default_generic6) {
+            (BAP.options[pageId].defTrans.generic6 = cud.default_generic6);
+        }
+        if (cud.default_link1) {
+          BAP.options[pageId].defTrans.link1 = cud.default_link1;
+        }
+        if (cud.default_link2) {
+          BAP.options[pageId].defTrans.link2 = cud.default_link2;
+        }
+        if (cud.default_link3) {
+          BAP.options[pageId].defTrans.link3 = cud.default_link3;
+        } 
+        if (cud.default_footer) {
+          BAP.options[pageId].defTrans.footer = cud.default_footer);
+        }
         // reusing skip flag if the L1 has no appropriate L2, but is not a mini.
         BAP.options[pageId].skipL2 =
           cud.skip_L2 ||
           isSkipper(BAP.options[pageId].ad_w, BAP.options[pageId].ad_h) || BAP.options[pageId].vast;
         // overwrite with localized version if available
         var mp = cud.message_properties || "";
-        mp["behavioral_" + country] &&
-          (BAP.options[pageId].behavioral = mp["behavioral_" + country]);
-        mp["behavioral_" + country] && (BAP.options[pageId].noDefault = true);
+        if (mp["behavioral_" + country]) {
+          BAP.options[pageId].behavioral = mp["behavioral_" + country];
+        }
+        if (mp["behavioral_" + country]) {
+           BAP.options[pageId].noDefault = true;
+        }
         // default icon
-        cud.default_icon &&
-          !BAP.options[pageId].noDefault &&
-          (BAP.options[pageId].cicon = cud.default_icon);
-        mp["generic_text_" + country] &&
-          (BAP.options[pageId].behavioralCustomMessage =
-            mp["generic_text_" + country]);
-        mp["adv_name_" + country] &&
-          (BAP.options[pageId].advName = mp["adv_name_" + country]);
-        mp["adv_msg_" + country] &&
-          (BAP.options[pageId].advMessage = mp["adv_msg_" + country]);
-        mp["adv_logo_" + country] &&
+        if(cud.default_icon && !BAP.options[pageId].noDefault) {
+            BAP.options[pageId].cicon = cud.default_icon;
+        }
+
+        if (mp["generic_text_" + country]) {
+         BAP.options[pageId].behavioralCustomMessage = mp["generic_text_" + country];
+        }
+        if (mp["adv_name_" + country]) {
+         BAP.options[pageId].advName = mp["adv_name_" + country];
+        }
+        if (mp["adv_msg_" + country]) {
+         BAP.options[pageId].advMessage = mp["adv_msg_" + country];
+        }
+        if (mp["adv_logo_" + country]) {
           (BAP.options[pageId].advLogo = mp["adv_logo_" + country].replace(
             "http:",
             "https:"
           ));
-        mp["adv_link_" + country] &&
+        }
+        if (mp["adv_link_" + country]) {
           (BAP.options[pageId].advLink = mp["adv_link_" + country]);
-        mp["translation_" + country] &&
+        if (mp["translation_" + country]) {
           (BAP.options[pageId].translation = mp["translation_" + country]);
-        mp["translation_" + country] &&
+        if (mp["translation_" + country]) {
           (BAP.options[pageId].cicon = mp["translation_" + country].icon);
-        mp.hasOwnProperty("skip_L2_" + country) &&
+        if (mp.hasOwnProperty("skip_L2_" + country)) {
           (BAP.options[pageId].skipL2 = mp["skip_L2_" + country]);
+        }
+
+/// L3
+        //   var a7 = a9.hasOwnProperty("custom_optout_" + z) ? a9["custom_optout_" + z] : (a6.hasOwnProperty("custom_optout") ? a6.custom_optout : null);
+        //   if (a7) {
+        //       m.options[bb].customL3 = a7.desktop
+        //   } else {
+        //       m.options[bb].customL3 = null
+        //   }
+
+
         BAP.options[pageId].icon_delay = cud.icon_delay || 0;
         BAP.options[pageId].icon_display = cud.icon_display || "normal";
         BAP.options[pageId].icon_display = cud.icon_expandable
