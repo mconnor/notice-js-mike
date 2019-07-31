@@ -3267,8 +3267,8 @@ var BAP =
       } else if (reg === 5) {
         if (BAP.options[pageId].new_l2) { 
           noticeHTML =
-          '<div id="bap-notice-' + pageId + 'style="width:' + BAP.options[pageId].ad_w + 'px"' +
-            '" class="bap-notice bap-notice-new-l2 dimensions-reg5-newl2">' +
+          '<div id="bap-notice-' + pageId + 'style="width:' + BAP.options[pageId].ad_w + 'px;" \
+            class="bap-notice bap-notice-new-l2 dimensions-reg5-newl2">' +
             CLOSE_BTN +
               '<div class="center-vert" \
                     style="width:299px; \
