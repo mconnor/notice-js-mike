@@ -845,19 +845,22 @@ var BAP =
          BAP.options[pageId].advMessage = mp["adv_msg_" + country];
         }
         if (mp["adv_logo_" + country]) {
-          (BAP.options[pageId].advLogo = mp["adv_logo_" + country].replace(
+          BAP.options[pageId].advLogo = mp["adv_logo_" + country].replace(
             "http:",
             "https:"
-          ));
+          );
         }
         if (mp["adv_link_" + country]) {
-          (BAP.options[pageId].advLink = mp["adv_link_" + country]);
+          BAP.options[pageId].advLink = mp["adv_link_" + country];
+        }
         if (mp["translation_" + country]) {
-          (BAP.options[pageId].translation = mp["translation_" + country]);
+          BAP.options[pageId].translation = mp["translation_" + country];
+        }
         if (mp["translation_" + country]) {
-          (BAP.options[pageId].cicon = mp["translation_" + country].icon);
+          BAP.options[pageId].cicon = mp["translation_" + country].icon;
+        }
         if (mp.hasOwnProperty("skip_L2_" + country)) {
-          (BAP.options[pageId].skipL2 = mp["skip_L2_" + country]);
+          BAP.options[pageId].skipL2 = mp["skip_L2_" + country];
         }
 
 /// L3
