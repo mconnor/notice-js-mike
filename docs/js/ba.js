@@ -816,7 +816,7 @@ var BAP =
           BAP.options[pageId].defTrans.link3 = cud.default_link3;
         } 
         if (cud.default_footer) {
-          BAP.options[pageId].defTrans.footer = cud.default_footer);
+          BAP.options[pageId].defTrans.footer = cud.default_footer;
         }
         // reusing skip flag if the L1 has no appropriate L2, but is not a mini.
         BAP.options[pageId].skipL2 =
