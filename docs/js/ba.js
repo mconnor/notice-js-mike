@@ -438,7 +438,7 @@ var BAP =
         width: 159px; height: 292px; \
       } \
       .dimensions-reg5-newl2 { \
-        width: " + BAP.options[pageId].ad_w + "px; height: 199px;\
+        height: 199px; \
       } \
       .dimensions-reg5 { \
         width: 190px; \
@@ -3267,7 +3267,7 @@ var BAP =
       } else if (reg === 5) {
         if (BAP.options[pageId].new_l2) { 
           noticeHTML =
-          '<div id="bap-notice-' + pageId +
+          '<div id="bap-notice-' + pageId + 'style="width:' + BAP.options[pageId].ad_w + 'px"' +
             '" class="bap-notice bap-notice-new-l2 dimensions-reg5-newl2">' +
             CLOSE_BTN +
               '<div class="center-vert" \
