@@ -212,7 +212,7 @@ var BAP =
             if (BAP.options[pageId].new_l2) {
               i.src = '//mconnor.github.io/testVast/newL2testing/64564.js';
             } else {
-              i.src = '//mconnor.github.io/testVast/oldL2testing/64564.js';
+              i.src = '//mconnor.github.io/testVast/oldL2testing/136956.js';
             }
             // END LOCAL TESTING
             body.appendChild(i);
@@ -3267,7 +3267,8 @@ var BAP =
       } else if (reg === 5) {
         if (BAP.options[pageId].new_l2) { 
           noticeHTML =
-          '<div id="bap-notice-' + pageId + '" style="width:' + BAP.options[pageId].ad_w + 'px;" \
+          '<div id="bap-notice-' + pageId + '" \
+            style="width:' + BAP.options[pageId].ad_w + 'px;" \
             class="bap-notice bap-notice-new-l2 dimensions-reg5-newl2">' +
             CLOSE_BTN +
               '<div class="center-vert" \
