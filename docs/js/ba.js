@@ -438,7 +438,7 @@ var BAP =
         width: 159px; height: 292px; \
       } \
       .dimensions-reg5-newl2 { \
-        width: 299px; height: 199px; \
+        width: " + BAP.options[pageId].ad_w + "px; height: 199px; \
       } \
       .dimensions-reg5 { \
         width: 190px; \
