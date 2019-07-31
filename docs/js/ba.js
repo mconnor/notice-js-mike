@@ -780,10 +780,8 @@ var BAP =
         BAP.options[pageId].rev = cud.revision || 0;
         BAP.options[pageId].behavioral = cud.behavioral || "definitive";
         BAP.options[pageId].behavioralCustomMessage = cud.generic_text || "";
-        if(cud.hide_wi ) 
-            BAP.options[pageId].hideWhatIs = true;
-        if(cud.hide_cl ) 
-            BAP.options[pageId].hideCustom = true;
+        cud.hide_wi && (BAP.options[pageId].hideWhatIs = true);
+        cud.hide_cl && (BAP.options[pageId].hideCustom = true);
         // default translation
         BAP.options[pageId].defTrans = {};
 
