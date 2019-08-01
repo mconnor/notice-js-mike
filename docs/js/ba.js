@@ -1639,19 +1639,23 @@ var BAP =
         // custom ownerIQ opt-out page.
         mi = "https://owneriq.evidon.com";
       } else {
+       if (BAP.options[pageId].hasOwnProperty("customL3") && BAP.options[pageId].customL3) {
+           mi = BAP.options[pageId].customL3;
+       } else {
         for (key in coveredNotices[pageId]) {
-          mi += "," + key;
-        }
-        // Add vendor links
-        (vi = vendor(pageId, "cps")) && p.push(vi);
-        (vi = vendor(pageId, "seg")) && p.push(vi);
-        (vi = vendor(pageId, "ecaid")) && p.push(vi);
-        if (_gdn) {
-          p.push("gdn=1");
-        }
-        if (p.length > 0) {
-          mi += "?" + p.join("&");
-        }
+            mi += "," + key;
+          }
+          // Add vendor links
+          (vi = vendor(pageId, "cps")) && p.push(vi);
+          (vi = vendor(pageId, "seg")) && p.push(vi);
+          (vi = vendor(pageId, "ecaid")) && p.push(vi);
+          if (_gdn) {
+            p.push("gdn=1");
+          }
+          if (p.length > 0) {
+            mi += "?" + p.join("&");
+          }
+       }
       }
       return mi;
     }
