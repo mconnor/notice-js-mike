@@ -212,7 +212,7 @@ var BAP =
             if (BAP.options[pageId].new_l2) {
               i.src = '//mconnor.github.io/testVast/newL2testing/64564.js';
             } else {
-              i.src = '//mconnor.github.io/testVast/oldL2testing/136956.js';
+                i.src = '//mconnor.github.io/testVast/newL2testing/64564.js';
             }
             // END LOCAL TESTING
             body.appendChild(i);
@@ -780,29 +780,33 @@ var BAP =
         BAP.options[pageId].rev = cud.revision || 0;
         BAP.options[pageId].behavioral = cud.behavioral || "definitive";
         BAP.options[pageId].behavioralCustomMessage = cud.generic_text || "";
-        cud.hide_wi && (BAP.options[pageId].hideWhatIs = true);
-        cud.hide_cl && (BAP.options[pageId].hideCustom = true);
+        if(cud.hide_wi ) {
+            BAP.options[pageId].hideWhatIs = true;
+        }
+        if(cud.hide_cl ) {
+            BAP.options[pageId].hideCustom = true;
+        }
         // default translation
         BAP.options[pageId].defTrans = {};
 
 
         if (cud.default_generic1) {
-            (BAP.options[pageId].defTrans.generic1 = cud.default_generic1);
+            BAP.options[pageId].defTrans.generic1 = cud.default_generic1;
         }
         if (cud.default_generic2) {
-            (BAP.options[pageId].defTrans.generic2 = cud.default_generic2);
+            BAP.options[pageId].defTrans.generic2 = cud.default_generic2;
         }
         if (cud.default_generic3) {
-            (BAP.options[pageId].defTrans.generic3 = cud.default_generic3);
+            BAP.options[pageId].defTrans.generic3 = cud.default_generic3;
         }
         if (cud.default_generic4) {
-            (BAP.options[pageId].defTrans.generic4 = cud.default_generic4);
+            BAP.options[pageId].defTrans.generic4 = cud.default_generic4;
         }
         if (cud.default_generic5) {
-            (BAP.options[pageId].defTrans.generic5 = cud.default_generic5);
+            BAP.options[pageId].defTrans.generic5 = cud.default_generic5;
         }
         if (cud.default_generic6) {
-            (BAP.options[pageId].defTrans.generic6 = cud.default_generic6);
+            BAP.options[pageId].defTrans.generic6 = cud.default_generic6;
         }
         if (cud.default_link1) {
           BAP.options[pageId].defTrans.link1 = cud.default_link1;
