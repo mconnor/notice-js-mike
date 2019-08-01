@@ -210,9 +210,11 @@ var BAP =
             // LOCAL TESTING
             BAP.options[pageId].new_l2 = (BAP.options[pageId].new_l2 == 'true');
             if (BAP.options[pageId].new_l2) {
-              i.src = '//mconnor.github.io/testVast/data/64564.js';
+                //i.src = '//mconnor.github.io/testVast/data/64564.js';
+              i.src = '//mconnor.github.io/testVast/data/136956.js';
             } else {
-              i.src = '//mconnor.github.io/testVast/data/64564.js';
+                //i.src = '//mconnor.github.io/testVast/data/64564.js';
+              i.src = '//mconnor.github.io/testVast/data/136956.js';
             }
             // END LOCAL TESTING
             body.appendChild(i);
