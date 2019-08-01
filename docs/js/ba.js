@@ -868,12 +868,12 @@ var BAP =
         }
 
 /// L3
-        //   var a7 = a9.hasOwnProperty("custom_optout_" + z) ? a9["custom_optout_" + z] : (a6.hasOwnProperty("custom_optout") ? a6.custom_optout : null);
-        //   if (a7) {
-        //       m.options[bb].customL3 = a7.desktop
-        //   } else {
-        //       m.options[bb].customL3 = null
-        //   }
+          var a7 = mp.hasOwnProperty("custom_optout_" + z) ? mp["custom_optout_" + z] : (cud.hasOwnProperty("custom_optout") ? cud.custom_optout : null);
+          if (a7) {
+            BAP.options[bb].customL3 = a7.desktop;
+          } else {
+            BAP.options[bb].customL3 = null;
+          }
 
 
         BAP.options[pageId].icon_delay = cud.icon_delay || 0;
