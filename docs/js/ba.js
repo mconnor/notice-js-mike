@@ -870,9 +870,9 @@ var BAP =
 /// L3
           var a7 = mp.hasOwnProperty("custom_optout_" + country) ? mp["custom_optout_" + country] : (cud.hasOwnProperty("custom_optout") ? cud.custom_optout : null);
           if (a7) {
-            BAP.options[bb].customL3 = a7.desktop;
+            BAP.options[pageId].customL3 = a7.desktop;
           } else {
-            BAP.options[bb].customL3 = null;
+            BAP.options[pageId].customL3 = null;
           }
 
 
