@@ -868,7 +868,7 @@ var BAP =
         }
 
 /// L3
-          var a7 = mp.hasOwnProperty("custom_optout_" + z) ? mp["custom_optout_" + z] : (cud.hasOwnProperty("custom_optout") ? cud.custom_optout : null);
+          var a7 = mp.hasOwnProperty("custom_optout_" + country) ? mp["custom_optout_" + country] : (cud.hasOwnProperty("custom_optout") ? cud.custom_optout : null);
           if (a7) {
             BAP.options[bb].customL3 = a7.desktop;
           } else {
