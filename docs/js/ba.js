@@ -1629,7 +1629,7 @@ var BAP =
         key,
         p = [],
         mi = DOMAIN_INFO + "more_info/" + nids[pageId];
-      if (BAP.options[pageId].coid === 321) {
+      if (BAP.options[pageId].coid === "321") {
         // custom ownerIQ opt-out page.
         mi = "https://owneriq.evidon.com";
       } else {
