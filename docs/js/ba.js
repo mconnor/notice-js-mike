@@ -3150,7 +3150,6 @@ var BAP =
                       "</a> \
                     </div>" +
                     // *** end link - opt out
-                    '<div>' + 
                     // ** start WHAT IS IAB
                       (BAP.options[pageId].hideWhatIs
                         ? ""
