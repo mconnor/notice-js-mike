@@ -3314,7 +3314,7 @@ var BAP =
             class="bap-notice bap-notice-new-l2 dimensions-reg5-newl2">' +
             CLOSE_BTN +
               '<div class="center-vert" \
-                    style="width:299px; \
+                    style="width:' + BAP.options[pageId].ad_w + 'px;" \
                           padding: 3px 25px 3px 25px;"> \
                   <div class="bap-img-container center-horiz">' + 
                     BAP_ADVERTISER_LOGO + 
