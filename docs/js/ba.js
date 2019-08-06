@@ -3348,7 +3348,7 @@ var BAP =
           noticeHTML = 
           '<div id="bap-notice-' + pageId + 
                   '" class="bap-notice bap-notice-new-l2 dimensions-reg6-newl2" \
-                        style="left: 274px;' + BAP.options[pageId].ad_h + 'px' + '">'  +
+                        style="left: 274px;height:' + BAP.options[pageId].ad_h + 'px' + '">'  +
                       CLOSE_BTN +
               '<div> \
                   <div class="center-vert inline-block" style="left: 20px;">' +
