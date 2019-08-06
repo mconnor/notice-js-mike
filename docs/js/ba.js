@@ -3105,7 +3105,7 @@ var BAP =
          * pulled).  If the CSS happens not to be loaded, then there is a brief display
          * artifact when the popup is added.
          */
-      if (width >= 190 && width < 300 && height >= 145 && height < 250) {
+      if (width >= 190 && width < 300 && height >= 145 && height <= 250) {
         // Small L2 - l2-300x200-inline.html
         reg = 5;
       } else if (width >= 300 && height >= 250) {
