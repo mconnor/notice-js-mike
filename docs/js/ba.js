@@ -3166,6 +3166,7 @@ var BAP =
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
+                  (!BAP.options[pageId].advLink) ? "" :
                   '<a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>' + //privacy policy
              '</div>';
       } else {
@@ -3214,6 +3215,7 @@ var BAP =
               ((reg === 5) 
                 ? "" 
                 : whatisLink +
+                (!BAP.options[pageId].advLink) ? "" :
                 '<div class="' + bapLinkDivClassList + '"> \
                     <a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + rigthArrow + '</a>\
                 </div>' + 
