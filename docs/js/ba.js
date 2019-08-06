@@ -3166,8 +3166,8 @@ var BAP =
                         "</a> \
                       </div>") + 
                   // ** end WHAT IS IAB
-                  (!BAP.options[pageId].advLink) ? "" :
-                  '<a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>' + //privacy policy
+                  ((!BAP.options[pageId].advLink) ? "" :
+                  '<div><a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + '</a></div>') + //privacy policy
              '</div>';
       } else {
         if (reg === 6) { // banner
@@ -3215,10 +3215,10 @@ var BAP =
               ((reg === 5) 
                 ? "" 
                 : whatisLink +
-                (!BAP.options[pageId].advLink) ? "" :
+                ((!BAP.options[pageId].advLink) ? "" :
                 '<div class="' + bapLinkDivClassList + '"> \
                     <a href=' + BAP.options[pageId].advLink + ' target="_blank">' + sl + rigthArrow + '</a>\
-                </div>' + 
+                </div>') + 
                 '<div class="bap-gray ' + bapLinkDivClassList + 
                 (reg === 2 ? '" style="font-size:.7em"' : '"') +
                 '">' + se + '</div>' //privacy policy
