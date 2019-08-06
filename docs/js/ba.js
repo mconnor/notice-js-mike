@@ -3351,7 +3351,7 @@ var BAP =
                         style="left: 274px;height:' + BAP.options[pageId].ad_h + 'px' + '">'  +
                       CLOSE_BTN +
               '<div> \
-                  <div class="center-vert inline-block" style="left: 20px;">' +
+                  <div class="center-vert inline-block" style="left: 20px; width:118px">' +
                       BAP_ADVERTISER_LOGO +  
                   '</div> \
                   <div class="center-vert inline-block" style="left: 25%; width:50%;">' + 
