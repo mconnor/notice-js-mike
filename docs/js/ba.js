@@ -450,7 +450,7 @@ var BAP =
         min-width: 688px; height: 84px; \
       } \
       .dimensions-reg6-newl2 { \
-        width: 726px; height: 118px; \
+        width: 726px;  \
       } \
       .heightReg6 { \
         height: 84px; \
@@ -3347,7 +3347,8 @@ var BAP =
         if (BAP.options[pageId].new_l2) { 
           noticeHTML = 
           '<div id="bap-notice-' + pageId + 
-                  '" class="bap-notice bap-notice-new-l2 dimensions-reg6-newl2" style="left: 274px;">' +
+                  '" class="bap-notice bap-notice-new-l2 dimensions-reg6-newl2" \
+                        style="left: 274px;' + BAP.options[pageId].ad_h + 'px' + '">'  +
                       CLOSE_BTN +
               '<div> \
                   <div class="center-vert inline-block" style="left: 20px;">' +
