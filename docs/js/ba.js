@@ -2459,7 +2459,7 @@ var BAP =
       } else  {
         try {
           var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
-          if (isNonTimerDm(BAP.options[pageId].dm)) {
+          if (isNonTimerDm(BAP.options[pageId].dm) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
             appendIconToAd(pageId, icon);
           } else {
             div.innerHTML = div.innerHTML + icon;
