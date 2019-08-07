@@ -34,7 +34,7 @@ var BAP = (function() {
                           // _d = document
                           // end shorteners
                           protocol = window.location.href.indexOf("http://") === 0 ? "http://" : "https://",
-                          DOMAIN_ROOT = protocol + "dev.betrad.com",
+                          DOMAIN_ROOT = protocol + "staging.betrad.com",
                           MORE_INFO_ROOT = "https://info.evidon.com",
                           DOMAIN_JSON = DOMAIN_ROOT + "/a/",
                           ITUNES_LINK = "https://itunes.apple.com/us/app/appchoices/id894822870",
