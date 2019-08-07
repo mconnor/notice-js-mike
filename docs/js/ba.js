@@ -1958,7 +1958,7 @@ var BAP =
     }
 
     function isNonTimerDm(_dm){
-      if (_dm === 3 || _dm === 9 || _dm === 5){
+      if (_dm === 9 || _dm === 5){
         return true;
       } else {
         return false;
