@@ -1958,6 +1958,7 @@ var BAP =
     }
 
     function isNonTimerDm(_dm){
+      var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
       if ((_dm ===3 || _dm === 9 || _dm === 5) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
         return true;
       } else {
@@ -2458,7 +2459,6 @@ var BAP =
         setTimeout(positionDM3(pageId),1000);
       } else  {
         try {
-          var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
           if (isNonTimerDm(BAP.options[pageId].dm)) {
             appendIconToAd(pageId, icon);
           } else {
