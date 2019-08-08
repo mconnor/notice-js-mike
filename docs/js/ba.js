@@ -1081,7 +1081,7 @@ var BAP =
     function testResize() {
       var pageId;
       for (pageId in BAP.options) {
-        if (!isNonTimerDm(BAP.options[pageId].dm)) {
+        if (!isNonTimerDm(BAP.options[pageId])) {
           noticePositionCalculate(pageId);
           noticePosition(pageId);
           repositionL2(pageId);
@@ -1946,7 +1946,7 @@ var BAP =
      * This method positions the notice.
      */
     function noticePosition(pageId) {
-      if (!isNonTimerDm(BAP.options[pageId].dm)) {
+      if (!isNonTimerDm(BAP.options[pageId])) {
         var t = $("trigger-" + pageId),
         tc = $("trigger-box-" + pageId);
         t.style.top = BAP.options[pageId].posTop + "px";
@@ -1957,8 +1957,9 @@ var BAP =
      
     }
 
-    function isNonTimerDm(_dm){
+    function isNonTimerDm(pageId){
       var ad_css_position = getComputedStyle(BAP.options[pageId].ad).position;
+      var _dm = BAP.options[pageId].dm;
       if ((_dm ===3 || _dm === 9 || _dm === 5) && (ad_css_position === 'relative' || ad_css_position === 'absolute')) {
         return true;
       } else {
@@ -2459,7 +2460,7 @@ var BAP =
         setTimeout(positionDM3(pageId),1000);
       } else  {
         try {
-          if (isNonTimerDm(BAP.options[pageId].dm)) {
+          if (isNonTimerDm(BAP.options[pageId])) {
             appendIconToAd(pageId, icon);
           } else {
             div.innerHTML = div.innerHTML + icon;
