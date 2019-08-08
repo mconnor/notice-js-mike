@@ -1081,7 +1081,7 @@ var BAP =
     function testResize() {
       var pageId;
       for (pageId in BAP.options) {
-        if (!isNonTimerDm(BAP.options[pageId])) {
+        if (!isNonTimerDm(pageId)) {
           noticePositionCalculate(pageId);
           noticePosition(pageId);
           repositionL2(pageId);
@@ -1946,7 +1946,7 @@ var BAP =
      * This method positions the notice.
      */
     function noticePosition(pageId) {
-      if (!isNonTimerDm(BAP.options[pageId])) {
+      if (!isNonTimerDm(pageId)) {
         var t = $("trigger-" + pageId),
         tc = $("trigger-box-" + pageId);
         t.style.top = BAP.options[pageId].posTop + "px";
@@ -2460,7 +2460,7 @@ var BAP =
         setTimeout(positionDM3(pageId),1000);
       } else  {
         try {
-          if (isNonTimerDm(BAP.options[pageId])) {
+          if (isNonTimerDm(pageId)) {
             appendIconToAd(pageId, icon);
           } else {
             div.innerHTML = div.innerHTML + icon;
