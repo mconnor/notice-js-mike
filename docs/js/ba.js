@@ -2081,7 +2081,9 @@ var BAP =
       if (BAP.options[pageId].position === "top-right") {
         posTop += adBorderWidth;
         posLeft += spotWidth + adBorderWidth;
-        // } else if (BAP.options[pageId].position === 'top-left') {
+      } else if (BAP.options[pageId].position === 'top-left') {
+        posTop += adBorderWidth;
+        posLeft +=  adBorderWidth;
       } else if (BAP.options[pageId].position === "bottom-right") {
 
         
