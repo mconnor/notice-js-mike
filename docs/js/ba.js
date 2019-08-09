@@ -2079,12 +2079,14 @@ var BAP =
 
 
       if (BAP.options[pageId].position === "top-right") {
-        posLeft += spotWidth;
+        posLeft += spotWidth + adBorderWidth;
         // } else if (BAP.options[pageId].position === 'top-left') {
       } else if (BAP.options[pageId].position === "bottom-right") {
-        posTop += spotHeight - iconH;
+
         
-        posLeft += spotWidth;
+        posTop += spotHeight - iconH + adBorderWidth;
+        
+        posLeft += spotWidth + adBorderWidth;
       } else if (BAP.options[pageId].position === "bottom-left") {
 
         posLeft += adBorderWidth;
