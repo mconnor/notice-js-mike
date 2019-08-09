@@ -2078,7 +2078,14 @@ var BAP =
         
         posLeft += spotWidth;
       } else if (BAP.options[pageId].position === "bottom-left") {
-        posTop += spotHeight - iconH;
+
+        if (!!getStyle(ad, 'border-width')) {
+            var _i = getStyle(ad, 'border-width').indexOf('px');
+            var adBorderWidth = parseInt(getStyle(ad, 'border-width').substring(0,_i))
+        }
+
+
+        posTop += spotHeight - iconH + adBorderWidth;
       }
       // adjust with offsets
       posTop += BAP.options[pageId].offsetTop;
@@ -2164,7 +2171,7 @@ var BAP =
             (ad2 = getAdStandard(frameSize()[0], frameSize()[1])) !== 0
           ) {
             /*jsl:end*/
-            // checking if the contaier is a known size frame.
+            // checking if the container is a known size frame.
             BAP.options[pageId].ad_h = frameSize()[0];
             BAP.options[pageId].ad_w = frameSize()[1];
             BAP.options[pageId].pixel_ad_w = BAP.options[pageId].ad_w;
