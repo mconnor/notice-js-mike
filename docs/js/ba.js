@@ -1993,7 +1993,8 @@ var BAP =
         spotTop,
         ad = BAP.options[pageId].ad,
         spotHeight,
-        spotWidth, px;
+        spotWidth, px,
+        borderTop, borderBottom, borderRight, borderLeft;
       if (BAP.options[pageId].dm === 5) {
         spotHeight = BAP.options[pageId].ad_h;
         spotWidth = BAP.options[pageId].ad_w;
@@ -2070,6 +2071,13 @@ var BAP =
       posTop = spotTop;
       posLeft = spotLeft;
       var iconH = 14;
+
+      if (!!getStyle(ad, 'border-width')) {
+        var _i = getStyle(ad, 'border-width').indexOf('px');
+        var adBorderWidth = parseInt(getStyle(ad, 'border-width').substring(0,_i))
+      }
+
+
       if (BAP.options[pageId].position === "top-right") {
         posLeft += spotWidth;
         // } else if (BAP.options[pageId].position === 'top-left') {
@@ -2079,12 +2087,7 @@ var BAP =
         posLeft += spotWidth;
       } else if (BAP.options[pageId].position === "bottom-left") {
 
-        if (!!getStyle(ad, 'border-width')) {
-            var _i = getStyle(ad, 'border-width').indexOf('px');
-            var adBorderWidth = parseInt(getStyle(ad, 'border-width').substring(0,_i))
-        }
-
-
+        posLeft = adBorderWidth;
         posTop += spotHeight - iconH + adBorderWidth;
       }
       // adjust with offsets
