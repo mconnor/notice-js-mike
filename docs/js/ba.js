@@ -2087,7 +2087,7 @@ var BAP =
         posLeft += spotWidth;
       } else if (BAP.options[pageId].position === "bottom-left") {
 
-        posLeft = adBorderWidth;
+        posLeft += adBorderWidth;
         posTop += spotHeight - iconH + adBorderWidth;
       }
       // adjust with offsets
